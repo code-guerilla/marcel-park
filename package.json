@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "ultracite check",
+    "format": "ultracite fix"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.6",
@@ -37,14 +38,14 @@
     "unified": "^11.0.5"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.3.11",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20.17.30",
     "@types/react": "^18.3.20",
     "@types/react-dom": "^18.3.6",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "14.2.4",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "ultracite": "7.0.8"
   }
 }
