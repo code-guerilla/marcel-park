@@ -1,13 +1,13 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardHeader } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardHeader } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -40,33 +40,33 @@ export const ResumeCard = ({
 
   return (
     <Link
-      href={href || "#"}
       className="block cursor-pointer"
+      href={href || "#"}
       onClick={handleClick}
     >
       <Card className="flex">
         <div className="flex-none">
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+          <Avatar className="m-auto size-12 border bg-muted-background dark:bg-foreground">
             <AvatarImage
-              src={logoUrl}
               alt={altText}
               className="object-contain"
+              src={logoUrl}
             />
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
         </div>
-        <div className="flex-grow ml-4 items-center flex-col group">
+        <div className="group ml-4 flex-grow flex-col items-center">
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
-              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
+              <h3 className="inline-flex items-center justify-center font-semibold text-xs leading-none sm:text-sm">
                 {title}
                 {badges && (
                   <span className="inline-flex gap-x-1">
                     {badges.map((badge, index) => (
                       <Badge
-                        variant="secondary"
                         className="align-middle text-xs"
                         key={index}
+                        variant="secondary"
                       >
                         {badge}
                       </Badge>
@@ -80,7 +80,7 @@ export const ResumeCard = ({
                   )}
                 />
               </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+              <div className="text-right text-muted-foreground text-xs tabular-nums sm:text-sm">
                 {period}
               </div>
             </div>
@@ -88,17 +88,17 @@ export const ResumeCard = ({
           </CardHeader>
           {description && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
               animate={{
                 opacity: isExpanded ? 1 : 0,
 
                 height: isExpanded ? "auto" : 0,
               }}
+              className="mt-2 text-xs sm:text-sm"
+              initial={{ opacity: 0, height: 0 }}
               transition={{
                 duration: 0.7,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-2 text-xs sm:text-sm"
             >
               {description}
             </motion.div>

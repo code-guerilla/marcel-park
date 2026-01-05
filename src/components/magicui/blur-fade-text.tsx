@@ -1,8 +1,8 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, Variants } from "framer-motion";
+import { AnimatePresence, motion, type Variants } from "framer-motion";
 import { useMemo } from "react";
+import { cn } from "@/lib/utils";
 
 interface BlurFadeTextProps {
   text: string;
@@ -39,18 +39,18 @@ const BlurFadeText = ({
         <AnimatePresence>
           {characters.map((char, i) => (
             <motion.span
-              key={i}
-              initial="hidden"
               animate="visible"
+              className={cn("inline-block", className)}
               exit="hidden"
-              variants={combinedVariants}
+              initial="hidden"
+              key={i}
+              style={{ width: char.trim() === "" ? "0.2em" : "auto" }}
               transition={{
-                yoyo: Infinity,
+                yoyo: Number.POSITIVE_INFINITY,
                 delay: delay + i * characterDelay,
                 ease: "easeOut",
               }}
-              className={cn("inline-block", className)}
-              style={{ width: char.trim() === "" ? "0.2em" : "auto" }}
+              variants={combinedVariants}
             >
               {char}
             </motion.span>
@@ -64,16 +64,16 @@ const BlurFadeText = ({
     <div className="flex">
       <AnimatePresence>
         <motion.span
-          initial="hidden"
           animate="visible"
+          className={cn("inline-block", className)}
           exit="hidden"
-          variants={combinedVariants}
+          initial="hidden"
           transition={{
-            yoyo: Infinity,
+            yoyo: Number.POSITIVE_INFINITY,
             delay,
             ease: "easeOut",
           }}
-          className={cn("inline-block", className)}
+          variants={combinedVariants}
         >
           {text}
         </motion.span>

@@ -1,6 +1,6 @@
+import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
 
 interface Props {
   title: string;
@@ -25,22 +25,22 @@ export function HackathonCard({
 }: Props) {
   return (
     <li className="relative ml-10 py-4">
-      <div className="absolute -left-16 top-2 flex items-center justify-center bg-white rounded-full">
-        <Avatar className="border size-12 m-auto">
-          <AvatarImage src={image} alt={title} className="object-contain" />
+      <div className="absolute top-2 -left-16 flex items-center justify-center rounded-full bg-white">
+        <Avatar className="m-auto size-12 border">
+          <AvatarImage alt={title} className="object-contain" src={image} />
           <AvatarFallback>{title[0]}</AvatarFallback>
         </Avatar>
       </div>
       <div className="flex flex-1 flex-col justify-start gap-1">
         {dates && (
-          <time className="text-xs text-muted-foreground">{dates}</time>
+          <time className="text-muted-foreground text-xs">{dates}</time>
         )}
         <h2 className="font-semibold leading-none">{title}</h2>
         {location && (
-          <p className="text-sm text-muted-foreground">{location}</p>
+          <p className="text-muted-foreground text-sm">{location}</p>
         )}
         {description && (
-          <span className="prose dark:prose-invert text-sm text-muted-foreground">
+          <span className="prose dark:prose-invert text-muted-foreground text-sm">
             {description}
           </span>
         )}
@@ -49,7 +49,7 @@ export function HackathonCard({
         <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
           {links?.map((link, idx) => (
             <Link href={link.href} key={idx}>
-              <Badge key={idx} title={link.title} className="flex gap-2">
+              <Badge className="flex gap-2" key={idx} title={link.title}>
                 {link.icon}
                 {link.title}
               </Badge>
