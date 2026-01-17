@@ -13,7 +13,7 @@ const BLUR_FADE_DELAY = 0.04
 
 export default function Page() {
   return (
-    <main className='flex min-h-[100dvh] flex-col space-y-10'>
+    <main className='flex min-h-dvh flex-col space-y-10'>
       <section id='hero'>
         <div className='mx-auto w-full max-w-2xl space-y-8'>
           <div className='flex justify-between gap-2'>
@@ -44,9 +44,9 @@ export default function Page() {
           <h2 className='font-bold text-xl'>About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className='prose dark:prose-invert max-w-full text-pretty font-sans text-muted-foreground text-sm'>
-            {DATA.summary}
-          </Markdown>
+          <div className='prose dark:prose-invert max-w-full text-pretty font-sans text-muted-foreground text-sm'>
+            <Markdown>{DATA.summary}</Markdown>
+          </div>
         </BlurFade>
       </section>
       <section id='work'>

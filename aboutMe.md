@@ -10,9 +10,17 @@ Nun ist das system was ich aufbaute schon sehr reif.
 
 Habe mehrere redhat linux terminal server für webhosten per nginx als reverse proxy mit pm2 für die processe. 
 Mehrere datenbank server mssql mit jeweils mehreren datenbanken.
-Github Enterprise server. Wo ich admin bin. 
+Github Enterprise server wo ich admin in einer Organisation bin mit über 126 Repositories und 50 member. 
 
-Nextjs, tailwindcss shadcn, firmenspezifische componenten und Farben. Template mit utility funktionen, linting formatierungen. Regelwerk für cleancode. Inzwischen haben mehrere. 
+
+Nextjs, React, TypeScript/JavaScript, Prisma ORM, tailwindcss shadcn, firmenspezifische componenten und Farben. Template mit utility funktionen, linting formatierungen erst mit prettier und eslint dann mit biome. Regelwerk für cleancode. 
+
+privat bilde ich mich sehr gern weiter ich schaue jeden tag beim fruhstueck ein video auf youtube was mit aktuellem code beschäftigt. auch so mache ich viele tech und analytische bezogene projecte. Baue meine eigene Tastaturen aus github. beschäftige mich mit den wissenschaftlichsten tastatur layout. habe umgestellt auf colemak d-h layout. besitze eine lötstation und lote damit eigene Pcbs leiterplatten für tastaturen. Totem 38 Keys von geigeigeist https://github.com/GEIGEIGEIST/TOTEM. und [Anywhy/ ](https://github.com/anywhy-io/flake) diese werden mit C in ZMK programmiert. ich habe mir ein home Server aufgebaut mit proxmox wo ich pihole drauf laufen habe ein NAS. ein Home assistant server mit sämtlichen Zigbee geräten ist mein ganze wohnung automatisiert. 
+
+Selber bin ich sehr lange gereist hatte ein naja eher 2 sabbat jahre genommen und bin in sämtlichen ländern und kontinenten gereist. die meiste zeit in Südamerika aber auch in Asien und Europa. wo ich mir selbst spanisch beibrachte. und meine jetzige Frau kennenlernte. Ich gehe gern Wandern zum ausgleich und dann auch gern schon mal 600km einige wochenlang.Den bekannten Camino de Santiago habe ich schon 2 mal gemacht. 
+
+ich bin recht froh dass ich meine lernzeit noch vor Ai gewesen ist sodass ich die basics alle richtig verstanden habe. Nun fällt mir gleicha auf wenn die ai unsinn erzeugt. zu ai muss ich nochmal genau sagen das ich es schon sehr nutze und ich weiss genau wie man prompten muss um gute code zu bekommen. es geht einfach schneller. 
+ 
 
 ***
 

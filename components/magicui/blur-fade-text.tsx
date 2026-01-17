@@ -1,6 +1,5 @@
 "use client"
 
-import { useMemo } from "react"
 import { AnimatePresence, motion, type Variants } from "framer-motion"
 
 interface BlurFadeTextProps {
@@ -20,8 +19,8 @@ const BlurFadeText = ({
   yOffset = 8,
   animateByCharacter = false,
 }: BlurFadeTextProps) => {
-  const characters = useMemo(() => text.split(""), [text])
-  const words = useMemo(() => text.split(" "), [text])
+  const characters = text.split("")
+  const words = text.split(" ")
 
   const defaultVariants: Variants = {
     hidden: { y: yOffset, opacity: 0, filter: "blur(8px)" },

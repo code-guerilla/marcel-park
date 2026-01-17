@@ -78,9 +78,9 @@ export function ProjectCard({
           <div className='hidden font-sans text-xs underline print:visible'>
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <Markdown className='prose dark:prose-invert max-w-full text-pretty font-sans text-muted-foreground text-xs'>
-            {description}
-          </Markdown>
+          <div className='prose dark:prose-invert max-w-full text-pretty font-sans text-muted-foreground text-xs'>
+            <Markdown>{description}</Markdown>
+          </div>
         </div>
       </CardHeader>
       <CardContent className='mt-auto flex flex-col px-2'>

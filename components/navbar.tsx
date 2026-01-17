@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Dock, DockIcon } from "@/components/magicui/dock"
 import { ModeToggle } from "@/components/mode-toggle"
-import { buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button-variants"
 import { Separator } from "@/components/ui/separator"
 import {
   Tooltip,
@@ -19,17 +19,19 @@ export default function Navbar() {
         {DATA.navbar.map((item) => (
           <DockIcon key={item.href}>
             <Tooltip>
-              <TooltipTrigger>
-                <Link
-                  className={cn(
-                    buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-12"
-                  )}
-                  href={item.href}
-                >
-                  <item.icon className='size-4' />
-                </Link>
-              </TooltipTrigger>
+              <TooltipTrigger
+                render={
+                  <Link
+                    className={cn(
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "size-12"
+                    )}
+                    href={item.href}
+                  >
+                    <item.icon className='size-4' />
+                  </Link>
+                }
+              />
               <TooltipContent>
                 <p>{item.label}</p>
               </TooltipContent>
@@ -42,17 +44,19 @@ export default function Navbar() {
           .map(([name, social]) => (
             <DockIcon key={name}>
               <Tooltip>
-                <TooltipTrigger>
-                  <Link
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12"
-                    )}
-                    href={social.url}
-                  >
-                    <social.icon className='size-4' />
-                  </Link>
-                </TooltipTrigger>
+                <TooltipTrigger
+                  render={
+                    <Link
+                      className={cn(
+                        buttonVariants({ variant: "ghost", size: "icon" }),
+                        "size-12"
+                      )}
+                      href={social.url}
+                    >
+                      <social.icon className='size-4' />
+                    </Link>
+                  }
+                />
                 <TooltipContent>
                   <p>{name}</p>
                 </TooltipContent>
@@ -62,9 +66,7 @@ export default function Navbar() {
         <Separator className='h-full py-2' orientation='vertical' />
         <DockIcon>
           <Tooltip>
-            <TooltipTrigger>
-              <ModeToggle />
-            </TooltipTrigger>
+            <TooltipTrigger render={<ModeToggle />} />
             <TooltipContent>
               <p>Theme</p>
             </TooltipContent>

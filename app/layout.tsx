@@ -1,16 +1,12 @@
 import type { Metadata } from "next"
-import { Inter as FontSans } from "next/font/google"
 import Navbar from "@/components/navbar"
 import { ThemeProvider } from "@/components/theme-provider"
-import { TooltipProvider } from "@/components/ui/tooltip"
 import { DATA } from "@/data/resume"
 import { cn } from "@/lib/utils"
 import "./globals.css"
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
+import { GeistMono } from "geist/font/mono"
+import { GeistSans } from "geist/font/sans"
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
@@ -24,7 +20,7 @@ export const metadata: Metadata = {
     description: DATA.description,
     url: DATA.url,
     siteName: `${DATA.name}`,
-    locale: "en_US",
+    locale: "de_DE",
     type: "website",
   },
   robots: {
@@ -54,18 +50,17 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html lang='de' suppressHydrationWarning>
       <body
         className={cn(
           "mx-auto min-h-screen max-w-2xl bg-background px-6 py-12 font-sans antialiased sm:py-24",
-          fontSans.variable
+          GeistSans,
+          GeistMono
         )}
       >
         <ThemeProvider attribute='class' defaultTheme='light'>
-          <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
-          </TooltipProvider>
+          {children}
+          <Navbar />
         </ThemeProvider>
       </body>
     </html>
