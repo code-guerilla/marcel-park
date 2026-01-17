@@ -1,4 +1,38 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "extends": ["ultracite/biome/core", "ultracite/biome/next"]
+  "extends": [
+    "ultracite/biome/core",
+    "ultracite/biome/next",
+    "ultracite/biome/react"
+  ],
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded",
+      "jsxQuoteStyle": "single"
+    }
+  },
+  "linter": {
+    "rules": {
+      "security": {
+        "noDangerouslySetInnerHtml": {
+          "level": "off"
+        }
+      },
+      "style": {
+        "useConsistentTypeDefinitions": {
+          "level": "error",
+          "options": { "style": "type" }
+        },
+        "noDescendingSpecificity": "off"
+      },
+      "suspicious": {
+        "noUnknownAtRules": {
+          "level": "off"
+        }
+      }
+    }
+  },
+  "files": {
+    "includes": ["!components/magicui/**/*", "!components/ui/**/*"]
+  }
 }
