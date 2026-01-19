@@ -2,25 +2,38 @@ cv
 
 Marcel Park
 
-Erst handwerkliche ausbildung Wasserversorgung dann dort in elektronik und steuerungstechnik vertieft.  in berlin 2018-2021 bei einen Leiterplattenhersteller eine uralte steuerung und manuell schaltschränken. Mit einer externen firma übersetzt als ansprechspartner vor ort der die steuerung der anlage perfekt kannte. Es wurde dann in moderne sps vollautomatisches steuerungsystem übertragen 2 jahre lang hat dies gedauert. Da hab ich interesse auf programmieren bekommen und erste hobbyprojekte umgesetzt. Dann wollte ich es beruflich machen und bin nach Nürnberg zu Robert Bosch GmBh gekommen und eine neue berufliche Ausbildung zum Fachinformatiker für Anwendungsentwicklung gemacht. Durch vorwissen und ergeiz dann die ausbildung verkürzt in nur 2,5 jahren mit Auszeichnung abgeschlossen. 
-
-Schon in der Ausbildung fang ich an die software entwicklung die kaum vorhanden war an dem standort erst zu modernisieren und dann auszubauen. Vorher gab es 2-3 kleine .net c# webseiten. Das habe ich umgezogen. Alte webseiten übersetzt und optimiert. Und langsam so das Javascript ecosystem eingeführt. Habe dann auch die erste stelle überbaut an dem standort als vollzeit programmierer bekommen.
-
-Nun ist das system was ich aufbaute schon sehr reif.
-
-Habe mehrere redhat linux terminal server für webhosten per nginx als reverse proxy mit pm2 für die processe. 
-Mehrere datenbank server mssql mit jeweils mehreren datenbanken.
-Github Enterprise server wo ich admin in einer Organisation bin mit über 126 Repositories und 50 member. 
-
-
-Nextjs, React, TypeScript/JavaScript, Prisma ORM, tailwindcss shadcn, firmenspezifische componenten und Farben. Template mit utility funktionen, linting formatierungen erst mit prettier und eslint dann mit biome. Regelwerk für cleancode. 
-
-privat bilde ich mich sehr gern weiter ich schaue jeden tag beim fruhstueck ein video auf youtube was mit aktuellem code beschäftigt. auch so mache ich viele tech und analytische bezogene projecte. Baue meine eigene Tastaturen aus github. beschäftige mich mit den wissenschaftlichsten tastatur layout. habe umgestellt auf colemak d-h layout. besitze eine lötstation und lote damit eigene Pcbs leiterplatten für tastaturen. Totem 38 Keys von geigeigeist https://github.com/GEIGEIGEIST/TOTEM. und [Anywhy/ ](https://github.com/anywhy-io/flake) diese werden mit C in ZMK programmiert. ich habe mir ein home Server aufgebaut mit proxmox wo ich pihole drauf laufen habe ein NAS. ein Home assistant server mit sämtlichen Zigbee geräten ist mein ganze wohnung automatisiert. 
-
-Selber bin ich sehr lange gereist hatte ein naja eher 2 sabbat jahre genommen und bin in sämtlichen ländern und kontinenten gereist. die meiste zeit in Südamerika aber auch in Asien und Europa. wo ich mir selbst spanisch beibrachte. und meine jetzige Frau kennenlernte. Ich gehe gern Wandern zum ausgleich und dann auch gern schon mal 600km einige wochenlang.Den bekannten Camino de Santiago habe ich schon 2 mal gemacht. 
-
-ich bin recht froh dass ich meine lernzeit noch vor Ai gewesen ist sodass ich die basics alle richtig verstanden habe. Nun fällt mir gleicha auf wenn die ai unsinn erzeugt. zu ai muss ich nochmal genau sagen das ich es schon sehr nutze und ich weiss genau wie man prompten muss um gute code zu bekommen. es geht einfach schneller. 
- 
+Beruflicher Werdegang
+Ursprünglich komme ich aus dem Handwerk: Nach meiner Ausbildung in der Wasserversorgung habe ich mich dort in Elektronik und Steuerungstechnik vertieft. Von 2018 bis 2021 arbeitete ich in Berlin bei einem Leiterplattenhersteller an alten Steuerungen und manuellen Schaltschränken. Dort fungierte ich als Ansprechpartner vor Ort für eine externe Firma, da ich die Steuerung der Anlage im Detail kannte. Gemeinsam haben wir das System über zwei Jahre hinweg in eine moderne, vollautomatische SPS-Steuerung überführt.
+Dabei entdeckte ich mein Interesse am Programmieren und setzte erste Hobbyprojekte um. Um dies zum Beruf zu machen, ging ich nach Nürnberg zur Robert Bosch GmbH und absolvierte eine Ausbildung zum Fachinformatiker für Anwendungsentwicklung. Durch Vorwissen und Ehrgeiz konnte ich die Ausbildung auf 2,5 Jahre verkürzen und mit Auszeichnung abschließen.
+Schon während der Ausbildung begann ich, die kaum vorhandene Softwareentwicklung am Standort zu modernisieren und auszubauen. Zuvor gab es lediglich 2–3 kleine .NET C# Webseiten. Ich habe diese migriert, übersetzt, optimiert und so schrittweise das JavaScript-Ökosystem eingeführt. Schließlich erhielt ich die erste Vollzeitstelle als Programmierer an diesem Standort.
+Tech-Stack & Infrastruktur
+Das System, das ich aufgebaut habe, ist mittlerweile sehr ausgereift. Ich betreue mehrere Red Hat Linux Terminal-Server für das Webhosting (Nginx als Reverse Proxy, PM2 für Prozessmanagement) sowie mehrere MSSQL-Datenbankserver. Zudem administriere ich einen GitHub Enterprise Server mit über 126 Repositories und 50 Mitgliedern.
+Mein Tech-Stack umfasst Next.js, React, TypeScript, Prisma ORM und Tailwind CSS (shadcn). Ich nutze firmenspezifische Komponenten, Templates mit Utility-Funktionen sowie Linting/Formatierung (initial Prettier/ESLint, jetzt Biome) und ein festes Regelwerk für Clean Code.
+Privates & Weiterbildung
+Privat bilde ich mich leidenschaftlich gern weiter; schon beim Frühstück schaue ich Videos zu aktuellen Code-Themen. Auch sonst setze ich viele technische und analytische Projekte um. Ich baue meine eigenen Tastaturen (Open Source Hardware von GitHub) und beschäftige mich mit ergonomischen Layouts (Umstellung auf Colemak-DH). Mit meiner Lötstation fertige ich eigene PCBs, wie das Totem 38 Keys oder Anywhy, die ich in C mit ZMK programmiere. Zudem betreibe ich einen Home-Server mit Proxmox, auf dem Pi-hole, ein NAS und Home Assistant laufen, womit ich über Zigbee-Geräte meine gesamte Wohnung automatisiert habe.
+Reisen & Persönliches
+Ich bin viel gereist und habe mir gut zwei Sabbatjahre genommen, um verschiedene Länder und Kontinente zu erkunden – die meiste Zeit davon in Südamerika, aber auch in Asien und Europa. Dabei habe ich mir selbst Spanisch beigebracht und meine jetzige Frau kennengelernt. Zum Ausgleich gehe ich gerne wandern, auch mal Strecken von 600 km über mehrere Wochen. Den Jakobsweg (Camino de Santiago) bin ich bereits zweimal gelaufen.
+Einstellung zu KI
+Ich bin froh, dass meine Lernphase noch vor dem großen KI-Zeitalter lag. So habe ich alles "auf die harte Tour" über Dokumentationen, Stack Overflow und GitHub gelernt. Dadurch fällt es mir heute sofort auf, wenn eine KI unsinnigen Code erzeugt. Dennoch nutze ich KI intensiv als Werkzeug; ich weiß genau, wie man prompten muss, um guten Code zu erhalten – es beschleunigt die Arbeit einfach enorm.
+Sprachen & Herkunft
+Geboren bin ich in Elmshorn, meine Muttersprache ist Deutsch. Durch meine Reisen spreche ich recht gut Spanisch. Englisch spreche und lese ich täglich, da es zu Hause mit meiner Frau unsere Hauptsprache ist.
+Version 2: Kurz & Strukturiert (Optimiert für Profile wie LinkedIn/Xing)
+Hier ist eine Variante, die etwas stichpunktartiger und scannbarer ist, falls du die Texte für ein Profilfeld nutzen möchtest.
+Über mich
+Vom Handwerker zum Full-Stack Developer: Mein Weg führte über die Steuerungstechnik (SPS) zur Leidenschaft für Code. Nach meiner mit Auszeichnung abgeschlossenen Ausbildung bei Bosch habe ich dort die moderne Webentwicklung am Standort Nürnberg von Grund auf etabliert.
+Tech-Stack & Skills
+Frontend/Backend: Next.js, React, TypeScript, Prisma ORM, Tailwind CSS, shadcn/ui.
+Quality: Biome (Linting/Format), Clean Code Prinzipien.
+Infrastructure: Red Hat Linux, Nginx, PM2, MSSQL, GitHub Enterprise Admin (120+ Repos, 50 User).
+Workflow: KI-gestützte Entwicklung mit fundiertem Basiswissen (Dokumentation/Debugging First).
+Projekte & Interessen
+Hardware: Bau von Custom Mechanical Keyboards (Löten von PCBs, ZMK Firmware in C, Colemak-DH Layout).
+Home Lab: Proxmox Server, Pi-hole, NAS, Home Assistant (Zigbee Automatisierung).
+Reisen & Outdoor: 2 Sabbatjahre (Südamerika/Asien), Spanisch im Selbststudium gelernt, Fernwandern (2x Jakobsweg).
+Sprachen
+Deutsch (Muttersprache)
+Englisch (Verhandlungssicher, tägliche Nutzung)
+Spanisch (Fließend)
 
 ***
 
