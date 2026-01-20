@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion"
 import { ChevronRightIcon } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 import React from "react"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardHeader } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
@@ -18,6 +18,7 @@ type ResumeCardProps = {
   badges?: readonly string[]
   period: string
   description?: string
+  logoClassName?: string
 }
 
 export const ResumeCard = ({
@@ -29,6 +30,7 @@ export const ResumeCard = ({
   badges,
   period,
   description,
+  logoClassName,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false)
 
@@ -46,20 +48,19 @@ export const ResumeCard = ({
       onClick={handleClick}
     >
       <Card className='flex'>
-        <div className='flex-none'>
-          <Avatar className='m-auto size-12 border bg-muted-background dark:bg-foreground'>
-            <AvatarImage
-              alt={altText}
-              className='object-contain'
-              src={logoUrl}
-            />
-            <AvatarFallback>{altText[0]}</AvatarFallback>
-          </Avatar>
+        <div className='flex-none pl-2'>
+          <Image
+            alt={altText}
+            className={cn("h-10 max-w-40 object-contain", logoClassName)}
+            height={40}
+            src={logoUrl}
+            width={200}
+          />
         </div>
-        <div className='group ml-4 grow flex-col items-center'>
+        <div className='group ml-4 grow flex-col items-start'>
           <CardHeader>
             <div className='flex items-center justify-between gap-x-2 text-base'>
-              <h3 className='inline-flex items-center justify-center font-semibold text-xs leading-none sm:text-sm'>
+              <h3 className='inline-flex items-center gap-x-1 font-semibold text-xs leading-none sm:text-sm'>
                 {title}
                 {badges && (
                   <span className='inline-flex gap-x-1'>

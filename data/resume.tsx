@@ -1,41 +1,49 @@
-import { HomeIcon, NotebookIcon } from "lucide-react"
+import {
+  ArrowRightLeft,
+  Award,
+  HomeIcon,
+  LayoutTemplate,
+  NotebookIcon,
+  Server,
+} from "lucide-react"
 import { Icons } from "@/components/icons"
 
 export const DATA = {
   name: "Marcel Park",
   initials: "MP",
   url: "https://marcelpark.dev",
-  location: "Nuremberg, Germany",
+  location: "Nürnberg, Deutschland",
   locationLink: "https://www.google.com/maps/place/Nuremberg",
   description:
-    "Software Engineer and Traveler. I love building things and helping people.",
+    "Full-Stack Solution Architect & Lead Developer. Ich bringe Digitalisierung voran – vom Server-Rack bis zur Benutzeroberfläche.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+    "Ursprünglich komme ich aus dem Handwerk: Nach meiner Ausbildung in der Wasserversorgung (ebenfalls mit Auszeichnung) nahm ich mir von 2016 bis 2018 zwei Sabbatjahre, um die Welt zu bereisen, Spanisch autodidaktisch zu lernen und in verschiedensten Jobs zu arbeiten. Danach ging ich nach Berlin zu HMP Heidenhain Microprint – einem Leiterplattenhersteller – und überführte dort gemeinsam mit einem externen Team ein altes Steuerungssystem in eine vom Computer bedienbare, vollautomatische SPS-Steuerung. Dabei entdeckte ich meine Leidenschaft fürs Programmieren und wechselte zur Robert Bosch GmbH nach Nürnberg, um eine Ausbildung zum Fachinformatiker für Anwendungsentwicklung zu absolvieren – verkürzt auf 2,5 Jahre und mit Auszeichnung abgeschlossen. Die nicht vorhandene Webentwicklungsstruktur am Standort baute ich quasi im Alleingang auf und bekam die erste Stelle als Vollzeitentwickler in diesem Industrie-Fertigungsstandort.",
   avatarUrl: "/me.png",
   skills: [
     "React",
     "Next.js",
-    "Javascript",
-    "Typescript",
+    "TypeScript",
+    "JavaScript",
     "Node.js",
     "Python",
     "SQL",
-    "SQL Server",
-    "Postgres",
-    "Linux",
-    "Redhat",
-    "Windows Server",
+    "MSSQL",
+    "Prisma",
+    "Linux (Red Hat)",
+    "NGINX",
+    "PM2",
+    "GitHub Enterprise",
     "C#",
     "Blazor",
     ".NET",
+    "Tailwind CSS",
   ],
   navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/", icon: HomeIcon, label: "Startseite" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "marcel_park@gmx.de",
-    // tel: "+49 ",
     social: {
       GitHub: {
         name: "GitHub",
@@ -44,10 +52,9 @@ export const DATA = {
         navbar: true,
       },
       email: {
-        name: "Send Email",
+        name: "E-Mail senden",
         url: "#",
         icon: Icons.email,
-
         navbar: false,
       },
     },
@@ -55,177 +62,209 @@ export const DATA = {
 
   work: [
     {
-      company: "Atomic Finance",
-      href: "https://atomic.finance",
-      badges: [],
-      location: "Remote",
-      title: "Bitcoin Protocol Engineer",
-      logoUrl: "/atomic.png",
-      start: "May 2021",
-      end: "Oct 2022",
+      company: "Robert Bosch GmbH",
+      href: "https://www.bosch.de",
+      badges: ["Full-Time"],
+      location: "Nürnberg",
+      title: "Full-Stack Developer & Solution Architect",
+      logoUrl: "/bosch-invented-for-life.svg",
+      logoClassName: "dark:bg-foreground px-3 py-1.5 rounded",
+      start: "2021",
+      end: "heute",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "Betreue mehrere Red Hat Linux Terminal-Server (NGINX, PM2) sowie MSSQL-Datenbankserver. Administriere einen GitHub Enterprise Server mit über 126 Repositories und 50 Mitgliedern. Entwickle komplexe Webanwendungen mit Next.js, React, TypeScript und Prisma ORM – teilweise Bosch-weit bzw. weltweit genutzt. Habe Legacy C# Blazor Projekte auf moderne JavaScript-Frameworks migriert und ein standortweites Web-Template mit Bosch Corporate Design erstellt.",
     },
     {
-      company: "Shopify",
-      badges: [],
-      href: "https://shopify.com",
-      location: "Remote",
-      title: "Software Engineer",
-      logoUrl: "/shopify.svg",
-      start: "January 2021",
-      end: "April 2021",
+      company: "HMP Heidenhain Microprint",
+      badges: ["Full-Time"],
+      href: "https://www.hmp-heidenhain.de/",
+      location: "Berlin",
+      title: "Elektronik & Steuerungstechnik",
+      logoUrl: "/hmp heidenhain-microprint768x131.png",
+      start: "2018",
+      end: "2021",
+      logoClassName: "bg-[#706F6F] py-1.5 rounded max-w-58",
       description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+        "Arbeit an alten Steuerungen und manuellen Schaltschränken. Fungierte als Ansprechpartner vor Ort für eine externe Firma zur Modernisierung der Anlagensteuerung. Gemeinsam wurde das System über zwei Jahre in eine vom Computer bedienbare, vollautomatische SPS-Steuerung überführt.",
     },
     {
-      company: "Nvidia",
-      href: "https://nvidia.com/",
-      badges: [],
-      location: "Santa Clara, CA",
-      title: "Software Engineer",
-      logoUrl: "/nvidia.png",
-      start: "January 2020",
-      end: "April 2020",
+      company: "Stadtwerke Elmshorn",
+      badges: ["Full-Time"],
+      href: "https://www.stadtwerke-elmshorn.de/",
+      location: "Elmshorn",
+      title: "Facharbeiter & Ausbildung (Wasserversorgung)",
+      logoClassName: "dark:bg-foreground px-0 dark:py-0.5 rounded max-w-45",
+      logoUrl: "/stadtwerke-elmshorn.svg",
+      start: "2012",
+      end: "2016",
       description:
-        "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
+        "Ausbildung und Facharbeit im Bereich Wasserversorgung mit Schwerpunkten in Chemie, Elektro, Metall, Steuerungstechnik und Laboranalysen. Ausbildung mit Auszeichnung abgeschlossen.",
     },
   ],
   education: [
     {
-      school: "University of Waterloo",
-      href: "https://uwaterloo.ca",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
-      logoUrl: "/waterloo.png",
-      start: "2016",
-      end: "2021",
+      school: "Robert Bosch GmbH",
+      href: "https://www.bosch.de",
+      degree:
+        "Fachinformatiker für Anwendungsentwicklung (verkürzt, mit Auszeichnung)",
+      logoUrl: "/bosch-invented-for-life.svg",
+      start: "2021",
+      end: "2023",
     },
     {
-      school: "Wilfrid Laurier University",
-      href: "https://wlu.ca",
-      degree: "Bachelor's Degree of Business Administration (BBA)",
-      logoUrl: "/laurier.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "/ib.png",
+      school: "Stadtwerke Elmshorn",
+      href: "#",
+      degree: "Fachkraft für Wasserversorgungstechnik (mit Auszeichnung)",
+      logoUrl: "/stadtwerke-elmshorn.svg",
       start: "2012",
-      end: "2016",
+      end: "2015",
     },
   ],
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      title: "drink2art",
+      href: "https://www.drink2art.com/",
+      dates: "2024 - heute",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "Eine Plattform, die es Gästen ermöglicht, mithilfe von KI einzigartige Kunstwerke direkt am Tisch zu kreieren. Durch automatisches Branding mit dem Logo der Bar wird die Markenbindung gestärkt und organisches Marketing auf Social Media gefördert. Basiert auf modernen KI-Modellen wie Googles Imagen.",
       technologies: [
         "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
+        "TypeScript",
+        "Tailwind CSS",
         "Shadcn UI",
-        "Magic UI",
+        "Google Imagen",
+        "Vercel",
       ],
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
+          href: "https://www.drink2art.com/",
           icon: <Icons.globe className='size-3' />,
         },
       ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
-    },
-    {
-      title: "Magic UI",
-      href: "https://magicui.design",
-      dates: "June 2023 - Present",
-      active: true,
-      description:
-        "Designed, developed and sold animated UI components for developers.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://magicui.design",
-          icon: <Icons.globe className='size-3' />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
-          icon: <Icons.github className='size-3' />,
-        },
-      ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      image: "/drink2art-landingPage.png",
+      video: "",
     },
   ],
-  hackathons: [
+  boschProjects: [
     {
-      title: "Make School's Student App Competition 2017",
-      dates: "May 19th - 21st, 2017",
-      location: "International",
-      description: "Improved PocketDoc and submitted to online competition",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/make-school-hackathon.png",
-      win: "Top 10 Finalist | Honourable Mention",
+      title: "Manufacturing & Maintenance Suite (MMS)",
+      role: "Sole Developer (End-to-End)",
+      scope: "Werk NuP1 Produktion & Service",
+      description:
+        "Umfassendes Live-Monitoring und Incident-Management-System. Echtzeit-Tracking von Produktionslinien mit Heatmap-Visualisierung. SAP-Integration für direkte Issue-Erstellung. KI-gestützte Reparaturempfehlungen basierend auf 20 Jahren Issue-Daten.",
+    },
+    {
+      title: "Strategic Personnel Planning (SPP)",
+      role: "Lead Developer",
+      scope: "HR-Abteilungen",
+      description:
+        "Strategisches HR-Tool zur dynamischen Personalplanung. Prognose von Renteneintritten, Vertragsendigungen und Trainee-Übernahmen. Dashboard zur Gap-Analyse zwischen aktuellem und benötigtem Personal.",
+    },
+    {
+      title: "ITM-Location CMDB (Device Finder)",
+      role: "Sole Developer",
+      scope: "Werk NuP1",
+      description:
+        "Interaktive 2D-Raumkarte des Werks NuP1 mit über 3.000 gepinnten IT-Geräten. Geräte sind mit echten Koordinaten, Bildern und Beschreibungen verknüpft.",
+    },
+    {
+      title: "My Stuff – Interner Marktplatz",
+      role: "Contributor / Lead Developer",
+      scope: "Bosch-weit (RB)",
+      description:
+        "Sichere interne Austauschplattform für gebrauchte Artikel (unter 25.000€). Erfolgreich auf Bosch-weite Nutzung skaliert – weltweit ca. 400.000 Mitarbeiter.",
+    },
+    {
+      title: "ASM-Hub (Application Lifecycle Management)",
+      role: "Developer / Contributor",
+      scope: "Global (NuP1 → PS → BBM → RB)",
+      description:
+        "Zentrale Plattform für Software-Lifecycle-Management. Dokumentenhistorie, Templates und Versionskontrolle. Integration mit LeanIX für Enterprise Architecture Compliance.",
+    },
+  ],
+  personalMilestones: [
+    {
+      title: "Custom Mechanical Keyboards & Ergonomie",
+      dates: "2025 - 2026",
+      location: "Privat",
+      description:
+        "Bau eigener Tastaturen mit Open Source Hardware von GitHub. Umstellung auf ergonomisches Colemak-DH Layout. Fertigung eigener PCBs (Totem 38 Keys, Anywhy) mit Lötstation, programmiert in C mit ZMK.",
+      image: "/TOTEM_black_top.png",
       links: [
         {
-          title: "Medium Article",
-          icon: <Icons.globe className='h-4 w-4' />,
-          href: "https://medium.com/make-school/the-winners-of-make-schools-student-app-competition-2017-a6b0e72f190a",
-        },
-        {
-          title: "Devpost",
-          icon: <Icons.globe className='h-4 w-4' />,
-          href: "https://devpost.com/software/pocketdoc-react-native",
-        },
-        {
-          title: "YouTube",
-          icon: <Icons.youtube className='h-4 w-4' />,
-          href: "https://www.youtube.com/watch?v=XwFdn5Rmx68",
-        },
-        {
-          title: "Source",
+          title: "Anywhy Flake",
           icon: <Icons.github className='h-4 w-4' />,
-          href: "https://github.com/dillionverma/pocketdoc-react-native",
+          href: "https://github.com/anywhy-io/flake",
+        },
+        {
+          title: "TOTEM",
+          icon: <Icons.github className='h-4 w-4' />,
+          href: "https://github.com/GEIGEIGEIST/TOTEM",
         },
       ],
     },
     {
-      title: "Portal Hackathon",
-      dates: "October 29, 2016",
-      location: "Kingston, Ontario",
+      title: "drink2art.com Launch",
+      dates: "2025",
+      location: "Privat",
       description:
-        "Developed an internal widget for uploading assignments using Waterloo's portal app",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/portal-hackathon.png",
+        "Launch meiner eigenen KI-Kunstplattform für Bars. Gäste können mit KI einzigartige Kunstwerke erstellen, die automatisch mit dem Bar-Logo gebrandet werden.",
+      image: "/drink2art.png",
       links: [
         {
-          title: "Source",
-          icon: <Icons.github className='h-4 w-4' />,
-          href: "https://github.com/UWPortalSDK/crowmark",
+          title: "Website",
+          icon: <Icons.globe className='h-4 w-4' />,
+          href: "https://www.drink2art.com/",
         },
       ],
+    },
+    {
+      title: "Fachinformatiker-Ausbildung mit Auszeichnung",
+      dates: "2023",
+      location: "Robert Bosch GmbH, Nürnberg",
+      description:
+        "Ausbildung zum Fachinformatiker für Anwendungsentwicklung auf 2,5 Jahre verkürzt und mit Auszeichnung abgeschlossen.",
+      icon: Award,
+      links: [],
+    },
+    {
+      title: "Home-Server & Smart Home Automation",
+      dates: "2022 - heute",
+      location: "Privat",
+      description:
+        "Betrieb eines Home-Servers mit Proxmox: Pi-hole, NAS und Home Assistant. Vollständige Wohnungsautomatisierung über Zigbee-Geräte.",
+      icon: Server,
+      image: "/ha.svg",
+      links: [],
+    },
+    {
+      title: "GitHub Enterprise Server Administrator",
+      dates: "2022 - heute",
+      location: "Robert Bosch GmbH",
+      description:
+        "Administration der nup1-development Organisation mit über 126 Repositories und 50 Mitgliedern. Verantwortlich für Repository-Management, Zugriffssteuerung und Sicherheitsrichtlinien.",
+      icon: Icons.github,
+      links: [],
+    },
+    {
+      title: "Enterprise Web Template & Design System",
+      dates: "2022 - heute",
+      location: "Robert Bosch GmbH",
+      description:
+        "Entwicklung eines wiederverwendbaren Web-Templates mit Entra ID Authentifizierung, Sicherheitsfeatures und vollständigem Bosch Corporate Design. Wird kontinuierlich aktualisiert und von Teams übernommen.",
+      icon: LayoutTemplate,
+      links: [],
+    },
+    {
+      title: "Legacy C# → JavaScript Migration",
+      dates: "2021 - 2022",
+      location: "Robert Bosch GmbH",
+      description:
+        "Migration von Legacy C# Blazor Webseiten auf moderne JavaScript-Frameworks (Next.js/React). Einführung des JavaScript-Ökosystems am Standort.",
+      icon: ArrowRightLeft,
+      links: [],
     },
   ],
 } as const

@@ -14,22 +14,26 @@ type Props = {
     title: string
     href: string
   }[]
+  icon?: React.ElementType
 }
 
-export function HackathonCard({
+export function MilestoneCard({
   title,
   description,
   dates,
   location,
   image,
   links,
+  icon: Icon,
 }: Props) {
   return (
     <li className='relative ml-10 py-4'>
       <div className='absolute top-2 -left-16 flex items-center justify-center rounded-full bg-white'>
         <Avatar className='m-auto size-12 border'>
           <AvatarImage alt={title} className='object-contain' src={image} />
-          <AvatarFallback>{title[0]}</AvatarFallback>
+          <AvatarFallback className='bg-white'>
+            {Icon ? <Icon className='size-6 text-zinc-800' /> : title[0]}
+          </AvatarFallback>
         </Avatar>
       </div>
       <div className='flex flex-1 flex-col justify-start gap-1'>

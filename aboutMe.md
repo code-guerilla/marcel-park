@@ -10,9 +10,6 @@ Mein Tech-Stack umfasst Next.js, React, TypeScript, Prisma ORM und Tailwind CSS 
 Privates & Weiterbildung
 Privat bilde ich mich leidenschaftlich gern weiter; schon beim Frühstück schaue ich Videos zu aktuellen Code-Themen. Auch sonst setze ich viele technische und analytische Projekte um. Ich baue meine eigenen Tastaturen (Open Source Hardware von GitHub) und beschäftige mich mit ergonomischen Layouts (Umstellung auf Colemak-DH). Mit meiner Lötstation fertige ich eigene PCBs, wie das Totem 38 Keys oder Anywhy, die ich in C mit ZMK programmiere. Zudem betreibe ich einen Home-Server mit Proxmox, auf dem Pi-hole, ein NAS und Home Assistant laufen, womit ich über Zigbee-Geräte meine gesamte Wohnung automatisiert habe.
 
-Eigene Projekte
-Ein aktuelles Projekt von mir ist [drink2art](https://www.drink2art.com/), eine Plattform, die es Gästen ermöglicht, mithilfe von KI einzigartige Kunstwerke direkt am Tisch zu kreieren. Durch das automatische Branding mit dem Logo der Bar wird die Markenbindung gestärkt und organisches Marketing auf Social Media gefördert. Technisch basiert das Projekt auf modernen Modellen wie Googles Imagen. Ich nutze die Webseite primär als Experimentierfeld, um neueste Technologien auszuprobieren; bewähren sie sich dort, fließen diese Erfahrungen direkt in meine Hauptarbeit bei Bosch ein.
-
 Reisen & Persönliches
 Ich bin viel gereist und habe mir gut zwei Sabbatjahre genommen, um verschiedene Länder und Kontinente zu erkunden – die meiste Zeit davon in Südamerika, aber auch in Asien und Europa. Dabei habe ich mir selbst Spanisch beigebracht und meine jetzige Frau kennengelernt. Zum Ausgleich gehe ich gerne wandern, auch mal Strecken von 600 km über mehrere Wochen. Den Jakobsweg (Camino de Santiago) bin ich bereits zweimal gelaufen.
 Einstellung zu KI
@@ -20,7 +17,11 @@ Ich bin froh, dass meine Lernphase noch vor dem großen KI-Zeitalter lag. So hab
 Sprachen & Herkunft
 Geboren bin ich in Elmshorn, meine Muttersprache ist Deutsch. Durch meine Reisen spreche ich recht gut Spanisch. Englisch spreche und lese ich täglich, da es zu Hause mit meiner Frau unsere Hauptsprache ist.
 
+Eigene Projekte
+Ein aktuelles Projekt von mir ist [drink2art](https://www.drink2art.com/), eine Plattform, die es Gästen ermöglicht, mithilfe von KI einzigartige Kunstwerke direkt am Tisch zu kreieren. Durch das automatische Branding mit dem Logo der Bar wird die Markenbindung gestärkt und organisches Marketing auf Social Media gefördert. Technisch basiert das Projekt auf modernen Modellen wie Googles Imagen. Ich nutze die Webseite primär als Experimentierfeld, um neueste Technologien auszuprobieren; bewähren sie sich dort, fließen diese Erfahrungen direkt in meine Hauptarbeit bei Bosch ein.
 
+
+Meine Arbeits Robert Bosch Projekte
 ***
 
 # Professional Portfolio
@@ -111,6 +112,9 @@ A unified platform for managing the entire lifecycle of software projects. Initi
 * **Compliance & Automation:** Automated import of measures via operator self-checks and integration with **LeanIX** for enterprise architecture compliance.
 * **Link:** `https://rb-bbm-asm.app.bosch.com`
 
+
+
+now with links for bosch specific offline internal usage:
 ---
 
 ***
