@@ -1,5 +1,3 @@
-cv
-
 Marcel Park
 
 Beruflicher Werdegang
@@ -11,29 +9,17 @@ Das System, das ich aufgebaut habe, ist mittlerweile sehr ausgereift. Ich betreu
 Mein Tech-Stack umfasst Next.js, React, TypeScript, Prisma ORM und Tailwind CSS (shadcn). Ich nutze firmenspezifische Komponenten, Templates mit Utility-Funktionen sowie Linting/Formatierung (initial Prettier/ESLint, jetzt Biome) und ein festes Regelwerk für Clean Code.
 Privates & Weiterbildung
 Privat bilde ich mich leidenschaftlich gern weiter; schon beim Frühstück schaue ich Videos zu aktuellen Code-Themen. Auch sonst setze ich viele technische und analytische Projekte um. Ich baue meine eigenen Tastaturen (Open Source Hardware von GitHub) und beschäftige mich mit ergonomischen Layouts (Umstellung auf Colemak-DH). Mit meiner Lötstation fertige ich eigene PCBs, wie das Totem 38 Keys oder Anywhy, die ich in C mit ZMK programmiere. Zudem betreibe ich einen Home-Server mit Proxmox, auf dem Pi-hole, ein NAS und Home Assistant laufen, womit ich über Zigbee-Geräte meine gesamte Wohnung automatisiert habe.
+
+Eigene Projekte
+Ein aktuelles Projekt von mir ist [drink2art](https://www.drink2art.com/), eine Plattform, die es Gästen ermöglicht, mithilfe von KI einzigartige Kunstwerke direkt am Tisch zu kreieren. Durch das automatische Branding mit dem Logo der Bar wird die Markenbindung gestärkt und organisches Marketing auf Social Media gefördert. Technisch basiert das Projekt auf modernen Modellen wie Googles Imagen. Ich nutze die Webseite primär als Experimentierfeld, um neueste Technologien auszuprobieren; bewähren sie sich dort, fließen diese Erfahrungen direkt in meine Hauptarbeit bei Bosch ein.
+
 Reisen & Persönliches
 Ich bin viel gereist und habe mir gut zwei Sabbatjahre genommen, um verschiedene Länder und Kontinente zu erkunden – die meiste Zeit davon in Südamerika, aber auch in Asien und Europa. Dabei habe ich mir selbst Spanisch beigebracht und meine jetzige Frau kennengelernt. Zum Ausgleich gehe ich gerne wandern, auch mal Strecken von 600 km über mehrere Wochen. Den Jakobsweg (Camino de Santiago) bin ich bereits zweimal gelaufen.
 Einstellung zu KI
 Ich bin froh, dass meine Lernphase noch vor dem großen KI-Zeitalter lag. So habe ich alles "auf die harte Tour" über Dokumentationen, Stack Overflow und GitHub gelernt. Dadurch fällt es mir heute sofort auf, wenn eine KI unsinnigen Code erzeugt. Dennoch nutze ich KI intensiv als Werkzeug; ich weiß genau, wie man prompten muss, um guten Code zu erhalten – es beschleunigt die Arbeit einfach enorm.
 Sprachen & Herkunft
 Geboren bin ich in Elmshorn, meine Muttersprache ist Deutsch. Durch meine Reisen spreche ich recht gut Spanisch. Englisch spreche und lese ich täglich, da es zu Hause mit meiner Frau unsere Hauptsprache ist.
-Version 2: Kurz & Strukturiert (Optimiert für Profile wie LinkedIn/Xing)
-Hier ist eine Variante, die etwas stichpunktartiger und scannbarer ist, falls du die Texte für ein Profilfeld nutzen möchtest.
-Über mich
-Vom Handwerker zum Full-Stack Developer: Mein Weg führte über die Steuerungstechnik (SPS) zur Leidenschaft für Code. Nach meiner mit Auszeichnung abgeschlossenen Ausbildung bei Bosch habe ich dort die moderne Webentwicklung am Standort Nürnberg von Grund auf etabliert.
-Tech-Stack & Skills
-Frontend/Backend: Next.js, React, TypeScript, Prisma ORM, Tailwind CSS, shadcn/ui.
-Quality: Biome (Linting/Format), Clean Code Prinzipien.
-Infrastructure: Red Hat Linux, Nginx, PM2, MSSQL, GitHub Enterprise Admin (120+ Repos, 50 User).
-Workflow: KI-gestützte Entwicklung mit fundiertem Basiswissen (Dokumentation/Debugging First).
-Projekte & Interessen
-Hardware: Bau von Custom Mechanical Keyboards (Löten von PCBs, ZMK Firmware in C, Colemak-DH Layout).
-Home Lab: Proxmox Server, Pi-hole, NAS, Home Assistant (Zigbee Automatisierung).
-Reisen & Outdoor: 2 Sabbatjahre (Südamerika/Asien), Spanisch im Selbststudium gelernt, Fernwandern (2x Jakobsweg).
-Sprachen
-Deutsch (Muttersprache)
-Englisch (Verhandlungssicher, tägliche Nutzung)
-Spanisch (Fließend)
+
 
 ***
 
