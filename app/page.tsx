@@ -209,9 +209,9 @@ export default function Page() {
                 Want to chat? Just shoot me a dm{" "}
                 <Link
                   className='text-blue-500 hover:underline'
-                  href={DATA.contact.social.X.url}
+                  href={DATA.contact.social.GitHub.url}
                 >
-                  with a direct question on twitter
+                  with a direct question on GitHub
                 </Link>{" "}
                 and I&apos;ll respond whenever I can. I will ignore all
                 soliciting.
