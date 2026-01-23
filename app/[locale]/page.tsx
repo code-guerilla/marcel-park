@@ -1,3 +1,4 @@
+import { Briefcase, MapPin } from "lucide-react"
 import Link from "next/link"
 import Markdown from "react-markdown"
 import BlurFade from "@/components/magicui/blur-fade"
@@ -30,6 +31,25 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
+              <BlurFade delay={BLUR_FADE_DELAY}>
+                <Link
+                  className='flex items-center gap-2 text-muted-foreground text-sm hover:text-foreground hover:underline'
+                  href={DATA.locationLink}
+                  target='_blank'
+                >
+                  <MapPin className='size-3.5' />
+                  {DATA.location}
+                </Link>
+              </BlurFade>
+              <BlurFade delay={BLUR_FADE_DELAY * 1.5}>
+                <Link
+                  className='mt-2 inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1 font-medium text-green-600 text-xs transition-colors hover:bg-green-500/20 dark:text-green-400'
+                  href='#contact'
+                >
+                  <Briefcase className='size-3' />
+                  Offen für Jobangebote
+                </Link>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className='size-28 border'>
@@ -92,6 +112,9 @@ export default function Page() {
                 altText={education.school}
                 href={education.href}
                 key={education.school}
+                logoClassName={
+                  (education as { logoClassName?: string }).logoClassName
+                }
                 logoUrl={education.logoUrl}
                 period={`${education.start} - ${education.end}`}
                 subtitle={education.degree}
@@ -252,15 +275,17 @@ export default function Page() {
                 Kontakt
               </div>
               <h2 className='font-bold text-3xl tracking-tighter sm:text-5xl'>
-                Kontaktiere mich
+                Lass uns zusammenarbeiten
               </h2>
               <p className='mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
-                Du möchtest mit mir in Kontakt treten? Schreib mir einfach eine{" "}
+                Ich bin aktuell auf der Suche nach neuen Herausforderungen und
+                offen für spannende Jobangebote. Du hast eine interessante
+                Stelle oder ein Projekt? Schreib mir einfach eine{" "}
                 <Link
                   className='text-blue-500 hover:underline'
-                  href={DATA.contact.social.GitHub.url}
+                  href={`mailto:${DATA.contact.email}`}
                 >
-                  Nachricht auf GitHub
+                  E-Mail
                 </Link>{" "}
                 und ich melde mich so schnell wie möglich.
               </p>

@@ -1,0 +1,203 @@
+{
+  "common": {
+    "today": "present",
+    "website": "Website"
+  },
+  "navbar": {
+    "home": "Home",
+    "parkDigitalSolutions": "Park Digital Solutions",
+    "resume": "Resume",
+    "projects": "Projects",
+    "contact": "Contact",
+    "theme": "Theme",
+    "language": "Language"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy"
+  },
+  "hero": {
+    "greeting": "Hey, I'm {firstName} 👋",
+    "description": "Full-Stack Solution Architect & Lead Developer. I drive digitalization – from server to user interface.",
+    "openForWork": "Open to job opportunities"
+  },
+  "about": {
+    "title": "About me",
+    "summary": "I originally come from the trades: After my apprenticeship in water supply, I took two sabbatical years from 2016 to 2018 to travel the world, teach myself Spanish, and work various jobs. Then I went to Berlin to HMP Heidenhain Microprint – a circuit board manufacturer – where, together with an external team, I converted an old control system into a computer-operated, fully automatic PLC control. That's when I discovered my passion for programming and moved to Robert Bosch GmbH in Nuremberg to complete an apprenticeship as an IT specialist for application development – shortened to 2.5 years and completed with distinction, just like my first apprenticeship. I built up the previously almost non-existent web development structure at the site practically single-handedly and got the first full-time developer position at the industrial manufacturing site NuP1. There I develop complex business web applications with Next.js, React, TypeScript and Prisma ORM – some used Bosch-wide or even worldwide."
+  },
+  "work": {
+    "title": "Work Experience",
+    "parkDigitalSolutions": {
+      "title": "Founder & Full-Stack Developer",
+      "description": "Consulting and development of customized software solutions for businesses, clubs, and organizations. Focus on process automation, individual software solutions, and web applications with Next.js and optional AI integrations. Responsible for the entire product lifecycle – from requirements analysis to deployment.",
+      "badges": ["Part-time", "Sole Proprietorship"]
+    },
+    "bosch": {
+      "title": "Full-Stack Developer & Solution Architect",
+      "description": "Managing multiple Red Hat Linux terminal servers (NGINX, PM2) as well as MSSQL database servers. Administering a GitHub Enterprise Server with over 126 repositories and 30+ users. Developing complex web applications with Next.js, React, TypeScript and Prisma ORM – some used Bosch-wide or worldwide. Many smaller scripts and applications that save employees a lot of time. Migrated legacy C# Blazor projects to modern JavaScript frameworks and created a site-wide web template with Bosch corporate design.",
+      "badges": ["Full-time"]
+    },
+    "hmp": {
+      "title": "Water Treatment/Plant Operator + Electronics & Control Engineering",
+      "description": "Plant operator of a water treatment facility until modernization of the plant control. Work on old controls and manual switch cabinets. Served as on-site contact for an external company to modernize the plant control. Together, the system was converted over two years into a computer-controlled, fully automatic PLC system. This was my first exposure to programming and sparked my desire to reorient toward becoming a programmer.",
+      "badges": ["Full-time"]
+    },
+    "stadtwerke": {
+      "title": "Skilled Worker & Apprenticeship (Water Supply)",
+      "description": "Apprenticeship and skilled work in water supply with focus areas in chemistry, electrical, metal, control engineering, and laboratory analysis. Apprenticeship completed with distinction.",
+      "badges": ["Full-time"]
+    }
+  },
+  "education": {
+    "title": "Education",
+    "bosch": {
+      "degree": "IT Specialist for Application Development (shortened, with distinction)"
+    },
+    "stadtwerke": {
+      "degree": "Specialist for Water Supply Technology (with distinction)"
+    }
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "projects": {
+    "badge": "My Projects",
+    "title": "Discover my recent work",
+    "description": "I've worked on various projects, from simple websites to complex web applications. Here are some of my favorites.",
+    "drink2art": {
+      "description": "A platform that enables guests to create unique artworks using AI directly at their table. Through automatic branding with the bar's logo, brand loyalty is strengthened and organic marketing on social media is promoted. Based on modern AI models like Google's Imagen."
+    }
+  },
+  "boschProjects": {
+    "badge": "Bosch Projects",
+    "title": "Internal Business Solutions",
+    "description": "During my time at Bosch, I developed various business-critical web applications that are deployed worldwide or site-wide.",
+    "mms": {
+      "title": "Manufacturing & Maintenance Suite (MMS)",
+      "role": "Sole Developer (End-to-End)",
+      "scope": "Plant NuP1 Production & Service",
+      "description": "Comprehensive live monitoring and incident management system. Real-time tracking of production lines with heatmap visualization. SAP integration for direct issue creation. AI-powered repair recommendations based on 20 years of issue data."
+    },
+    "spp": {
+      "title": "Strategic Personnel Planning (SPP)",
+      "role": "Lead Developer",
+      "scope": "HR Departments",
+      "description": "Strategic HR tool for dynamic workforce planning. Forecasting of retirements, contract endings, and trainee takeovers. Dashboard for gap analysis between current and required personnel."
+    },
+    "deviceFinder": {
+      "title": "ITM-Location CMDB (Device Finder)",
+      "role": "Sole Developer",
+      "scope": "Plant NuP1",
+      "description": "Interactive 2D room map of the NuP1 plant with over 3,000 pinned IT devices. Devices are linked with real coordinates, images, and descriptions."
+    },
+    "myStuff": {
+      "title": "My Stuff – Internal Marketplace",
+      "role": "Contributor / Lead Developer",
+      "scope": "Bosch-wide (RB)",
+      "description": "Secure internal exchange platform for used items (under €25,000). Successfully scaled to Bosch-wide use – approximately 400,000 employees worldwide."
+    },
+    "asmHub": {
+      "title": "ASM-Hub (Application Lifecycle Management)",
+      "role": "Developer / Contributor",
+      "scope": "Global (NuP1 → PS → BBM → RB)",
+      "description": "Central platform for software lifecycle management. Document history, templates, and version control. Integration with LeanIX for Enterprise Architecture Compliance."
+    }
+  },
+  "milestones": {
+    "badge": "Achievements",
+    "title": "I love learning and creating new things",
+    "description": "Throughout my career, I've reached various milestones and taken on responsibilities. From introducing new technologies to administering entire development platforms – here are some highlights.",
+    "keyboards": {
+      "title": "Custom Mechanical Keyboards & Ergonomics",
+      "description": "Building custom keyboards with open source hardware from GitHub. Switched to ergonomic Colemak-DH layout. Manufacturing own PCBs (Totem 38 Keys, Anywhy) with soldering station, programmed in C with ZMK."
+    },
+    "drink2artLaunch": {
+      "title": "drink2art.com Launch",
+      "description": "Launch of my own AI art platform for bars. Guests can create unique artworks with AI that are automatically branded with the bar's logo."
+    },
+    "fiAusbildung": {
+      "title": "IT Specialist Apprenticeship with Distinction",
+      "description": "Apprenticeship as IT specialist for application development shortened to 2.5 years and completed with distinction."
+    },
+    "homeServer": {
+      "title": "Home Server & Smart Home Automation",
+      "description": "Operating a home server with Proxmox: Pi-hole, NAS, and Home Assistant. Complete apartment automation via Zigbee devices."
+    },
+    "githubAdmin": {
+      "title": "GitHub Enterprise Server Administrator",
+      "description": "Administration of the nup1-development organization with over 126 repositories and 50 members. Responsible for repository management, access control, and security policies."
+    },
+    "webTemplate": {
+      "title": "Enterprise Web Template & Design System",
+      "description": "Development of a reusable web template with Entra ID authentication, security features, and complete Bosch corporate design. Continuously updated and adopted by teams."
+    },
+    "legacyMigration": {
+      "title": "Legacy C# → JavaScript Migration",
+      "description": "Migration of legacy C# Blazor websites to modern JavaScript frameworks (Next.js/React). Introduction of the JavaScript ecosystem at the site."
+    }
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Let's work together",
+    "description": "I'm currently looking for new challenges and open to exciting job opportunities. Have an interesting position or project? Just send me an",
+    "email": "email",
+    "descriptionEnd": "and I'll get back to you as soon as possible."
+  },
+  "parkDigitalSolutions": {
+    "hero": {
+      "title": "Park Digital Solutions",
+      "description": "Customized software solutions for your business. Digitalization with heart and mind."
+    },
+    "services": {
+      "title": "My Services",
+      "webDev": {
+        "title": "Custom Web Development",
+        "description": "From simple landing pages to complex web applications. I build performant, scalable solutions with modern technologies like"
+      },
+      "automation": {
+        "title": "Process Automation",
+        "description": "No more Excel chaos and manual data maintenance. I automate your business processes with",
+        "descriptionEnd": ", so you can focus on what matters."
+      },
+      "consulting": {
+        "title": "Consulting & Planning",
+        "description": "I accompany you from the first idea to the finished product. As a",
+        "descriptionEnd": "at Bosch, I learned to translate complex requirements into understandable and actionable concepts."
+      },
+      "fullService": {
+        "title": "Full-Service",
+        "description": "I don't just take care of the code, but also the",
+        "descriptionEnd": ". You get a turnkey solution from a single source."
+      }
+    },
+    "whyMe": {
+      "title": "Why work with me?",
+      "intro": "I'll be honest: I'm just starting out with my own business. But that's exactly",
+      "introHighlight": "your advantage",
+      "focus": {
+        "title": "100% Focus:",
+        "description": "As my first customer, you enjoy my full attention and priority."
+      },
+      "experience": {
+        "title": "Industry Experience:",
+        "description": "I work full-time as a Solution Architect at Robert Bosch GmbH – I know how to build professional software."
+      },
+      "quality": {
+        "title": "Excellent Quality:",
+        "description": "I completed my apprenticeships with distinction. I don't deliver half-measures."
+      },
+      "practical": {
+        "title": "Practitioner Mentality:",
+        "description": "I come from the trades. I speak plainly and deliver results that work."
+      }
+    },
+    "cta": {
+      "badge": "Let's get started",
+      "title": "Ready for the next step?",
+      "description": "Tell me about your project or idea. The initial consultation is completely non-binding and free.",
+      "button": "Inquire now",
+      "cvLink": "Learn more about me in my CV"
+    }
+  }
+}

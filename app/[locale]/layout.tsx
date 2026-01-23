@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 import { ThemeProvider } from "@/components/theme-provider"
 import { DATA } from "@/data/resume"
@@ -7,6 +8,9 @@ import "./globals.css"
 
 import { GeistMono } from "geist/font/mono"
 import { GeistSans } from "geist/font/sans"
+import { notFound } from "next/navigation"
+import { hasLocale, NextIntlClientProvider } from "next-intl"
+import { routing } from "@/i18n/routing"
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
@@ -44,13 +48,19 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+type LayoutProps = {
   children: React.ReactNode
-}>) {
+  params: Promise<{ locale: string }>
+}
+
+export default async function LocaleLayout({ children, params }: LayoutProps) {
+  // Ensure that the incoming `locale` is valid
+  const { locale } = await params
+  if (!hasLocale(routing.locales, locale)) {
+    notFound()
+  }
   return (
-    <html lang='de' suppressHydrationWarning>
+    <html className='scroll-smooth' lang='de' suppressHydrationWarning>
       <body
         className={cn(
           "mx-auto min-h-screen max-w-2xl bg-background px-6 py-12 font-sans antialiased sm:py-24",
@@ -59,7 +69,8 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute='class' defaultTheme='light'>
-          {children}
+          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          <Footer />
           <Navbar />
         </ThemeProvider>
       </body>

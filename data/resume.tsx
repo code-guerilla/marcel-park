@@ -1,9 +1,10 @@
 import {
   ArrowRightLeft,
   Award,
+  Briefcase,
   HomeIcon,
   LayoutTemplate,
-  NotebookIcon,
+  Mail,
   Server,
 } from "lucide-react"
 import { Icons } from "@/components/icons"
@@ -15,9 +16,9 @@ export const DATA = {
   location: "Nürnberg, Deutschland",
   locationLink: "https://www.google.com/maps/place/Nuremberg",
   description:
-    "Full-Stack Solution Architect & Lead Developer. Ich bringe Digitalisierung voran – vom Server-Rack bis zur Benutzeroberfläche.",
+    "Full-Stack Solution Architect & Lead Developer. Ich bringe Digitalisierung voran – vom Server bis zur Benutzeroberfläche.",
   summary:
-    "Ursprünglich komme ich aus dem Handwerk: Nach meiner Ausbildung in der Wasserversorgung (ebenfalls mit Auszeichnung) nahm ich mir von 2016 bis 2018 zwei Sabbatjahre, um die Welt zu bereisen, Spanisch autodidaktisch zu lernen und in verschiedensten Jobs zu arbeiten. Danach ging ich nach Berlin zu HMP Heidenhain Microprint – einem Leiterplattenhersteller – und überführte dort gemeinsam mit einem externen Team ein altes Steuerungssystem in eine vom Computer bedienbare, vollautomatische SPS-Steuerung. Dabei entdeckte ich meine Leidenschaft fürs Programmieren und wechselte zur Robert Bosch GmbH nach Nürnberg, um eine Ausbildung zum Fachinformatiker für Anwendungsentwicklung zu absolvieren – verkürzt auf 2,5 Jahre und mit Auszeichnung abgeschlossen. Die nicht vorhandene Webentwicklungsstruktur am Standort baute ich quasi im Alleingang auf und bekam die erste Stelle als Vollzeitentwickler in diesem Industrie-Fertigungsstandort.",
+    "Ursprünglich komme ich aus dem Handwerk: Nach meiner Ausbildung in der Wasserversorgung nahm ich mir von 2016 bis 2018 zwei Sabbatjahre, um die Welt zu bereisen, Spanisch autodidaktisch zu lernen und in verschiedensten Jobs zu arbeiten. Danach ging ich nach Berlin zu HMP Heidenhain Microprint – einem Leiterplattenhersteller – und überführte dort gemeinsam mit einem externen Team ein altes Steuerungssystem in eine vom Computer bedienbare, vollautomatische SPS-Steuerung. Dabei entdeckte ich meine Leidenschaft fürs Programmieren und wechselte zur Robert Bosch GmbH nach Nürnberg, um eine Ausbildung zum Fachinformatiker für Anwendungsentwicklung zu absolvieren – verkürzt auf 2,5 Jahre und wie schon die erste Ausbildung mit Auszeichnung abgeschlossen. Die vorher kaum vorhandene Webentwicklungsstruktur am Standort baute ich quasi im Alleingang auf und bekam die erste Stelle als Vollzeitentwickler in dem Industrie-Fertigungsstandort NuP1. Dort entwickel ich komplexe Business-Webanwendungen mit Next.js, React, TypeScript und Prisma ORM – teilweise Bosch-weit bzw. weltweit genutzt.",
   avatarUrl: "/me.png",
   skills: [
     "React",
@@ -27,7 +28,6 @@ export const DATA = {
     "Node.js",
     "Python",
     "SQL",
-    "MSSQL",
     "Prisma",
     "Linux (Red Hat)",
     "NGINX",
@@ -40,7 +40,15 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Startseite" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    {
+      href: "/park-digital-solutions",
+      icon: Briefcase,
+      label: "Park Digital Solutions",
+    },
+    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/#work", icon: Award, label: "Lebenslauf" },
+    { href: "/#projects", icon: LayoutTemplate, label: "Projekte" },
+    { href: "/#contact", icon: Mail, label: "Kontakt" },
   ],
   contact: {
     email: "marcel_park@gmx.de",
@@ -53,14 +61,43 @@ export const DATA = {
       },
       email: {
         name: "E-Mail senden",
-        url: "#",
+        url: "mailto:marcel_park@gmx.de",
         icon: Icons.email,
         navbar: false,
       },
     },
   },
+  footer: {
+    rights: "Alle Rechte vorbehalten.",
+    links: [
+      {
+        href: "/imprint",
+        label: "Impressum",
+        target: "_self",
+      },
+      {
+        href: "/privacy",
+        label: "Datenschutz",
+        target: "_self",
+      },
+    ],
+  },
 
   work: [
+    {
+      company: "Park Digital Solutions",
+      href: "https://park-digital-solutions.com",
+      badges: ["Nebenberuflich", "Einzelunternehmen"],
+      location: "Nürnberg",
+      title: "Gründer & Full-Stack Developer",
+      logoUrl: "/park-digital-solutions.png",
+      logoClassName:
+        " dark:bg-foreground w-full object-cover pt-1.5 h-10.5 rounded ",
+      start: "2026",
+      end: "heute",
+      description:
+        "Beratung und Entwicklung von maßgeschneiderten Softwarelösungen für Betriebe, Vereine und Organisationen. Fokus auf Prozessautomatisierung, individuelle Softwarelösungen und Webanwendungen mit Next.js und ggf. KI-Integrationen. Verantwortlich für den gesamten Product Lifecycle – von der Anforderungsanalyse bis zum Deployment.",
+    },
     {
       company: "Robert Bosch GmbH",
       href: "https://www.bosch.de",
@@ -68,24 +105,25 @@ export const DATA = {
       location: "Nürnberg",
       title: "Full-Stack Developer & Solution Architect",
       logoUrl: "/bosch-invented-for-life.svg",
-      logoClassName: "dark:bg-foreground px-3 py-1.5 rounded",
+      logoClassName: "dark:bg-foreground py-1.5 rounded",
       start: "2021",
       end: "heute",
       description:
-        "Betreue mehrere Red Hat Linux Terminal-Server (NGINX, PM2) sowie MSSQL-Datenbankserver. Administriere einen GitHub Enterprise Server mit über 126 Repositories und 50 Mitgliedern. Entwickle komplexe Webanwendungen mit Next.js, React, TypeScript und Prisma ORM – teilweise Bosch-weit bzw. weltweit genutzt. Habe Legacy C# Blazor Projekte auf moderne JavaScript-Frameworks migriert und ein standortweites Web-Template mit Bosch Corporate Design erstellt.",
+        "Betreue mehrere Red Hat Linux Terminal-Server (NGINX, PM2) sowie MSSQL-Datenbankserver. Administriere einen GitHub Enterprise Server mit über 126 Repositories und 30+ Nutzern. Entwickle komplexe Webanwendungen mit Next.js, React, TypeScript und Prisma ORM – teilweise Bosch-weit bzw. weltweit genutzt. Viele kleinere scripts und anwendungen die Mitarbeitern viel Zeit sparen. Habe Legacy C# Blazor Projekte auf moderne JavaScript-Frameworks migriert und ein standortweites Web-Template mit Bosch Corporate Design erstellt.",
     },
     {
       company: "HMP Heidenhain Microprint",
       badges: ["Full-Time"],
       href: "https://www.hmp-heidenhain.de/",
       location: "Berlin",
-      title: "Elektronik & Steuerungstechnik",
+      title:
+        "Wasseraufbereitung/Anlagenführer + Elektronik & Steuerungstechnik",
       logoUrl: "/hmp heidenhain-microprint768x131.png",
       start: "2018",
       end: "2021",
-      logoClassName: "bg-[#706F6F] py-1.5 rounded max-w-58",
+      logoClassName: "bg-[#706F6F] py-1.5 pl-1 rounded ",
       description:
-        "Arbeit an alten Steuerungen und manuellen Schaltschränken. Fungierte als Ansprechpartner vor Ort für eine externe Firma zur Modernisierung der Anlagensteuerung. Gemeinsam wurde das System über zwei Jahre in eine vom Computer bedienbare, vollautomatische SPS-Steuerung überführt.",
+        "Anlagenführer einer Wasseraufbereitung bis zur Modernisierung der Anlagensteuerung. Arbeit an alten Steuerungen und manuellen Schaltschränken. Fungierte als Ansprechpartner vor Ort für eine externe Firma zur Modernisierung der Anlagensteuerung. Gemeinsam wurde das System über zwei Jahre in eine vom Computer bedienbare, vollautomatische SPS-Steuerung überführt. Da erste Berührungspunkte mit der Programmierung und der Wunsch zur Neuorientierung zum Programmierer kam",
     },
     {
       company: "Stadtwerke Elmshorn",
@@ -93,7 +131,7 @@ export const DATA = {
       href: "https://www.stadtwerke-elmshorn.de/",
       location: "Elmshorn",
       title: "Facharbeiter & Ausbildung (Wasserversorgung)",
-      logoClassName: "dark:bg-foreground px-0 dark:py-0.5 rounded max-w-45",
+      logoClassName: "dark:bg-foreground px-0 dark:py-0.5 rounded ",
       logoUrl: "/stadtwerke-elmshorn.svg",
       start: "2012",
       end: "2016",
@@ -108,14 +146,16 @@ export const DATA = {
       degree:
         "Fachinformatiker für Anwendungsentwicklung (verkürzt, mit Auszeichnung)",
       logoUrl: "/bosch-invented-for-life.svg",
+      logoClassName: "dark:bg-foreground px-3 py-1.5 rounded",
       start: "2021",
       end: "2023",
     },
     {
       school: "Stadtwerke Elmshorn",
-      href: "#",
+      href: "https://www.stadtwerke-elmshorn.de",
       degree: "Fachkraft für Wasserversorgungstechnik (mit Auszeichnung)",
       logoUrl: "/stadtwerke-elmshorn.svg",
+      logoClassName: "dark:bg-foreground dark:py-0.5 rounded",
       start: "2012",
       end: "2015",
     },
@@ -123,7 +163,7 @@ export const DATA = {
   projects: [
     {
       title: "drink2art",
-      href: "https://www.drink2art.com/",
+      href: "https://www.drink2art.com",
       dates: "2024 - heute",
       active: true,
       description:

@@ -1,0 +1,203 @@
+{
+  "common": {
+    "today": "heute",
+    "website": "Website"
+  },
+  "navbar": {
+    "home": "Startseite",
+    "parkDigitalSolutions": "Park Digital Solutions",
+    "resume": "Lebenslauf",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "theme": "Theme",
+    "language": "Sprache"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "hero": {
+    "greeting": "Hey, ich bin {firstName} 👋",
+    "description": "Full-Stack Solution Architect & Lead Developer. Ich bringe Digitalisierung voran – vom Server bis zur Benutzeroberfläche.",
+    "openForWork": "Offen für Jobangebote"
+  },
+  "about": {
+    "title": "Über mich",
+    "summary": "Ursprünglich komme ich aus dem Handwerk: Nach meiner Ausbildung in der Wasserversorgung nahm ich mir von 2016 bis 2018 zwei Sabbatjahre, um die Welt zu bereisen, Spanisch autodidaktisch zu lernen und in verschiedensten Jobs zu arbeiten. Danach ging ich nach Berlin zu HMP Heidenhain Microprint – einem Leiterplattenhersteller – und überführte dort gemeinsam mit einem externen Team ein altes Steuerungssystem in eine vom Computer bedienbare, vollautomatische SPS-Steuerung. Dabei entdeckte ich meine Leidenschaft fürs Programmieren und wechselte zur Robert Bosch GmbH nach Nürnberg, um eine Ausbildung zum Fachinformatiker für Anwendungsentwicklung zu absolvieren – verkürzt auf 2,5 Jahre und wie schon die erste Ausbildung mit Auszeichnung abgeschlossen. Die vorher kaum vorhandene Webentwicklungsstruktur am Standort baute ich quasi im Alleingang auf und bekam die erste Stelle als Vollzeitentwickler in dem Industrie-Fertigungsstandort NuP1. Dort entwickel ich komplexe Business-Webanwendungen mit Next.js, React, TypeScript und Prisma ORM – teilweise Bosch-weit bzw. weltweit genutzt."
+  },
+  "work": {
+    "title": "Berufserfahrung",
+    "parkDigitalSolutions": {
+      "title": "Gründer & Full-Stack Developer",
+      "description": "Beratung und Entwicklung von maßgeschneiderten Softwarelösungen für Betriebe, Vereine und Organisationen. Fokus auf Prozessautomatisierung, individuelle Softwarelösungen und Webanwendungen mit Next.js und ggf. KI-Integrationen. Verantwortlich für den gesamten Product Lifecycle – von der Anforderungsanalyse bis zum Deployment.",
+      "badges": ["Nebenberuflich", "Einzelunternehmen"]
+    },
+    "bosch": {
+      "title": "Full-Stack Developer & Solution Architect",
+      "description": "Betreue mehrere Red Hat Linux Terminal-Server (NGINX, PM2) sowie MSSQL-Datenbankserver. Administriere einen GitHub Enterprise Server mit über 126 Repositories und 30+ Nutzern. Entwickle komplexe Webanwendungen mit Next.js, React, TypeScript und Prisma ORM – teilweise Bosch-weit bzw. weltweit genutzt. Viele kleinere scripts und anwendungen die Mitarbeitern viel Zeit sparen. Habe Legacy C# Blazor Projekte auf moderne JavaScript-Frameworks migriert und ein standortweites Web-Template mit Bosch Corporate Design erstellt.",
+      "badges": ["Vollzeit"]
+    },
+    "hmp": {
+      "title": "Wasseraufbereitung/Anlagenführer + Elektronik & Steuerungstechnik",
+      "description": "Anlagenführer einer Wasseraufbereitung bis zur Modernisierung der Anlagensteuerung. Arbeit an alten Steuerungen und manuellen Schaltschränken. Fungierte als Ansprechpartner vor Ort für eine externe Firma zur Modernisierung der Anlagensteuerung. Gemeinsam wurde das System über zwei Jahre in eine vom Computer bedienbare, vollautomatische SPS-Steuerung überführt. Da erste Berührungspunkte mit der Programmierung und der Wunsch zur Neuorientierung zum Programmierer kam",
+      "badges": ["Vollzeit"]
+    },
+    "stadtwerke": {
+      "title": "Facharbeiter & Ausbildung (Wasserversorgung)",
+      "description": "Ausbildung und Facharbeit im Bereich Wasserversorgung mit Schwerpunkten in Chemie, Elektro, Metall, Steuerungstechnik und Laboranalysen. Ausbildung mit Auszeichnung abgeschlossen.",
+      "badges": ["Vollzeit"]
+    }
+  },
+  "education": {
+    "title": "Ausbildung",
+    "bosch": {
+      "degree": "Fachinformatiker für Anwendungsentwicklung (verkürzt, mit Auszeichnung)"
+    },
+    "stadtwerke": {
+      "degree": "Fachkraft für Wasserversorgungstechnik (mit Auszeichnung)"
+    }
+  },
+  "skills": {
+    "title": "Fähigkeiten"
+  },
+  "projects": {
+    "badge": "Meine Projekte",
+    "title": "Entdecke meine aktuellen Arbeiten",
+    "description": "Ich habe an verschiedenen Projekten gearbeitet, von einfachen Webseiten bis hin zu komplexen Webanwendungen. Hier sind einige meiner Favoriten.",
+    "drink2art": {
+      "description": "Eine Plattform, die es Gästen ermöglicht, mithilfe von KI einzigartige Kunstwerke direkt am Tisch zu kreieren. Durch automatisches Branding mit dem Logo der Bar wird die Markenbindung gestärkt und organisches Marketing auf Social Media gefördert. Basiert auf modernen KI-Modellen wie Googles Imagen."
+    }
+  },
+  "boschProjects": {
+    "badge": "Bosch Projekte",
+    "title": "Interne Business-Lösungen",
+    "description": "Während meiner Zeit bei Bosch habe ich verschiedene geschäftskritische Webanwendungen entwickelt, die weltweit oder standortweit im Einsatz sind.",
+    "mms": {
+      "title": "Manufacturing & Maintenance Suite (MMS)",
+      "role": "Sole Developer (End-to-End)",
+      "scope": "Werk NuP1 Produktion & Service",
+      "description": "Umfassendes Live-Monitoring und Incident-Management-System. Echtzeit-Tracking von Produktionslinien mit Heatmap-Visualisierung. SAP-Integration für direkte Issue-Erstellung. KI-gestützte Reparaturempfehlungen basierend auf 20 Jahren Issue-Daten."
+    },
+    "spp": {
+      "title": "Strategic Personnel Planning (SPP)",
+      "role": "Lead Developer",
+      "scope": "HR-Abteilungen",
+      "description": "Strategisches HR-Tool zur dynamischen Personalplanung. Prognose von Renteneintritten, Vertragsendigungen und Trainee-Übernahmen. Dashboard zur Gap-Analyse zwischen aktuellem und benötigtem Personal."
+    },
+    "deviceFinder": {
+      "title": "ITM-Location CMDB (Device Finder)",
+      "role": "Sole Developer",
+      "scope": "Werk NuP1",
+      "description": "Interaktive 2D-Raumkarte des Werks NuP1 mit über 3.000 gepinnten IT-Geräten. Geräte sind mit echten Koordinaten, Bildern und Beschreibungen verknüpft."
+    },
+    "myStuff": {
+      "title": "My Stuff – Interner Marktplatz",
+      "role": "Contributor / Lead Developer",
+      "scope": "Bosch-weit (RB)",
+      "description": "Sichere interne Austauschplattform für gebrauchte Artikel (unter 25.000€). Erfolgreich auf Bosch-weite Nutzung skaliert – weltweit ca. 400.000 Mitarbeiter."
+    },
+    "asmHub": {
+      "title": "ASM-Hub (Application Lifecycle Management)",
+      "role": "Developer / Contributor",
+      "scope": "Global (NuP1 → PS → BBM → RB)",
+      "description": "Zentrale Plattform für Software-Lifecycle-Management. Dokumentenhistorie, Templates und Versionskontrolle. Integration mit LeanIX für Enterprise Architecture Compliance."
+    }
+  },
+  "milestones": {
+    "badge": "Errungenschaften",
+    "title": "Ich liebe es, neue Dinge zu lernen und zu erschaffen",
+    "description": "Im Laufe meiner Karriere habe ich verschiedene Meilensteine erreicht und Verantwortung übernommen. Von der Einführung neuer Technologien bis zur Administration ganzer Entwicklungsplattformen – hier sind einige Highlights.",
+    "keyboards": {
+      "title": "Custom Mechanical Keyboards & Ergonomie",
+      "description": "Bau eigener Tastaturen mit Open Source Hardware von GitHub. Umstellung auf ergonomisches Colemak-DH Layout. Fertigung eigener PCBs (Totem 38 Keys, Anywhy) mit Lötstation, programmiert in C mit ZMK."
+    },
+    "drink2artLaunch": {
+      "title": "drink2art.com Launch",
+      "description": "Launch meiner eigenen KI-Kunstplattform für Bars. Gäste können mit KI einzigartige Kunstwerke erstellen, die automatisch mit dem Bar-Logo gebrandet werden."
+    },
+    "fiAusbildung": {
+      "title": "Fachinformatiker-Ausbildung mit Auszeichnung",
+      "description": "Ausbildung zum Fachinformatiker für Anwendungsentwicklung auf 2,5 Jahre verkürzt und mit Auszeichnung abgeschlossen."
+    },
+    "homeServer": {
+      "title": "Home-Server & Smart Home Automation",
+      "description": "Betrieb eines Home-Servers mit Proxmox: Pi-hole, NAS und Home Assistant. Vollständige Wohnungsautomatisierung über Zigbee-Geräte."
+    },
+    "githubAdmin": {
+      "title": "GitHub Enterprise Server Administrator",
+      "description": "Administration der nup1-development Organisation mit über 126 Repositories und 50 Mitgliedern. Verantwortlich für Repository-Management, Zugriffssteuerung und Sicherheitsrichtlinien."
+    },
+    "webTemplate": {
+      "title": "Enterprise Web Template & Design System",
+      "description": "Entwicklung eines wiederverwendbaren Web-Templates mit Entra ID Authentifizierung, Sicherheitsfeatures und vollständigem Bosch Corporate Design. Wird kontinuierlich aktualisiert und von Teams übernommen."
+    },
+    "legacyMigration": {
+      "title": "Legacy C# → JavaScript Migration",
+      "description": "Migration von Legacy C# Blazor Webseiten auf moderne JavaScript-Frameworks (Next.js/React). Einführung des JavaScript-Ökosystems am Standort."
+    }
+  },
+  "contact": {
+    "badge": "Kontakt",
+    "title": "Lass uns zusammenarbeiten",
+    "description": "Ich bin aktuell auf der Suche nach neuen Herausforderungen und offen für spannende Jobangebote. Du hast eine interessante Stelle oder ein Projekt? Schreib mir einfach eine",
+    "email": "E-Mail",
+    "descriptionEnd": "und ich melde mich so schnell wie möglich."
+  },
+  "parkDigitalSolutions": {
+    "hero": {
+      "title": "Park Digital Solutions",
+      "description": "Maßgeschneiderte Softwarelösungen für Ihr Unternehmen. Digitalisierung mit Hand und Verstand."
+    },
+    "services": {
+      "title": "Meine Leistungen",
+      "webDev": {
+        "title": "Individuelle Webentwicklung",
+        "description": "Von der einfachen Landingpage bis zur komplexen Webanwendung. Ich baue performante, skalierbare Lösungen mit modernen Technologien wie"
+      },
+      "automation": {
+        "title": "Prozessautomatisierung",
+        "description": "Schluss mit Excel-Chaos und manueller Datenpflege. Ich automatisiere Ihre Geschäftsabläufe mit",
+        "descriptionEnd": ", damit Sie sich auf das Wesentliche konzentrieren können."
+      },
+      "consulting": {
+        "title": "Beratung & Planung",
+        "description": "Ich begleite Sie von der ersten Idee bis zum fertigen Produkt. Als",
+        "descriptionEnd": "bei Bosch habe ich gelernt, komplexe Anforderungen in verständliche und umsetzbare Konzepte zu übersetzen."
+      },
+      "fullService": {
+        "title": "Full-Service",
+        "description": "Ich kümmere mich nicht nur um den Code, sondern auch um das",
+        "descriptionEnd": ". Sie bekommen eine schlüsselfertige Lösung aus einer Hand."
+      }
+    },
+    "whyMe": {
+      "title": "Warum mit mir arbeiten?",
+      "intro": "Ich bin ganz ehrlich: Ich stehe mit meinem eigenen Gewerbe am Anfang. Aber genau das ist",
+      "introHighlight": "Ihr Vorteil",
+      "focus": {
+        "title": "100% Fokus:",
+        "description": "Als mein erster Kunde genießen Sie meine volle Aufmerksamkeit und Priorität."
+      },
+      "experience": {
+        "title": "Industrie-Erfahrung:",
+        "description": "Ich arbeite hauptberuflich als Solution Architect bei der Robert Bosch GmbH – ich weiß, wie man professionelle Software baut."
+      },
+      "quality": {
+        "title": "Ausgezeichnete Qualität:",
+        "description": "Meine Ausbildungen habe ich mit Auszeichnung abgeschlossen. Ich liefere keine halben Sachen."
+      },
+      "practical": {
+        "title": "Praktiker-Mentalität:",
+        "description": "Ich komme aus dem Handwerk. Ich spreche Klartext und liefere Ergebnisse, die funktionieren."
+      }
+    },
+    "cta": {
+      "badge": "Lassen Sie uns starten",
+      "title": "Bereit für den nächsten Schritt?",
+      "description": "Erzählen Sie mir von Ihrem Projekt oder Ihrer Idee. Das Erstgespräch ist völlig unverbindlich und kostenlos.",
+      "button": "Jetzt anfragen",
+      "cvLink": "Mehr über mich im CV"
+    }
+  }
+}

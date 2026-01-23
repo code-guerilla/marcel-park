@@ -1,6 +1,9 @@
+import createNextIntlPlugin from "next-intl/plugin"
+
 const nextConfig = {
   cacheComponents: true,
   reactCompiler: true,
 }
 
-export default nextConfig
+const withNextIntl = createNextIntlPlugin()
+export default withNextIntl(nextConfig)

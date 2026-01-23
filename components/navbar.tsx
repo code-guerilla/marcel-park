@@ -52,6 +52,7 @@ export default function Navbar() {
                         "size-12"
                       )}
                       href={social.url}
+                      target='_blank'
                     >
                       <social.icon className='size-4' />
                     </Link>

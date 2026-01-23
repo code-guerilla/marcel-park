@@ -53,7 +53,7 @@ export function MilestoneCard({
       {links && links.length > 0 && (
         <div className='mt-2 flex flex-row flex-wrap items-start gap-2'>
           {links?.map((link) => (
-            <Link href={link.href} key={link.title}>
+            <Link href={link.href} key={link.title} target='_blank'>
               <Badge className='flex gap-2' title={link.title}>
                 {link.icon}
                 {link.title}

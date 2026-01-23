@@ -1,3 +1,4 @@
+import { ExternalLink } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import type React from "react"
@@ -10,7 +11,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
 
 type Props = {
   title: string
@@ -39,7 +39,6 @@ export function ProjectCard({
   image,
   video,
   links,
-  className,
 }: Props) {
   return (
     <Card
@@ -47,30 +46,25 @@ export function ProjectCard({
         "flex h-full flex-col overflow-hidden border transition-all duration-300 ease-out hover:shadow-lg"
       }
     >
-      <Link
-        className={cn("block cursor-pointer", className)}
-        href={href || "#"}
-      >
-        {video && (
-          <video
-            autoPlay
-            className='pointer-events-none mx-auto h-40 w-full object-cover object-top'
-            loop
-            muted
-            playsInline
-            src={video}
-          />
-        )}
-        {image && (
-          <Image
-            alt={title}
-            className='h-40 w-full overflow-hidden object-cover object-top'
-            height={300}
-            src={image}
-            width={500}
-          />
-        )}
-      </Link>
+      {video && (
+        <video
+          autoPlay
+          className='pointer-events-none mx-auto h-40 w-full object-cover object-top'
+          loop
+          muted
+          playsInline
+          src={video}
+        />
+      )}
+      {image && (
+        <Image
+          alt={title}
+          className='h-40 w-full overflow-hidden object-cover object-top'
+          height={300}
+          src={image}
+          width={500}
+        />
+      )}
       <CardHeader className='px-2'>
         <div className='space-y-1'>
           <CardTitle className='mt-1 text-base'>{title}</CardTitle>
@@ -99,18 +93,24 @@ export function ProjectCard({
         )}
       </CardContent>
       <CardFooter className='px-2 pb-2'>
-        {links && links.length > 0 && (
-          <div className='flex flex-row flex-wrap items-start gap-1'>
-            {links?.map((link) => (
-              <Link href={link?.href} key={link.type} target='_blank'>
-                <Badge className='flex gap-2 px-2 py-1 text-[10px]'>
-                  {link.icon}
-                  {link.type}
-                </Badge>
-              </Link>
-            ))}
-          </div>
-        )}
+        <div className='flex flex-row flex-wrap items-start gap-1'>
+          {href && (
+            <Link href={href} target='_blank'>
+              <Badge className='flex gap-2 px-2 py-1 text-[10px]'>
+                <ExternalLink className='size-3' />
+                Website
+              </Badge>
+            </Link>
+          )}
+          {links?.map((link) => (
+            <Link href={link?.href} key={link.type} target='_blank'>
+              <Badge className='flex gap-2 px-2 py-1 text-[10px]'>
+                {link.icon}
+                {link.type}
+              </Badge>
+            </Link>
+          ))}
+        </div>
       </CardFooter>
     </Card>
   )
