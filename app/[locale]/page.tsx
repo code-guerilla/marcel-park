@@ -26,7 +26,7 @@ export default async function Page({
   return (
     <main className='flex min-h-dvh flex-col space-y-10'>
       <section id='hero'>
-        <div className='mx-auto w-full space-y-8'>
+        <div className='mx-auto w-full max-w-3xl space-y-8'>
           <div className='flex justify-between gap-2'>
             <div className='flex flex-1 flex-col space-y-1.5'>
               <BlurFadeText
@@ -93,16 +93,18 @@ export default async function Page({
             >
               <ResumeCard
                 altText={work.company}
-                badges={getWorkBadges(t, work.company)}
-                description={getWorkDescription(t, work.company)}
+                badges={
+                  t.raw(
+                    `work.${work.translationKey}.badges`
+                  ) as readonly string[]
+                }
+                description={t(`work.${work.translationKey}.description`)}
                 href={work.href}
                 key={work.company}
-                logoClassName={
-                  (work as { logoClassName?: string }).logoClassName
-                }
+                logoClassName={work.logoClassName}
                 logoUrl={work.logoUrl}
-                period={`${work.start} - ${work.end ?? t("common.today")}`}
-                subtitle={getWorkTitle(t, work.company)}
+                period={`${work.start} - ${work.end === "heute" ? t("common.today") : work.end}`}
+                subtitle={t(`work.${work.translationKey}.title`)}
                 title={work.company}
               />
             </BlurFade>
@@ -123,12 +125,10 @@ export default async function Page({
                 altText={education.school}
                 href={education.href}
                 key={education.school}
-                logoClassName={
-                  (education as { logoClassName?: string }).logoClassName
-                }
+                logoClassName={education.logoClassName}
                 logoUrl={education.logoUrl}
                 period={`${education.start} - ${education.end}`}
-                subtitle={getEducationDegree(t, education.school)}
+                subtitle={t(`education.${education.translationKey}.degree`)}
                 title={education.school}
               />
             </BlurFade>
@@ -177,14 +177,15 @@ export default async function Page({
             {DATA.projects.map((project, id) => (
               <BlurFade
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                key={project.title}
+                key={project.translationKey}
               >
                 <ProjectCard
                   dates={project.dates}
-                  description={t("projects.drink2art.description")}
-                  href={project.href}
+                  description={t(
+                    `projects.${project.translationKey}.description`
+                  )}
                   image={project.image}
-                  key={project.title}
+                  key={project.translationKey}
                   links={project.links}
                   tags={project.technologies}
                   title={project.title}
@@ -216,21 +217,23 @@ export default async function Page({
             {DATA.boschProjects.map((project, id) => (
               <BlurFade
                 delay={BLUR_FADE_DELAY * 14 + id * 0.05}
-                key={project.title}
+                key={project.translationKey}
               >
                 <ProjectCard
-                  dates={getBoschProjectScope(t, project.title)}
-                  description={getBoschProjectDescription(t, project.title)}
-                  key={project.title}
-                  tags={[getBoschProjectRole(t, project.title)]}
-                  title={getBoschProjectTitle(t, project.title)}
+                  dates={t(`boschProjects.${project.translationKey}.scope`)}
+                  description={t(
+                    `boschProjects.${project.translationKey}.description`
+                  )}
+                  key={project.translationKey}
+                  tags={[t(`boschProjects.${project.translationKey}.role`)]}
+                  title={t(`boschProjects.${project.translationKey}.title`)}
                 />
               </BlurFade>
             ))}
           </div>
         </div>
       </section>
-      <section id='hackathons'>
+      <section id='milestones'>
         <div className='w-full space-y-12 py-12'>
           <BlurFade delay={BLUR_FADE_DELAY * 15}>
             <div className='flex flex-col items-center justify-center space-y-4 text-center'>
@@ -252,18 +255,20 @@ export default async function Page({
               {DATA.personalMilestones.map((project, id) => (
                 <BlurFade
                   delay={BLUR_FADE_DELAY * 17 + id * 0.05}
-                  key={project.title + project.dates}
+                  key={project.translationKey + project.dates}
                 >
                   <MilestoneCard
                     dates={project.dates}
-                    description={getMilestoneDescription(t, project.title)}
+                    description={t(
+                      `milestones.${project.translationKey}.description`
+                    )}
                     icon={
                       (project as unknown as { icon?: React.ElementType }).icon
                     }
                     image={(project as unknown as { image?: string }).image}
                     links={project.links}
                     location={project.location}
-                    title={getMilestoneTitle(t, project.title)}
+                    title={t(`milestones.${project.translationKey}.title`)}
                   />
                 </BlurFade>
               ))}
@@ -297,183 +302,4 @@ export default async function Page({
       </section>
     </main>
   )
-}
-
-// Helper functions to map company/school names to translation keys
-function getWorkBadges(
-  t: Awaited<ReturnType<typeof getTranslations>>,
-  company: string
-): readonly string[] {
-  const keyMap: Record<string, string> = {
-    "Park Digital Solutions": "parkDigitalSolutions",
-    "Robert Bosch GmbH": "bosch",
-    "HMP Heidenhain Microprint": "hmp",
-    "Stadtwerke Elmshorn": "stadtwerke",
-  }
-  const key = keyMap[company]
-  if (!key) {
-    return []
-  }
-  return t.raw(`work.${key}.badges`) as readonly string[]
-}
-
-function getWorkTitle(
-  t: Awaited<ReturnType<typeof getTranslations>>,
-  company: string
-): string {
-  const keyMap: Record<string, string> = {
-    "Park Digital Solutions": "parkDigitalSolutions",
-    "Robert Bosch GmbH": "bosch",
-    "HMP Heidenhain Microprint": "hmp",
-    "Stadtwerke Elmshorn": "stadtwerke",
-  }
-  const key = keyMap[company]
-  if (!key) {
-    return ""
-  }
-  return t(`work.${key}.title`)
-}
-
-function getWorkDescription(
-  t: Awaited<ReturnType<typeof getTranslations>>,
-  company: string
-): string {
-  const keyMap: Record<string, string> = {
-    "Park Digital Solutions": "parkDigitalSolutions",
-    "Robert Bosch GmbH": "bosch",
-    "HMP Heidenhain Microprint": "hmp",
-    "Stadtwerke Elmshorn": "stadtwerke",
-  }
-  const key = keyMap[company]
-  if (!key) {
-    return ""
-  }
-  return t(`work.${key}.description`)
-}
-
-function getEducationDegree(
-  t: Awaited<ReturnType<typeof getTranslations>>,
-  school: string
-): string {
-  const keyMap: Record<string, string> = {
-    "Robert Bosch GmbH": "bosch",
-    "Stadtwerke Elmshorn": "stadtwerke",
-  }
-  const key = keyMap[school]
-  if (!key) {
-    return ""
-  }
-  return t(`education.${key}.degree`)
-}
-
-function getBoschProjectTitle(
-  t: Awaited<ReturnType<typeof getTranslations>>,
-  title: string
-): string {
-  const keyMap: Record<string, string> = {
-    "Manufacturing & Maintenance Suite (MMS)": "mms",
-    "Strategic Personnel Planning (SPP)": "spp",
-    "ITM-Location CMDB (Device Finder)": "deviceFinder",
-    "My Stuff – Interner Marktplatz": "myStuff",
-    "ASM-Hub (Application Lifecycle Management)": "asmHub",
-  }
-  const key = keyMap[title]
-  if (!key) {
-    return title
-  }
-  return t(`boschProjects.${key}.title`)
-}
-
-function getBoschProjectRole(
-  t: Awaited<ReturnType<typeof getTranslations>>,
-  title: string
-): string {
-  const keyMap: Record<string, string> = {
-    "Manufacturing & Maintenance Suite (MMS)": "mms",
-    "Strategic Personnel Planning (SPP)": "spp",
-    "ITM-Location CMDB (Device Finder)": "deviceFinder",
-    "My Stuff – Interner Marktplatz": "myStuff",
-    "ASM-Hub (Application Lifecycle Management)": "asmHub",
-  }
-  const key = keyMap[title]
-  if (!key) {
-    return ""
-  }
-  return t(`boschProjects.${key}.role`)
-}
-
-function getBoschProjectScope(
-  t: Awaited<ReturnType<typeof getTranslations>>,
-  title: string
-): string {
-  const keyMap: Record<string, string> = {
-    "Manufacturing & Maintenance Suite (MMS)": "mms",
-    "Strategic Personnel Planning (SPP)": "spp",
-    "ITM-Location CMDB (Device Finder)": "deviceFinder",
-    "My Stuff – Interner Marktplatz": "myStuff",
-    "ASM-Hub (Application Lifecycle Management)": "asmHub",
-  }
-  const key = keyMap[title]
-  if (!key) {
-    return ""
-  }
-  return t(`boschProjects.${key}.scope`)
-}
-
-function getBoschProjectDescription(
-  t: Awaited<ReturnType<typeof getTranslations>>,
-  title: string
-): string {
-  const keyMap: Record<string, string> = {
-    "Manufacturing & Maintenance Suite (MMS)": "mms",
-    "Strategic Personnel Planning (SPP)": "spp",
-    "ITM-Location CMDB (Device Finder)": "deviceFinder",
-    "My Stuff – Interner Marktplatz": "myStuff",
-    "ASM-Hub (Application Lifecycle Management)": "asmHub",
-  }
-  const key = keyMap[title]
-  if (!key) {
-    return ""
-  }
-  return t(`boschProjects.${key}.description`)
-}
-
-function getMilestoneTitle(
-  t: Awaited<ReturnType<typeof getTranslations>>,
-  title: string
-): string {
-  const keyMap: Record<string, string> = {
-    "Custom Mechanical Keyboards & Ergonomie": "keyboards",
-    "drink2art.com Launch": "drink2artLaunch",
-    "Fachinformatiker-Ausbildung mit Auszeichnung": "fiAusbildung",
-    "Home-Server & Smart Home Automation": "homeServer",
-    "GitHub Enterprise Server Administrator": "githubAdmin",
-    "Enterprise Web Template & Design System": "webTemplate",
-    "Legacy C# → JavaScript Migration": "legacyMigration",
-  }
-  const key = keyMap[title]
-  if (!key) {
-    return title
-  }
-  return t(`milestones.${key}.title`)
-}
-
-function getMilestoneDescription(
-  t: Awaited<ReturnType<typeof getTranslations>>,
-  title: string
-): string {
-  const keyMap: Record<string, string> = {
-    "Custom Mechanical Keyboards & Ergonomie": "keyboards",
-    "drink2art.com Launch": "drink2artLaunch",
-    "Fachinformatiker-Ausbildung mit Auszeichnung": "fiAusbildung",
-    "Home-Server & Smart Home Automation": "homeServer",
-    "GitHub Enterprise Server Administrator": "githubAdmin",
-    "Enterprise Web Template & Design System": "webTemplate",
-    "Legacy C# → JavaScript Migration": "legacyMigration",
-  }
-  const key = keyMap[title]
-  if (!key) {
-    return ""
-  }
-  return t(`milestones.${key}.description`)
 }

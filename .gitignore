@@ -36,4 +36,7 @@ bun.lock
 *.tsbuildinfo
 next-env.d.ts
 bun.lock
-bun.lock
+
+.idx
+.kilocode
+AGENTS.md

@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className='mx-auto flex max-w-2xl flex-col gap-2 px-6 py-32 text-center text-muted-foreground text-sm'>
+    <footer className='mx-auto flex max-w-3xl flex-col gap-2 px-6 pt-32 pb-16 text-center text-muted-foreground text-sm'>
       <p>
         &copy; {currentYear} {DATA.name} - All rights reserved.
       </p>

@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useLocale } from "next-intl"
+import { buttonVariants } from "@/components/ui/button-variants"
 import {
   Select,
   SelectContent,
@@ -10,13 +11,18 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { usePathname, useRouter } from "@/i18n/navigation"
+import { cn } from "@/lib/utils"
 
 const locales = [
   { code: "de", label: "DE", flag: "/de.svg" },
   { code: "en", label: "EN", flag: "/en.svg" },
 ] as const
 
-export function LanguageSwitcher() {
+type LanguageSwitcherProps = {
+  className?: string
+}
+
+export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
@@ -31,12 +37,18 @@ export function LanguageSwitcher() {
 
   return (
     <Select onValueChange={handleLocaleChange} value={locale}>
-      <SelectTrigger className='flex items-center justify-center rounded-lg border-none bg-transparent p-1 shadow-none transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:ring-0 [&_svg]:hidden'>
-        <SelectValue>
-          <span className='flex items-center justify-center'>
+      <SelectTrigger
+        className={cn(
+          buttonVariants({ variant: "ghost", size: "icon" }),
+          "h-12 w-12 border-none p-0 shadow-none ring-0 focus:ring-0 focus-visible:ring-0 [&_svg]:hidden",
+          className
+        )}
+      >
+        <SelectValue className='flex h-full w-full items-center justify-center'>
+          <span className='flex h-full w-full items-center justify-center'>
             <Image
               alt={currentLocale.label}
-              className='rounded-sm'
+              className='rounded-sm object-cover'
               height={24}
               src={currentLocale.flag}
               width={24}

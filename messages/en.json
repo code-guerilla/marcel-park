@@ -24,7 +24,7 @@
   },
   "about": {
     "title": "About me",
-    "summary": "I originally come from the trades: After my apprenticeship in water supply, I took two sabbatical years from 2016 to 2018, traveled the world, taught myself Spanish, and worked various jobs. Then I went to Berlin to HMP Heidenhain Microprint – a circuit board manufacturer – where, together with an external team, I converted an old control system into a computer-operated, fully automatic PLC control. That's when I discovered my passion for programming and moved to Robert Bosch GmbH in Nuremberg to complete an apprenticeship as an IT specialist for application development – shortened to 2.5 years and completed with distinction, just like my first apprenticeship. I built up the previously almost non-existent web development structure at the site practically single-handedly and got the first full-time developer position at the industrial manufacturing site NuP1. There I develop complex business web applications with Next.js, React, TypeScript and Prisma ORM – some used Bosch-wide or even worldwide."
+    "summary": "I have my roots in the trades: After completing my apprenticeship in water supply, I took two sabbatical years between 2016 and 2018 to travel the world, teach myself Spanish, and work various jobs. I then joined HMP Heidenhain Microprint in Berlin – a circuit board manufacturer – where I worked with an external team to modernize a legacy control system into a fully automated, PLC-controlled system. This experience sparked my passion for programming, leading me to Robert Bosch GmbH in Nuremberg. There, I completed an apprenticeship as an IT Specialist for Application Development, which I accelerated to 2.5 years and finished with distinction, just like my first trade. I independently established the site's web development infrastructure and became the first full-time developer at the NuP1 manufacturing plant. Today, I develop complex business web applications using Next.js, React, TypeScript, and Prisma ORM – some of which are deployed plant-wide, Bosch-wide which is globally."
   },
   "work": {
     "title": "Work Experience",
@@ -86,21 +86,21 @@
       "description": "Strategic HR tool for dynamic workforce planning. Forecasting of retirements, contract endings, and trainee takeovers. Dashboard for gap analysis between current and required personnel."
     },
     "deviceFinder": {
-      "title": "ITM-Location CMDB (Device Finder)",
+      "title": "ITM-Location Map (IT Device Finder)",
       "role": "Sole Developer",
       "scope": "Plant NuP1",
-      "description": "Interactive 2D room map of the NuP1 plant with over 3,000 pinned IT devices. Devices are linked with real coordinates, images, and descriptions."
+      "description": "Interactive google maps like leaflet.js map with original 2D room layout of the NuP1 plant. To locate IT devices. With over 3,000 pinned IT devices. Devices are linked with real coordinates, images, and descriptions."
     },
     "myStuff": {
       "title": "My Stuff – Internal Marketplace",
       "role": "Contributor / Lead Developer",
-      "scope": "Bosch-wide (RB)",
+      "scope": "Bosch-wide (international)",
       "description": "Secure internal exchange platform for used items (under €25,000). Successfully scaled to Bosch-wide use – approximately 400,000 employees worldwide."
     },
     "asmHub": {
       "title": "ASM-Hub (Application Lifecycle Management)",
       "role": "Developer / Contributor",
-      "scope": "Global (NuP1 → PS → BBM → RB)",
+      "scope": "Bosch-wide (international)",
       "description": "Central platform for software lifecycle management. Document history, templates, and version control. Integration with LeanIX for Enterprise Architecture Compliance."
     }
   },

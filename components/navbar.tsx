@@ -99,7 +99,7 @@ export default function Navbar() {
         <Separator className='h-full py-2' orientation='vertical' />
         <DockIcon>
           <Tooltip>
-            <TooltipTrigger render={<ModeToggle />} />
+            <TooltipTrigger render={<ModeToggle className='size-12' />} />
             <TooltipContent>
               <p>{t("theme")}</p>
             </TooltipContent>
@@ -107,7 +107,7 @@ export default function Navbar() {
         </DockIcon>
         <DockIcon>
           <Tooltip>
-            <TooltipTrigger render={<LanguageSwitcher />} />
+            <TooltipTrigger render={<LanguageSwitcher className='size-12' />} />
             <TooltipContent>
               <p>{t("language")}</p>
             </TooltipContent>

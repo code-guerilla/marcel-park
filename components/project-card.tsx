@@ -1,4 +1,3 @@
-import { ExternalLink } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import type React from "react"
@@ -14,7 +13,6 @@ import {
 
 type Props = {
   title: string
-  href?: string
   description: string
   dates: string
   tags: readonly string[]
@@ -31,7 +29,6 @@ type Props = {
 
 export function ProjectCard({
   title,
-  href,
   description,
   dates,
   tags,
@@ -94,14 +91,6 @@ export function ProjectCard({
       </CardContent>
       <CardFooter className='px-2 pb-2'>
         <div className='flex flex-row flex-wrap items-start gap-1'>
-          {href && (
-            <Link href={href} target='_blank'>
-              <Badge className='flex gap-2 px-2 py-1 text-[10px]'>
-                <ExternalLink className='size-3' />
-                Website
-              </Badge>
-            </Link>
-          )}
           {links?.map((link) => (
             <Link href={link?.href} key={link.type} target='_blank'>
               <Badge className='flex gap-2 px-2 py-1 text-[10px]'>
