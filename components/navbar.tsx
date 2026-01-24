@@ -91,7 +91,7 @@ export default function Navbar() {
                   }
                 />
                 <TooltipContent>
-                  <p>{name}</p>
+                  <p>{social.name}</p>
                 </TooltipContent>
               </Tooltip>
             </DockIcon>
