@@ -1,5 +1,6 @@
 import { Briefcase, MapPin } from "lucide-react"
 import Link from "next/link"
+import { getTranslations } from "next-intl/server"
 import Markdown from "react-markdown"
 import BlurFade from "@/components/magicui/blur-fade"
 import BlurFadeText from "@/components/magicui/blur-fade-text"
@@ -9,27 +10,37 @@ import { ResumeCard } from "@/components/resume-card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { DATA } from "@/data/resume"
+
 import { cn } from "@/lib/utils"
 
 const BLUR_FADE_DELAY = 0.04
 
-export default function Page() {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  const t = await getTranslations({ locale })
+
   return (
     <main className='flex min-h-dvh flex-col space-y-10'>
       <section id='hero'>
-        <div className='mx-auto w-full max-w-2xl space-y-8'>
+        <div className='mx-auto w-full space-y-8'>
           <div className='flex justify-between gap-2'>
             <div className='flex flex-1 flex-col space-y-1.5'>
               <BlurFadeText
                 className='font-bold text-3xl tracking-tighter sm:text-5xl xl:text-6xl/none'
                 delay={BLUR_FADE_DELAY}
-                text={`Hey, ich bin ${DATA.name.split(" ")[0]} 👋`}
+                text={t("hero.greeting", {
+                  firstName: DATA.name.split(" ")[0],
+                })}
                 yOffset={8}
               />
               <BlurFadeText
                 className='max-w-[600px] md:text-xl'
                 delay={BLUR_FADE_DELAY}
-                text={DATA.description}
+                text={t("hero.description")}
               />
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <Link
@@ -47,7 +58,7 @@ export default function Page() {
                   href='#contact'
                 >
                   <Briefcase className='size-3' />
-                  Offen für Jobangebote
+                  {t("hero.openForWork")}
                 </Link>
               </BlurFade>
             </div>
@@ -62,18 +73,18 @@ export default function Page() {
       </section>
       <section id='about'>
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className='font-bold text-xl'>Über mich</h2>
+          <h2 className='font-bold text-xl'>{t("about.title")}</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <div className='prose dark:prose-invert max-w-full text-pretty font-sans text-muted-foreground text-sm'>
-            <Markdown>{DATA.summary}</Markdown>
+            <Markdown>{t("about.summary")}</Markdown>
           </div>
         </BlurFade>
       </section>
       <section id='work'>
         <div className='flex min-h-0 flex-col gap-y-3'>
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className='font-bold text-xl'>Berufserfahrung</h2>
+            <h2 className='font-bold text-xl'>{t("work.title")}</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
             <BlurFade
@@ -82,16 +93,16 @@ export default function Page() {
             >
               <ResumeCard
                 altText={work.company}
-                badges={work.badges}
-                description={work.description}
+                badges={getWorkBadges(t, work.company)}
+                description={getWorkDescription(t, work.company)}
                 href={work.href}
                 key={work.company}
                 logoClassName={
                   (work as { logoClassName?: string }).logoClassName
                 }
                 logoUrl={work.logoUrl}
-                period={`${work.start} - ${work.end ?? "heute"}`}
-                subtitle={work.title}
+                period={`${work.start} - ${work.end ?? t("common.today")}`}
+                subtitle={getWorkTitle(t, work.company)}
                 title={work.company}
               />
             </BlurFade>
@@ -101,7 +112,7 @@ export default function Page() {
       <section id='education'>
         <div className='flex min-h-0 flex-col gap-y-3'>
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className='font-bold text-xl'>Ausbildung</h2>
+            <h2 className='font-bold text-xl'>{t("education.title")}</h2>
           </BlurFade>
           {DATA.education.map((education, id) => (
             <BlurFade
@@ -117,7 +128,7 @@ export default function Page() {
                 }
                 logoUrl={education.logoUrl}
                 period={`${education.start} - ${education.end}`}
-                subtitle={education.degree}
+                subtitle={getEducationDegree(t, education.school)}
                 title={education.school}
               />
             </BlurFade>
@@ -127,7 +138,7 @@ export default function Page() {
       <section id='skills'>
         <div className='flex min-h-0 flex-col gap-y-3'>
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className='font-bold text-xl'>Fähigkeiten</h2>
+            <h2 className='font-bold text-xl'>{t("skills.title")}</h2>
           </BlurFade>
           <div className='flex flex-wrap gap-1'>
             {DATA.skills.map((skill, id) => (
@@ -144,15 +155,13 @@ export default function Page() {
             <div className='flex flex-col items-center justify-center space-y-4 text-center'>
               <div className='space-y-2'>
                 <div className='inline-block rounded-lg bg-foreground px-3 py-1 text-background text-sm'>
-                  Meine Projekte
+                  {t("projects.badge")}
                 </div>
                 <h2 className='font-bold text-3xl tracking-tighter sm:text-5xl'>
-                  Entdecke meine aktuellen Arbeiten
+                  {t("projects.title")}
                 </h2>
                 <p className='text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
-                  Ich habe an verschiedenen Projekten gearbeitet, von einfachen
-                  Webseiten bis hin zu komplexen Webanwendungen. Hier sind
-                  einige meiner Favoriten.
+                  {t("projects.description")}
                 </p>
               </div>
             </div>
@@ -172,7 +181,7 @@ export default function Page() {
               >
                 <ProjectCard
                   dates={project.dates}
-                  description={project.description}
+                  description={t("projects.drink2art.description")}
                   href={project.href}
                   image={project.image}
                   key={project.title}
@@ -192,15 +201,13 @@ export default function Page() {
             <div className='flex flex-col items-center justify-center space-y-4 text-center'>
               <div className='space-y-2'>
                 <div className='inline-block rounded-lg bg-foreground px-3 py-1 text-background text-sm'>
-                  Bosch Projekte
+                  {t("boschProjects.badge")}
                 </div>
                 <h2 className='font-bold text-3xl tracking-tighter sm:text-5xl'>
-                  Interne Business-Lösungen
+                  {t("boschProjects.title")}
                 </h2>
                 <p className='text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
-                  Während meiner Zeit bei Bosch habe ich verschiedene
-                  geschäftskritische Webanwendungen entwickelt, die weltweit
-                  oder standortweit im Einsatz sind.
+                  {t("boschProjects.description")}
                 </p>
               </div>
             </div>
@@ -212,11 +219,11 @@ export default function Page() {
                 key={project.title}
               >
                 <ProjectCard
-                  dates={project.scope}
-                  description={project.description}
+                  dates={getBoschProjectScope(t, project.title)}
+                  description={getBoschProjectDescription(t, project.title)}
                   key={project.title}
-                  tags={[project.role]}
-                  title={project.title}
+                  tags={[getBoschProjectRole(t, project.title)]}
+                  title={getBoschProjectTitle(t, project.title)}
                 />
               </BlurFade>
             ))}
@@ -229,16 +236,13 @@ export default function Page() {
             <div className='flex flex-col items-center justify-center space-y-4 text-center'>
               <div className='space-y-2'>
                 <div className='inline-block rounded-lg bg-foreground px-3 py-1 text-background text-sm'>
-                  Errungenschaften
+                  {t("milestones.badge")}
                 </div>
                 <h2 className='font-bold text-3xl tracking-tighter sm:text-5xl'>
-                  Ich liebe es, neue Dinge zu lernen und zu erschaffen
+                  {t("milestones.title")}
                 </h2>
                 <p className='text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
-                  Im Laufe meiner Karriere habe ich verschiedene Meilensteine
-                  erreicht und Verantwortung übernommen. Von der Einführung
-                  neuer Technologien bis zur Administration ganzer
-                  Entwicklungsplattformen – hier sind einige Highlights.
+                  {t("milestones.description")}
                 </p>
               </div>
             </div>
@@ -252,14 +256,14 @@ export default function Page() {
                 >
                   <MilestoneCard
                     dates={project.dates}
-                    description={project.description}
+                    description={getMilestoneDescription(t, project.title)}
                     icon={
                       (project as unknown as { icon?: React.ElementType }).icon
                     }
                     image={(project as unknown as { image?: string }).image}
                     links={project.links}
                     location={project.location}
-                    title={project.title}
+                    title={getMilestoneTitle(t, project.title)}
                   />
                 </BlurFade>
               ))}
@@ -272,22 +276,20 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 18}>
             <div className='space-y-3'>
               <div className='inline-block rounded-lg bg-foreground px-3 py-1 text-background text-sm'>
-                Kontakt
+                {t("contact.badge")}
               </div>
               <h2 className='font-bold text-3xl tracking-tighter sm:text-5xl'>
-                Lass uns zusammenarbeiten
+                {t("contact.title")}
               </h2>
               <p className='mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
-                Ich bin aktuell auf der Suche nach neuen Herausforderungen und
-                offen für spannende Jobangebote. Du hast eine interessante
-                Stelle oder ein Projekt? Schreib mir einfach eine{" "}
+                {t("contact.description")}{" "}
                 <Link
                   className='text-blue-500 hover:underline'
                   href={`mailto:${DATA.contact.email}`}
                 >
-                  E-Mail
+                  {t("contact.email")}
                 </Link>{" "}
-                und ich melde mich so schnell wie möglich.
+                {t("contact.descriptionEnd")}
               </p>
             </div>
           </BlurFade>
@@ -295,4 +297,183 @@ export default function Page() {
       </section>
     </main>
   )
+}
+
+// Helper functions to map company/school names to translation keys
+function getWorkBadges(
+  t: Awaited<ReturnType<typeof getTranslations>>,
+  company: string
+): readonly string[] {
+  const keyMap: Record<string, string> = {
+    "Park Digital Solutions": "parkDigitalSolutions",
+    "Robert Bosch GmbH": "bosch",
+    "HMP Heidenhain Microprint": "hmp",
+    "Stadtwerke Elmshorn": "stadtwerke",
+  }
+  const key = keyMap[company]
+  if (!key) {
+    return []
+  }
+  return t.raw(`work.${key}.badges`) as readonly string[]
+}
+
+function getWorkTitle(
+  t: Awaited<ReturnType<typeof getTranslations>>,
+  company: string
+): string {
+  const keyMap: Record<string, string> = {
+    "Park Digital Solutions": "parkDigitalSolutions",
+    "Robert Bosch GmbH": "bosch",
+    "HMP Heidenhain Microprint": "hmp",
+    "Stadtwerke Elmshorn": "stadtwerke",
+  }
+  const key = keyMap[company]
+  if (!key) {
+    return ""
+  }
+  return t(`work.${key}.title`)
+}
+
+function getWorkDescription(
+  t: Awaited<ReturnType<typeof getTranslations>>,
+  company: string
+): string {
+  const keyMap: Record<string, string> = {
+    "Park Digital Solutions": "parkDigitalSolutions",
+    "Robert Bosch GmbH": "bosch",
+    "HMP Heidenhain Microprint": "hmp",
+    "Stadtwerke Elmshorn": "stadtwerke",
+  }
+  const key = keyMap[company]
+  if (!key) {
+    return ""
+  }
+  return t(`work.${key}.description`)
+}
+
+function getEducationDegree(
+  t: Awaited<ReturnType<typeof getTranslations>>,
+  school: string
+): string {
+  const keyMap: Record<string, string> = {
+    "Robert Bosch GmbH": "bosch",
+    "Stadtwerke Elmshorn": "stadtwerke",
+  }
+  const key = keyMap[school]
+  if (!key) {
+    return ""
+  }
+  return t(`education.${key}.degree`)
+}
+
+function getBoschProjectTitle(
+  t: Awaited<ReturnType<typeof getTranslations>>,
+  title: string
+): string {
+  const keyMap: Record<string, string> = {
+    "Manufacturing & Maintenance Suite (MMS)": "mms",
+    "Strategic Personnel Planning (SPP)": "spp",
+    "ITM-Location CMDB (Device Finder)": "deviceFinder",
+    "My Stuff – Interner Marktplatz": "myStuff",
+    "ASM-Hub (Application Lifecycle Management)": "asmHub",
+  }
+  const key = keyMap[title]
+  if (!key) {
+    return title
+  }
+  return t(`boschProjects.${key}.title`)
+}
+
+function getBoschProjectRole(
+  t: Awaited<ReturnType<typeof getTranslations>>,
+  title: string
+): string {
+  const keyMap: Record<string, string> = {
+    "Manufacturing & Maintenance Suite (MMS)": "mms",
+    "Strategic Personnel Planning (SPP)": "spp",
+    "ITM-Location CMDB (Device Finder)": "deviceFinder",
+    "My Stuff – Interner Marktplatz": "myStuff",
+    "ASM-Hub (Application Lifecycle Management)": "asmHub",
+  }
+  const key = keyMap[title]
+  if (!key) {
+    return ""
+  }
+  return t(`boschProjects.${key}.role`)
+}
+
+function getBoschProjectScope(
+  t: Awaited<ReturnType<typeof getTranslations>>,
+  title: string
+): string {
+  const keyMap: Record<string, string> = {
+    "Manufacturing & Maintenance Suite (MMS)": "mms",
+    "Strategic Personnel Planning (SPP)": "spp",
+    "ITM-Location CMDB (Device Finder)": "deviceFinder",
+    "My Stuff – Interner Marktplatz": "myStuff",
+    "ASM-Hub (Application Lifecycle Management)": "asmHub",
+  }
+  const key = keyMap[title]
+  if (!key) {
+    return ""
+  }
+  return t(`boschProjects.${key}.scope`)
+}
+
+function getBoschProjectDescription(
+  t: Awaited<ReturnType<typeof getTranslations>>,
+  title: string
+): string {
+  const keyMap: Record<string, string> = {
+    "Manufacturing & Maintenance Suite (MMS)": "mms",
+    "Strategic Personnel Planning (SPP)": "spp",
+    "ITM-Location CMDB (Device Finder)": "deviceFinder",
+    "My Stuff – Interner Marktplatz": "myStuff",
+    "ASM-Hub (Application Lifecycle Management)": "asmHub",
+  }
+  const key = keyMap[title]
+  if (!key) {
+    return ""
+  }
+  return t(`boschProjects.${key}.description`)
+}
+
+function getMilestoneTitle(
+  t: Awaited<ReturnType<typeof getTranslations>>,
+  title: string
+): string {
+  const keyMap: Record<string, string> = {
+    "Custom Mechanical Keyboards & Ergonomie": "keyboards",
+    "drink2art.com Launch": "drink2artLaunch",
+    "Fachinformatiker-Ausbildung mit Auszeichnung": "fiAusbildung",
+    "Home-Server & Smart Home Automation": "homeServer",
+    "GitHub Enterprise Server Administrator": "githubAdmin",
+    "Enterprise Web Template & Design System": "webTemplate",
+    "Legacy C# → JavaScript Migration": "legacyMigration",
+  }
+  const key = keyMap[title]
+  if (!key) {
+    return title
+  }
+  return t(`milestones.${key}.title`)
+}
+
+function getMilestoneDescription(
+  t: Awaited<ReturnType<typeof getTranslations>>,
+  title: string
+): string {
+  const keyMap: Record<string, string> = {
+    "Custom Mechanical Keyboards & Ergonomie": "keyboards",
+    "drink2art.com Launch": "drink2artLaunch",
+    "Fachinformatiker-Ausbildung mit Auszeichnung": "fiAusbildung",
+    "Home-Server & Smart Home Automation": "homeServer",
+    "GitHub Enterprise Server Administrator": "githubAdmin",
+    "Enterprise Web Template & Design System": "webTemplate",
+    "Legacy C# → JavaScript Migration": "legacyMigration",
+  }
+  const key = keyMap[title]
+  if (!key) {
+    return ""
+  }
+  return t(`milestones.${key}.description`)
 }

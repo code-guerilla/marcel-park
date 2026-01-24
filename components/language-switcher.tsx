@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useLocale } from "next-intl"
 import {
   Select,
@@ -11,8 +12,8 @@ import {
 import { usePathname, useRouter } from "@/i18n/navigation"
 
 const locales = [
-  { code: "de", label: "Deutsch", flag: "🇩🇪" },
-  { code: "en", label: "English", flag: "🇬🇧" },
+  { code: "de", label: "DE", flag: "/de.svg" },
+  { code: "en", label: "EN", flag: "/en.svg" },
 ] as const
 
 export function LanguageSwitcher() {
@@ -20,25 +21,45 @@ export function LanguageSwitcher() {
   const router = useRouter()
   const pathname = usePathname()
 
-  const handleLocaleChange = (newLocale: string) => {
-    router.replace(pathname, { locale: newLocale })
+  const handleLocaleChange = (newLocale: string | null) => {
+    if (newLocale) {
+      router.replace(pathname, { locale: newLocale as "en" | "de" })
+    }
   }
 
   const currentLocale = locales.find((l) => l.code === locale) ?? locales[0]
 
   return (
-    <Select defaultValue={locale} onValueChange={handleLocaleChange}>
-      <SelectTrigger className='h-10 w-[70px] gap-1 border-none bg-transparent px-2 shadow-none focus:ring-0'>
+    <Select onValueChange={handleLocaleChange} value={locale}>
+      <SelectTrigger className='flex items-center justify-center rounded-lg border-none bg-transparent p-1 shadow-none transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:ring-0 [&_svg]:hidden'>
         <SelectValue>
-          <span className='text-lg'>{currentLocale.flag}</span>
+          <span className='flex items-center justify-center'>
+            <Image
+              alt={currentLocale.label}
+              className='rounded-sm'
+              height={24}
+              src={currentLocale.flag}
+              width={24}
+            />
+          </span>
         </SelectValue>
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent align='end' className='min-w-[80px]'>
         {locales.map((loc) => (
-          <SelectItem key={loc.code} value={loc.code}>
+          <SelectItem
+            className='cursor-pointer'
+            key={loc.code}
+            value={loc.code}
+          >
             <span className='flex items-center gap-2'>
-              <span className='text-lg'>{loc.flag}</span>
-              <span className='text-sm'>{loc.label}</span>
+              <Image
+                alt={loc.label}
+                className='rounded-sm'
+                height={20}
+                src={loc.flag}
+                width={20}
+              />
+              <span className='font-bold text-xs'>{loc.label}</span>
             </span>
           </SelectItem>
         ))}

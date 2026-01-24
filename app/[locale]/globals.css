@@ -83,11 +83,17 @@
 }
 
 h3 code {
-  @apply !text-lg md:!text-xl;
+  @apply text-lg! md:text-xl!;
 }
 
 pre {
-  @apply !px-0 rounded-lg overflow-x-auto py-4 } pre [data-line] { @apply px-4 } code { @apply text-sm md:text-base !leading-loose;
+  @apply px-0! rounded-lg overflow-x-auto py-4;
+}
+pre [data-line] {
+  @apply px-4;
+}
+code {
+  @apply text-sm md:text-base leading-loose!;
 }
 
 pre > code {

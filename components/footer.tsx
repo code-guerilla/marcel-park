@@ -1,31 +1,22 @@
-import Link from "next/link"
 import { DATA } from "@/data/resume"
+import { Link } from "@/i18n/navigation"
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <footer className='mx-auto max-w-2xl px-6 py-32 text-center text-muted-foreground text-sm'>
-      <RightsReserved />
+    <footer className='mx-auto flex max-w-2xl flex-col gap-2 px-6 py-32 text-center text-muted-foreground text-sm'>
+      <p>
+        &copy; {currentYear} {DATA.name} - All rights reserved.
+      </p>
       <div className='mt-2 space-x-4'>
-        {DATA.footer.links.map((link) => (
-          <Link
-            className='hover:underline'
-            href={link.href}
-            key={link.label}
-            target={link.target}
-          >
-            {link.label}
-          </Link>
-        ))}
+        <Link className='hover:underline' href='/imprint'>
+          Imprint
+        </Link>
+        <Link className='hover:underline' href='/privacy'>
+          Privacy
+        </Link>
       </div>
     </footer>
-  )
-}
-// biome-ignore lint/suspicious/useAwait: <not nessesary>
-async function RightsReserved() {
-  "use cache"
-  return (
-    <p>
-      &copy; {new Date().getFullYear()} {DATA.name}. {DATA.footer.rights}
-    </p>
   )
 }

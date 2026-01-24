@@ -1,4 +1,14 @@
-import Link from "next/link"
+"use client"
+
+import {
+  Award,
+  Briefcase,
+  HomeIcon,
+  LayoutTemplate,
+  type LucideIcon,
+  Mail,
+} from "lucide-react"
+import { useTranslations } from "next-intl"
 import { Dock, DockIcon } from "@/components/magicui/dock"
 import { ModeToggle } from "@/components/mode-toggle"
 import { buttonVariants } from "@/components/ui/button-variants"
@@ -9,14 +19,36 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import { DATA } from "@/data/resume"
+import { Link } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
+import { LanguageSwitcher } from "./language-switcher"
+
+type NavItem = {
+  href: string
+  icon: LucideIcon
+  labelKey: string
+}
+
+const navItems: NavItem[] = [
+  { href: "/", icon: HomeIcon, labelKey: "home" },
+  {
+    href: "/park-digital-solutions",
+    icon: Briefcase,
+    labelKey: "parkDigitalSolutions",
+  },
+  { href: "/#work", icon: Award, labelKey: "resume" },
+  { href: "/#projects", icon: LayoutTemplate, labelKey: "projects" },
+  { href: "/#contact", icon: Mail, labelKey: "contact" },
+]
 
 export default function Navbar() {
+  const t = useTranslations("navbar")
+
   return (
     <div className='pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex h-full max-h-14 origin-bottom'>
       <div className='fixed inset-x-0 bottom-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background' />
       <Dock className='pointer-events-auto relative z-50 mx-auto flex h-full min-h-full transform-gpu items-center bg-background px-1 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]'>
-        {DATA.navbar.map((item) => (
+        {navItems.map((item) => (
           <DockIcon key={item.href}>
             <Tooltip>
               <TooltipTrigger
@@ -33,7 +65,7 @@ export default function Navbar() {
                 }
               />
               <TooltipContent>
-                <p>{item.label}</p>
+                <p>{t(item.labelKey)}</p>
               </TooltipContent>
             </Tooltip>
           </DockIcon>
@@ -69,7 +101,15 @@ export default function Navbar() {
           <Tooltip>
             <TooltipTrigger render={<ModeToggle />} />
             <TooltipContent>
-              <p>Theme</p>
+              <p>{t("theme")}</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger render={<LanguageSwitcher />} />
+            <TooltipContent>
+              <p>{t("language")}</p>
             </TooltipContent>
           </Tooltip>
         </DockIcon>

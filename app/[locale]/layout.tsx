@@ -10,7 +10,12 @@ import { GeistMono } from "geist/font/mono"
 import { GeistSans } from "geist/font/sans"
 import { notFound } from "next/navigation"
 import { hasLocale, NextIntlClientProvider } from "next-intl"
+import { Suspense } from "react"
 import { routing } from "@/i18n/routing"
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
@@ -59,19 +64,24 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
   if (!hasLocale(routing.locales, locale)) {
     notFound()
   }
+
   return (
-    <html className='scroll-smooth' lang='de' suppressHydrationWarning>
+    <html className='scroll-smooth' lang={locale} suppressHydrationWarning>
       <body
         className={cn(
-          "mx-auto min-h-screen max-w-2xl bg-background px-6 py-12 font-sans antialiased sm:py-24",
+          "mx-auto min-h-screen max-w-3xl bg-background px-6 py-12 font-sans antialiased sm:py-24",
           GeistSans,
           GeistMono
         )}
       >
         <ThemeProvider attribute='class' defaultTheme='light'>
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
-          <Footer />
-          <Navbar />
+          <Suspense fallback={<div className='min-h-screen' />}>
+            <NextIntlClientProvider locale={locale}>
+              {children}
+              <Footer />
+              <Navbar />
+            </NextIntlClientProvider>
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>

@@ -24,7 +24,7 @@
   },
   "about": {
     "title": "Über mich",
-    "summary": "Ursprünglich komme ich aus dem Handwerk: Nach meiner Ausbildung in der Wasserversorgung nahm ich mir von 2016 bis 2018 zwei Sabbatjahre, um die Welt zu bereisen, Spanisch autodidaktisch zu lernen und in verschiedensten Jobs zu arbeiten. Danach ging ich nach Berlin zu HMP Heidenhain Microprint – einem Leiterplattenhersteller – und überführte dort gemeinsam mit einem externen Team ein altes Steuerungssystem in eine vom Computer bedienbare, vollautomatische SPS-Steuerung. Dabei entdeckte ich meine Leidenschaft fürs Programmieren und wechselte zur Robert Bosch GmbH nach Nürnberg, um eine Ausbildung zum Fachinformatiker für Anwendungsentwicklung zu absolvieren – verkürzt auf 2,5 Jahre und wie schon die erste Ausbildung mit Auszeichnung abgeschlossen. Die vorher kaum vorhandene Webentwicklungsstruktur am Standort baute ich quasi im Alleingang auf und bekam die erste Stelle als Vollzeitentwickler in dem Industrie-Fertigungsstandort NuP1. Dort entwickel ich komplexe Business-Webanwendungen mit Next.js, React, TypeScript und Prisma ORM – teilweise Bosch-weit bzw. weltweit genutzt."
+    "summary": "Ursprünglich komme ich aus dem Handwerk: Nach meiner Ausbildung in der Wasserversorgung nahm ich mir von 2016 bis 2018 zwei Sabbatjahre, ich bereiste die Welt, lernte Spanisch autodidaktisch und arbeitete in den verschiedensten Jobs. Danach ging ich nach Berlin zu HMP Heidenhain Microprint – einem Leiterplattenhersteller – und überführte dort gemeinsam mit einem externen Team ein altes Steuerungssystem in eine vom Computer bedienbare, vollautomatische SPS-Steuerung. Dabei entdeckte ich meine Leidenschaft fürs Programmieren und wechselte zur Robert Bosch GmbH nach Nürnberg, um eine Ausbildung zum Fachinformatiker für Anwendungsentwicklung zu absolvieren – verkürzt auf 2,5 Jahre und wie schon die erste Ausbildung mit Auszeichnung abgeschlossen. Die vorher kaum vorhandene Webentwicklungsstruktur am Standort baute ich quasi im Alleingang auf und bekam die erste Stelle als Vollzeitentwickler in dem Industrie-Fertigungsstandort NuP1. Dort entwickel ich komplexe Business-Webanwendungen mit Next.js, React, TypeScript und Prisma ORM – teilweise Bosch-weit bzw. weltweit genutzt."
   },
   "work": {
     "title": "Berufserfahrung",
@@ -153,22 +153,35 @@
       "title": "Meine Leistungen",
       "webDev": {
         "title": "Individuelle Webentwicklung",
-        "description": "Von der einfachen Landingpage bis zur komplexen Webanwendung. Ich baue performante, skalierbare Lösungen mit modernen Technologien wie"
+        "description": "Von der einfachen Landingpage bis zur komplexen Webanwendung. Ich baue performante, skalierbare Lösungen mit modernen Technologien wie <bold>Next.js, TypeScript und React</bold>."
       },
       "automation": {
         "title": "Prozessautomatisierung",
-        "description": "Schluss mit Excel-Chaos und manueller Datenpflege. Ich automatisiere Ihre Geschäftsabläufe mit",
-        "descriptionEnd": ", damit Sie sich auf das Wesentliche konzentrieren können."
+        "description": "Schluss mit Excel-Chaos und manueller Datenpflege. Ich automatisiere Ihre Geschäftsabläufe mit <bold>Python, Scripts und intelligenten Schnittstellen</bold>, damit Sie sich auf das Wesentliche konzentrieren können."
       },
       "consulting": {
         "title": "Beratung & Planung",
-        "description": "Ich begleite Sie von der ersten Idee bis zum fertigen Produkt. Als",
-        "descriptionEnd": "bei Bosch habe ich gelernt, komplexe Anforderungen in verständliche und umsetzbare Konzepte zu übersetzen."
+        "description": "Ich begleite Sie von der ersten Idee bis zum fertigen Produkt. Als <bold>Solution Architect</bold> bei Bosch habe ich gelernt, komplexe Anforderungen in verständliche und umsetzbare Konzepte zu übersetzen."
       },
       "fullService": {
         "title": "Full-Service",
-        "description": "Ich kümmere mich nicht nur um den Code, sondern auch um das",
-        "descriptionEnd": ". Sie bekommen eine schlüsselfertige Lösung aus einer Hand."
+        "description": "Ich kümmere mich nicht nur um den Code, sondern auch um das <bold>Deployment, Hosting und die Wartung</bold>. Sie bekommen eine schlüsselfertige Lösung aus einer Hand."
+      },
+      "codeReviews": {
+        "title": "Code Reviews",
+        "description": "Detaillierte Analyse Ihrer Codebasis zur Sicherstellung von Qualität, Wartbarkeit und Best Practices."
+      },
+      "testing": {
+        "title": "Testing & QA",
+        "description": "Implementierung von Unit-, Integration- und End-to-End-Tests für maximale Stabilität."
+      },
+      "bugfixing": {
+        "title": "Bugfixing & Refactoring",
+        "description": "Behebung von Fehlern und Modernisierung von Legacy-Code für bessere Performance und Lesbarkeit."
+      },
+      "performance": {
+        "title": "Performance-Analyse",
+        "description": "Identifizierung und Beseitigung von Performance-Engpässen in Webanwendungen und Datenbanken."
       }
     },
     "whyMe": {

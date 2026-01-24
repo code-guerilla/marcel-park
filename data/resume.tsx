@@ -2,10 +2,14 @@ import {
   ArrowRightLeft,
   Award,
   Briefcase,
+  Gauge,
   HomeIcon,
   LayoutTemplate,
   Mail,
+  SearchCheck,
   Server,
+  TestTube2,
+  Wrench,
 } from "lucide-react"
 import { Icons } from "@/components/icons"
 
@@ -86,6 +90,7 @@ export const DATA = {
   work: [
     {
       company: "Park Digital Solutions",
+      translationKey: "parkDigitalSolutions",
       href: "https://park-digital-solutions.com",
       badges: ["Nebenberuflich", "Einzelunternehmen"],
       location: "Nürnberg",
@@ -100,6 +105,7 @@ export const DATA = {
     },
     {
       company: "Robert Bosch GmbH",
+      translationKey: "bosch",
       href: "https://www.bosch.de",
       badges: ["Full-Time"],
       location: "Nürnberg",
@@ -113,6 +119,7 @@ export const DATA = {
     },
     {
       company: "HMP Heidenhain Microprint",
+      translationKey: "hmp",
       badges: ["Full-Time"],
       href: "https://www.hmp-heidenhain.de/",
       location: "Berlin",
@@ -127,6 +134,7 @@ export const DATA = {
     },
     {
       company: "Stadtwerke Elmshorn",
+      translationKey: "stadtwerke",
       badges: ["Full-Time"],
       href: "https://www.stadtwerke-elmshorn.de/",
       location: "Elmshorn",
@@ -142,6 +150,7 @@ export const DATA = {
   education: [
     {
       school: "Robert Bosch GmbH",
+      translationKey: "bosch",
       href: "https://www.bosch.de",
       degree:
         "Fachinformatiker für Anwendungsentwicklung (verkürzt, mit Auszeichnung)",
@@ -152,6 +161,7 @@ export const DATA = {
     },
     {
       school: "Stadtwerke Elmshorn",
+      translationKey: "stadtwerke",
       href: "https://www.stadtwerke-elmshorn.de",
       degree: "Fachkraft für Wasserversorgungstechnik (mit Auszeichnung)",
       logoUrl: "/stadtwerke-elmshorn.svg",
@@ -190,6 +200,7 @@ export const DATA = {
   boschProjects: [
     {
       title: "Manufacturing & Maintenance Suite (MMS)",
+      translationKey: "mms",
       role: "Sole Developer (End-to-End)",
       scope: "Werk NuP1 Produktion & Service",
       description:
@@ -197,6 +208,7 @@ export const DATA = {
     },
     {
       title: "Strategic Personnel Planning (SPP)",
+      translationKey: "spp",
       role: "Lead Developer",
       scope: "HR-Abteilungen",
       description:
@@ -204,6 +216,7 @@ export const DATA = {
     },
     {
       title: "ITM-Location CMDB (Device Finder)",
+      translationKey: "deviceFinder",
       role: "Sole Developer",
       scope: "Werk NuP1",
       description:
@@ -211,6 +224,7 @@ export const DATA = {
     },
     {
       title: "My Stuff – Interner Marktplatz",
+      translationKey: "myStuff",
       role: "Contributor / Lead Developer",
       scope: "Bosch-weit (RB)",
       description:
@@ -218,6 +232,7 @@ export const DATA = {
     },
     {
       title: "ASM-Hub (Application Lifecycle Management)",
+      translationKey: "asmHub",
       role: "Developer / Contributor",
       scope: "Global (NuP1 → PS → BBM → RB)",
       description:
@@ -227,6 +242,7 @@ export const DATA = {
   personalMilestones: [
     {
       title: "Custom Mechanical Keyboards & Ergonomie",
+      translationKey: "keyboards",
       dates: "2025 - 2026",
       location: "Privat",
       description:
@@ -247,6 +263,7 @@ export const DATA = {
     },
     {
       title: "drink2art.com Launch",
+      translationKey: "drink2artLaunch",
       dates: "2025",
       location: "Privat",
       description:
@@ -262,6 +279,7 @@ export const DATA = {
     },
     {
       title: "Fachinformatiker-Ausbildung mit Auszeichnung",
+      translationKey: "fiAusbildung",
       dates: "2023",
       location: "Robert Bosch GmbH, Nürnberg",
       description:
@@ -271,6 +289,7 @@ export const DATA = {
     },
     {
       title: "Home-Server & Smart Home Automation",
+      translationKey: "homeServer",
       dates: "2022 - heute",
       location: "Privat",
       description:
@@ -281,6 +300,7 @@ export const DATA = {
     },
     {
       title: "GitHub Enterprise Server Administrator",
+      translationKey: "githubAdmin",
       dates: "2022 - heute",
       location: "Robert Bosch GmbH",
       description:
@@ -290,6 +310,7 @@ export const DATA = {
     },
     {
       title: "Enterprise Web Template & Design System",
+      translationKey: "webTemplate",
       dates: "2022 - heute",
       location: "Robert Bosch GmbH",
       description:
@@ -299,12 +320,43 @@ export const DATA = {
     },
     {
       title: "Legacy C# → JavaScript Migration",
+      translationKey: "legacyMigration",
       dates: "2021 - 2022",
       location: "Robert Bosch GmbH",
       description:
         "Migration von Legacy C# Blazor Webseiten auf moderne JavaScript-Frameworks (Next.js/React). Einführung des JavaScript-Ökosystems am Standort.",
       icon: ArrowRightLeft,
       links: [],
+    },
+  ],
+  parkServices: [
+    {
+      title: "Code Reviews",
+      translationKey: "codeReviews",
+      description:
+        "Detaillierte Analyse Ihrer Codebasis zur Sicherstellung von Qualität, Wartbarkeit und Best Practices.",
+      icon: SearchCheck,
+    },
+    {
+      title: "Testing & QA",
+      translationKey: "testing",
+      description:
+        "Implementierung von Unit-, Integration- und End-to-End-Tests für maximale Stabilität.",
+      icon: TestTube2,
+    },
+    {
+      title: "Bugfixing & Refactoring",
+      translationKey: "bugfixing",
+      description:
+        "Behebung von Fehlern und Modernisierung von Legacy-Code für bessere Performance und Lesbarkeit.",
+      icon: Wrench,
+    },
+    {
+      title: "Performance-Analyse",
+      translationKey: "performance",
+      description:
+        "Identifizierung und Beseitigung von Performance-Engpässen in Webanwendungen und Datenbanken.",
+      icon: Gauge,
     },
   ],
 } as const
