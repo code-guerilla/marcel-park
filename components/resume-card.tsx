@@ -68,35 +68,37 @@ export const ResumeCard = ({
         />
       </div>
       <div className='group ml-4 grow flex-col items-start'>
-        <CardHeader>
-          <div className='flex items-center justify-between gap-x-2 text-base'>
-            <h3 className='inline-flex items-center gap-x-1 font-semibold text-xs leading-none sm:text-sm'>
-              {title}
-              {badges && (
-                <span className='inline-flex gap-x-1'>
-                  {badges.map((badge) => (
-                    <Badge
-                      className='align-middle text-xs'
-                      key={badge}
-                      variant='secondary'
-                    >
-                      {badge}
-                    </Badge>
-                  ))}
-                </span>
-              )}
-              {description && (
-                <ChevronRightIcon
-                  className={cn(
-                    "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
-                    isExpanded ? "rotate-90" : "rotate-0"
-                  )}
-                />
-              )}
-            </h3>
-            <div className='text-right text-muted-foreground text-xs tabular-nums sm:text-sm'>
-              {period}
+        <CardHeader className='p-4 pb-2'>
+          <div className='flex flex-col gap-y-1.5'>
+            <div className='flex items-start justify-between gap-x-2'>
+              <h3 className='inline-flex items-center gap-x-1 font-semibold text-xs leading-none sm:text-sm'>
+                {title}
+                {description && (
+                  <ChevronRightIcon
+                    className={cn(
+                      "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                      isExpanded ? "rotate-90" : "rotate-0"
+                    )}
+                  />
+                )}
+              </h3>
+              <div className='shrink-0 text-muted-foreground text-xs tabular-nums sm:text-sm'>
+                {period}
+              </div>
             </div>
+            {badges && (
+              <div className='flex flex-wrap gap-1'>
+                {badges.map((badge) => (
+                  <Badge
+                    className='text-xs sm:text-sm'
+                    key={badge}
+                    variant='secondary'
+                  >
+                    {badge}
+                  </Badge>
+                ))}
+              </div>
+            )}
           </div>
           {subtitle && <div className='font-sans text-xs'>{subtitle}</div>}
         </CardHeader>

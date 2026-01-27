@@ -54,13 +54,13 @@ export default async function ParkDigitalSolutionsPage({
                 yOffset={8}
               />
               <BlurFadeText
-                className='max-w-[600px] md:text-xl'
+                className='max-w-150 md:text-xl'
                 delay={BLUR_FADE_DELAY}
                 text={t("hero.description")}
               />
             </div>
             <BlurFade
-              className='flex max-h-[200px] w-full max-w-[400px] flex-1 items-center justify-center sm:max-w-none'
+              className='flex max-h-50 w-full max-w-100 flex-1 items-center justify-center sm:max-w-none'
               delay={BLUR_FADE_DELAY}
             >
               <Image
