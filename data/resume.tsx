@@ -4,7 +4,6 @@ import {
   Gauge,
   LayoutTemplate,
   SearchCheck,
-  Send,
   Server,
   TestTube2,
   Wrench,
@@ -47,12 +46,12 @@ export const DATA = {
         icon: Icons.github,
         navbar: true,
       },
-      email: {
-        name: "Send email",
-        url: "mailto:marcel_park@gmx.de",
-        icon: Send,
-        navbar: true,
-      },
+      // email: {
+      //   name: "Send email",
+      //   url: "mailto:marcel_park@gmx.de",
+      //   icon: Send,
+      //   navbar: true,
+      // },
     },
   },
   work: [

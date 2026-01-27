@@ -74,7 +74,6 @@ export default async function ParkDigitalSolutionsPage({
           </div>
         </div>
       </section>
-
       {/* Intro/Services Section */}
       <section id='services'>
         <div className='flex min-h-0 flex-col gap-y-3'>
@@ -172,7 +171,6 @@ export default async function ParkDigitalSolutionsPage({
           </div>
         </div>
       </section>
-
       {/* Why Me / Trust Section */}
       <section id='why-me'>
         <BlurFade delay={BLUR_FADE_DELAY * 15}>
@@ -217,7 +215,6 @@ export default async function ParkDigitalSolutionsPage({
           </div>
         </BlurFade>
       </section>
-
       {/* Contact CTA */}
       <section id='contact'>
         <div className='flex flex-col items-center justify-center gap-4 py-12 text-center'>
@@ -229,7 +226,7 @@ export default async function ParkDigitalSolutionsPage({
               <h2 className='font-bold text-3xl tracking-tighter sm:text-5xl'>
                 {t("cta.title")}
               </h2>
-              <p className='mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
+              <p className='mx-auto max-w-150 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
                 {t("cta.description")}
               </p>
             </div>
@@ -247,7 +244,7 @@ export default async function ParkDigitalSolutionsPage({
                 <Handshake className='size-4' />
                 {t("cta.button")}
               </Link>
-              {DATA.contact.social.email && (
+              {/* {DATA.contact.social.email && (
                 <Link
                   className={cn(
                     buttonVariants({ variant: "outline", size: "lg" }),
@@ -257,7 +254,7 @@ export default async function ParkDigitalSolutionsPage({
                 >
                   {t("cta.cvLink")}
                 </Link>
-              )}
+              )} */}
             </div>
           </BlurFade>
         </div>

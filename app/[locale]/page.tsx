@@ -38,7 +38,7 @@ export default async function Page({
                 yOffset={8}
               />
               <BlurFadeText
-                className='max-w-[600px] md:text-xl'
+                className='max-w-150 md:text-xl'
                 delay={BLUR_FADE_DELAY}
                 text={t("hero.description")}
               />
