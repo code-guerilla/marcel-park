@@ -142,7 +142,83 @@
     "title": "Lass uns zusammenarbeiten",
     "description": "Ich bin aktuell auf der Suche nach neuen Herausforderungen und offen für spannende Jobangebote. Du hast eine interessante Stelle oder ein Projekt? Schreib mir einfach eine",
     "email": "E-Mail",
-    "descriptionEnd": "und ich melde mich so schnell wie möglich."
+    "descriptionEnd": "und ich melde mich so schnell wie möglich. Für eine schnelle Nachricht",
+    "whatsapp": "WhatsApp"
+  },
+  "privacyPage": {
+    "title": "Datenschutzerklärung",
+    "section1": {
+      "title": "1. Datenschutz auf einen Blick",
+      "general": {
+        "title": "Allgemeine Hinweise",
+        "text": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen."
+      },
+      "security": {
+        "title": "Sicherheit (SSL/TLS)",
+        "text": "Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-bzw. TLS-Verschlüsselung."
+      }
+    },
+    "section2": {
+      "title": "2. Hosting & Content Delivery Networks (CDN)",
+      "intro": "Wir hosten diese Website bei folgendem Anbieter:",
+      "provider": {
+        "name": "Vercel Inc.",
+        "address": "340 S Lemon Ave #4133, Walnut, CA 91789, USA"
+      },
+      "processing": {
+        "title": "Verarbeitung",
+        "text": "Der Provider erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt (z.B. IP-Adresse, Browser, Betriebssystem, Referrer URL, Uhrzeit). Diese Daten werden nicht mit anderen Datenquellen zusammengeführt."
+      },
+      "legalBasis": {
+        "title": "Rechtsgrundlage",
+        "text": "Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung, Sicherheit und Optimierung unserer Website."
+      },
+      "usaTransfer": {
+        "title": "Datenübermittlung in die USA",
+        "text": "Vercel ist ein US-Unternehmen. Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission sowie das \"Data Privacy Framework\" (DPF) gestützt. Vercel ist nach dem DPF zertifiziert."
+      },
+      "dataProcessingAgreement": {
+        "title": "Auftragsverarbeitung",
+        "text": "Wir haben einen Vertrag über Auftragsverarbeitung (AVV) mit dem oben genannten Anbieter geschlossen."
+      }
+    },
+    "section3": {
+      "title": "3. Allgemeine Hinweise und Pflichtinformationen",
+      "responsible": {
+        "title": "Verantwortliche Stelle",
+        "name": "Park Digital Solutions",
+        "person": "Marcel Park",
+        "address": "Amselstr. 16, 90439 Nürnberg",
+        "emailLabel": "E-Mail"
+      },
+      "contact": {
+        "title": "Kontakt",
+        "text": "Wenn Sie uns kontaktieren (z.B. per E-Mail), werden Ihre Angaben zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertrag/Anbahnung) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Bearbeitung)."
+      },
+      "rights": {
+        "title": "Ihre Rechte",
+        "intro": "Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf",
+        "list": {
+          "info": "Unentgeltliche <bold>Auskunft</bold> über Ihre gespeicherten personenbezogenen Daten (Art. 15 DSGVO).",
+          "correction": "<bold>Berichtigung</bold> unrichtiger Daten (Art. 16 DSGVO).",
+          "deletion": "<bold>Löschung</bold> Ihrer Daten (Art. 17 DSGVO).",
+          "restriction": "<bold>Einschränkung</bold> der Datenverarbeitung (Art. 18 DSGVO).",
+          "portability": "<bold>Datenübertragbarkeit</bold> (Art. 20 DSGVO).",
+          "revocation": "<bold>Widerruf</bold> Ihrer Einwilligung zur Datenverarbeitung (Art. 7 Abs. 3 DSGVO).",
+          "complaint": "<bold>Beschwerde</bold> bei der zuständigen Aufsichtsbehörde (Art. 77 DSGVO)."
+        }
+      },
+      "objection": {
+        "title": "Widerspruchsrecht",
+        "text": "Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) erfolgt, haben Sie jederzeit das Recht, Widerspruch einzulegen."
+      }
+    }
+  },
+  "imprintPage": {
+    "title": "Impressum",
+    "contact": "Kontakt",
+    "phone": "Telefon",
+    "email": "E-Mail"
   },
   "parkDigitalSolutions": {
     "hero": {

@@ -2,14 +2,15 @@ import { Briefcase, MapPin } from "lucide-react"
 import Link from "next/link"
 import { getTranslations } from "next-intl/server"
 import Markdown from "react-markdown"
+import { Icons } from "@/components/icons"
 import BlurFade from "@/components/magicui/blur-fade"
 import BlurFadeText from "@/components/magicui/blur-fade-text"
 import { MilestoneCard } from "@/components/milestone-card"
 import { ProjectCard } from "@/components/project-card"
 import { ResumeCard } from "@/components/resume-card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { buttonVariants } from "@/components/ui/button-variants"
 import { DATA } from "@/data/resume"
-
 import { cn } from "@/lib/utils"
 
 const BLUR_FADE_DELAY = 0.04
@@ -303,8 +304,36 @@ export default async function Page({
                 >
                   {t("contact.email")}
                 </Link>{" "}
-                {t("contact.descriptionEnd")}
+                {t("contact.descriptionEnd")}{" "}
+                <Link
+                  className='text-blue-500 hover:underline'
+                  href={`https://wa.me/${DATA.contact.tel.replace(/[+]/g, "")}`}
+                >
+                  {t("contact.whatsapp")}
+                </Link>
               </p>
+              <div className='flex flex-col items-center justify-center gap-2 sm:flex-row'>
+                <Link
+                  className={cn(
+                    buttonVariants({ size: "lg" }),
+                    "w-full gap-2 sm:w-auto"
+                  )}
+                  href={`mailto:${DATA.contact.email}`}
+                >
+                  <Icons.email className='size-4' />
+                  {t("contact.email")}
+                </Link>
+                <Link
+                  className={cn(
+                    buttonVariants({ variant: "outline", size: "lg" }),
+                    "w-full gap-2 sm:w-auto"
+                  )}
+                  href={`https://wa.me/${DATA.contact.tel.replace(/[+]/g, "")}`}
+                >
+                  <Icons.whatsapp className='size-4' />
+                  {t("contact.whatsapp")}
+                </Link>
+              </div>
             </div>
           </BlurFade>
         </div>

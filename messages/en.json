@@ -142,7 +142,83 @@
     "title": "Let's work together",
     "description": "I'm currently looking for new challenges and open to exciting job opportunities. Have an interesting position or project? Just send me an",
     "email": "email",
-    "descriptionEnd": "and I'll get back to you as soon as possible."
+    "descriptionEnd": "and I'll get back to you as soon as possible. For a quick message",
+    "whatsapp": "WhatsApp"
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "section1": {
+      "title": "1. Data Protection at a Glance",
+      "general": {
+        "title": "General Information",
+        "text": "The following notes provide a simple overview of what happens to your personal data when you visit this website."
+      },
+      "security": {
+        "title": "Security (SSL/TLS)",
+        "text": "This site uses SSL or TLS encryption for security reasons and to protect the transmission of confidential content."
+      }
+    },
+    "section2": {
+      "title": "2. Hosting & Content Delivery Networks (CDN)",
+      "intro": "We host this website with the following provider:",
+      "provider": {
+        "name": "Vercel Inc.",
+        "address": "340 S Lemon Ave #4133, Walnut, CA 91789, USA"
+      },
+      "processing": {
+        "title": "Processing",
+        "text": "The provider automatically collects and stores information in so-called server log files, which your browser automatically transmits to us (e.g., IP address, browser, operating system, referrer URL, time). This data is not merged with other data sources."
+      },
+      "legalBasis": {
+        "title": "Legal Basis",
+        "text": "Processing is carried out on the basis of Art. 6 Para. 1 lit. f GDPR. We have a legitimate interest in the most reliable representation, security, and optimization of our website."
+      },
+      "usaTransfer": {
+        "title": "Data Transfer to the USA",
+        "text": "Vercel is a US company. Data transfer to the USA is based on the EU Commission's standard contractual clauses and the \"Data Privacy Framework\" (DPF). Vercel is certified under the DPF."
+      },
+      "dataProcessingAgreement": {
+        "title": "Data Processing Agreement",
+        "text": "We have concluded a Data Processing Agreement (DPA) with the provider mentioned above."
+      }
+    },
+    "section3": {
+      "title": "3. General Notes and Mandatory Information",
+      "responsible": {
+        "title": "Responsible Body",
+        "name": "Park Digital Solutions",
+        "person": "Marcel Park",
+        "address": "Amselstr. 16, 90439 Nürnberg",
+        "emailLabel": "Email"
+      },
+      "contact": {
+        "title": "Contact",
+        "text": "If you contact us (e.g., via email), the data you provide will be stored by us for the purpose of processing the request and in case of follow-up questions. We do not pass on this data without your consent. Legal basis: Art. 6 Para. 1 lit. b GDPR (contract/pre-contractual measures) or Art. 6 Para. 1 lit. f GDPR (legitimate interest in processing)."
+      },
+      "rights": {
+        "title": "Your Rights",
+        "intro": "Within the framework of the applicable statutory provisions, you have the right at any time to",
+        "list": {
+          "info": "Free <bold>information</bold> about your stored personal data (Art. 15 GDPR).",
+          "correction": "<bold>Correction</bold> of incorrect data (Art. 16 GDPR).",
+          "deletion": "<bold>Deletion</bold> of your data (Art. 17 GDPR).",
+          "restriction": "<bold>Restriction</bold> of data processing (Art. 18 GDPR).",
+          "portability": "<bold>Data portability</bold> (Art. 20 GDPR).",
+          "revocation": "<bold>Revocation</bold> of your consent to data processing (Art. 7 Para. 3 GDPR).",
+          "complaint": "<bold>Complaint</bold> to the responsible supervisory authority (Art. 77 GDPR)."
+        }
+      },
+      "objection": {
+        "title": "Right of Objection",
+        "text": "If data processing is carried out on the basis of Art. 6 Para. 1 lit. f GDPR (legitimate interest), you have the right to object at any time."
+      }
+    }
+  },
+  "imprintPage": {
+    "title": "Imprint",
+    "contact": "Contact",
+    "phone": "Telephone",
+    "email": "Email"
   },
   "parkDigitalSolutions": {
     "hero": {
