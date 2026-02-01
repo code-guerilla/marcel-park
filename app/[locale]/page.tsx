@@ -8,7 +8,6 @@ import { MilestoneCard } from "@/components/milestone-card"
 import { ProjectCard } from "@/components/project-card"
 import { ResumeCard } from "@/components/resume-card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
 import { DATA } from "@/data/resume"
 
 import { cn } from "@/lib/utils"
@@ -136,14 +135,24 @@ export default async function Page({
         </div>
       </section>
       <section id='skills'>
-        <div className='flex min-h-0 flex-col gap-y-3'>
+        <div className='flex min-h-0 flex-col gap-y-4'>
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className='font-bold text-xl'>{t("skills.title")}</h2>
+            <h2 className='font-bold text-xl'>Skills</h2>
           </BlurFade>
-          <div className='flex flex-wrap gap-1'>
+          <div className='flex flex-wrap gap-2'>
             {DATA.skills.map((skill, id) => (
-              <BlurFade delay={BLUR_FADE_DELAY * 10 + id * 0.05} key={skill}>
-                <Badge key={skill}>{skill}</Badge>
+              <BlurFade
+                delay={BLUR_FADE_DELAY * 10 + id * 0.05}
+                key={skill.name}
+              >
+                <div className='flex h-8 w-fit items-center gap-2 rounded-xl border border-border bg-background px-4 ring-2 ring-border/20'>
+                  {skill.icon && (
+                    <skill.icon className='size-4 overflow-hidden rounded object-contain' />
+                  )}
+                  <span className='font-medium text-foreground text-sm'>
+                    {skill.name}
+                  </span>
+                </div>
               </BlurFade>
             ))}
           </div>
@@ -300,6 +309,26 @@ export default async function Page({
           </BlurFade>
         </div>
       </section>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: DATA.name,
+            url: DATA.url,
+            image: `${DATA.url}${DATA.avatarUrl}`,
+            sameAs: [
+              ...Object.values(DATA.contact.social).map((social) => social.url),
+            ],
+            jobTitle: "Software Engineer",
+            worksFor: {
+              "@type": "Organization",
+              name: DATA.work[0].company,
+            },
+          }),
+        }}
+        type='application/ld+json'
+      />
     </main>
   )
 }

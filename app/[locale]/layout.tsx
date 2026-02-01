@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar"
 import { ThemeProvider } from "@/components/theme-provider"
 import { DATA } from "@/data/resume"
 import { cn } from "@/lib/utils"
-import "./globals.css"
+import "../globals.css"
 
 import { GeistMono } from "geist/font/mono"
 import { GeistSans } from "geist/font/sans"
@@ -24,6 +24,24 @@ export const metadata: Metadata = {
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
+  keywords: [
+    "Software Engineer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Fullrights",
+    "Marcel Park",
+    "Nürnberg",
+    "Deutschland",
+  ],
+  authors: [
+    {
+      name: DATA.name,
+      url: DATA.url,
+    },
+  ],
+  creator: DATA.name,
   openGraph: {
     title: `${DATA.name}`,
     description: DATA.description,
@@ -31,6 +49,14 @@ export const metadata: Metadata = {
     siteName: `${DATA.name}`,
     locale: "de_DE",
     type: "website",
+    images: [
+      {
+        url: DATA.avatarUrl,
+        width: 1200,
+        height: 630,
+        alt: DATA.name,
+      },
+    ],
   },
   robots: {
     index: true,
@@ -46,6 +72,14 @@ export const metadata: Metadata = {
   twitter: {
     title: `${DATA.name}`,
     card: "summary_large_image",
+    images: [DATA.avatarUrl],
+  },
+  alternates: {
+    canonical: DATA.url,
+    languages: {
+      en: `${DATA.url}/en`,
+      de: `${DATA.url}/de`,
+    },
   },
   verification: {
     google: "",

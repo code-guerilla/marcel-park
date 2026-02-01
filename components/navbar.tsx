@@ -3,16 +3,15 @@
 import {
   Award,
   Briefcase,
+  Code,
   HomeIcon,
-  LayoutTemplate,
   type LucideIcon,
   Mail,
 } from "lucide-react"
 import { useTranslations } from "next-intl"
+
 import { Dock, DockIcon } from "@/components/magicui/dock"
-import { ModeToggle } from "@/components/mode-toggle"
-import { buttonVariants } from "@/components/ui/button-variants"
-import { Separator } from "@/components/ui/separator"
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 import {
   Tooltip,
   TooltipContent,
@@ -21,6 +20,7 @@ import {
 import { DATA } from "@/data/resume"
 import { Link } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
+
 import { LanguageSwitcher } from "./language-switcher"
 
 type NavItem = {
@@ -37,7 +37,7 @@ const navItems: NavItem[] = [
     labelKey: "parkDigitalSolutions",
   },
   { href: "/#work", icon: Award, labelKey: "resume" },
-  { href: "/#projects", icon: LayoutTemplate, labelKey: "projects" },
+  { href: "/#projects", icon: Code, labelKey: "projects" },
   { href: "/#contact", icon: Mail, labelKey: "contact" },
 ]
 
@@ -45,70 +45,87 @@ export default function Navbar() {
   const t = useTranslations("navbar")
 
   return (
-    <div className='pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex h-full max-h-14 origin-bottom'>
-      <div className='fixed inset-x-0 bottom-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background' />
-      <Dock className='pointer-events-auto relative z-50 mx-auto flex h-full min-h-full transform-gpu items-center bg-background px-1 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]'>
+    <div className='pointer-events-none fixed inset-x-0 bottom-4 z-30'>
+      <Dock className='pointer-events-auto relative z-50 mx-auto flex h-14 w-fit gap-2 border bg-card/90 p-2 shadow-[0_0_10px_3px] shadow-primary/5 backdrop-blur-3xl'>
         {navItems.map((item) => (
-          <DockIcon key={item.href}>
-            <Tooltip>
-              <TooltipTrigger
-                render={
-                  <Link
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12"
-                    )}
-                    href={item.href}
-                  >
-                    <item.icon className='size-4' />
-                  </Link>
-                }
-              />
-              <TooltipContent>
-                <p>{t(item.labelKey)}</p>
-              </TooltipContent>
-            </Tooltip>
-          </DockIcon>
+          <Tooltip key={item.href}>
+            <TooltipTrigger
+              render={(props) => (
+                <Link href={item.href} {...props}>
+                  <DockIcon className='size-full cursor-pointer rounded-3xl border border-border bg-background p-0 text-muted-foreground backdrop-blur-3xl transition-colors hover:bg-muted hover:text-foreground'>
+                    <item.icon className='size-full overflow-hidden rounded-sm object-contain' />
+                  </DockIcon>
+                </Link>
+              )}
+            />
+            <TooltipContent
+              className='rounded-xl bg-primary px-4 py-2 text-primary-foreground text-sm shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]'
+              side='top'
+              sideOffset={8}
+            >
+              <p>{t(item.labelKey)}</p>
+            </TooltipContent>
+          </Tooltip>
         ))}
-        <Separator className='h-full' orientation='vertical' />
+
         {Object.entries(DATA.contact.social)
           .filter(([_, social]) => social.navbar)
           .map(([name, social]) => (
-            <DockIcon key={name}>
-              <Tooltip>
-                <TooltipTrigger
-                  render={
-                    <Link
-                      className={cn(
-                        buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-12"
-                      )}
-                      href={social.url}
-                      target='_blank'
-                    >
-                      <social.icon className='size-4' />
-                    </Link>
-                  }
-                />
-                <TooltipContent>
-                  <p>{social.name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
+            <Tooltip key={name}>
+              <TooltipTrigger
+                render={(props) => (
+                  <a
+                    href={social.url}
+                    rel='noopener noreferrer'
+                    target='_blank'
+                    {...props}
+                  >
+                    <DockIcon className='size-full cursor-pointer rounded-3xl border border-border bg-background p-0 text-muted-foreground backdrop-blur-3xl transition-colors hover:bg-muted hover:text-foreground'>
+                      <social.icon className='size-full overflow-hidden rounded-sm object-contain' />
+                    </DockIcon>
+                  </a>
+                )}
+              />
+              <TooltipContent
+                className='rounded-xl bg-primary px-4 py-2 text-primary-foreground text-sm shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]'
+                side='top'
+                sideOffset={8}
+              >
+                <p>{social.name}</p>
+              </TooltipContent>
+            </Tooltip>
           ))}
-        <Separator className='h-full py-2' orientation='vertical' />
-        <DockIcon>
+        <DockIcon className='size-full cursor-pointer rounded-3xl border border-border bg-background p-0 text-muted-foreground backdrop-blur-3xl transition-colors hover:bg-muted hover:text-foreground'>
           <Tooltip>
-            <TooltipTrigger render={<ModeToggle className='size-12' />} />
-            <TooltipContent>
+            <TooltipTrigger
+              render={(props) => (
+                <AnimatedThemeToggler {...props} className={props.className} />
+              )}
+            />
+            <TooltipContent
+              className='rounded-xl bg-primary px-4 py-2 text-primary-foreground text-sm shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]'
+              side='top'
+              sideOffset={8}
+            >
               <p>{t("theme")}</p>
             </TooltipContent>
           </Tooltip>
         </DockIcon>
-        <DockIcon>
+        <DockIcon className='size-full cursor-pointer rounded-3xl border border-border bg-background p-0 text-muted-foreground backdrop-blur-3xl transition-colors hover:bg-muted hover:text-foreground'>
           <Tooltip>
-            <TooltipTrigger render={<LanguageSwitcher className='size-12' />} />
-            <TooltipContent>
+            <TooltipTrigger
+              render={(props) => (
+                <LanguageSwitcher
+                  {...props}
+                  className={cn("size-full", props.className)}
+                />
+              )}
+            />
+            <TooltipContent
+              className='rounded-xl bg-primary px-4 py-2 text-primary-foreground text-sm shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]'
+              side='top'
+              sideOffset={8}
+            >
               <p>{t("language")}</p>
             </TooltipContent>
           </Tooltip>
