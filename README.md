@@ -1,45 +1,80 @@
-<div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
-</div>
+# Marcel Park's Portfolio
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+Welcome to my personal portfolio! I am a **Full-Stack Solution Architect & Lead Developer** based in Nürnberg, Germany. This project showcases my professional work, personal milestones, and the cutting-edge technologies I love to work with.
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+This repository is **open source**—feel free to explore my code, learn from my style, or use it as a template for your own portfolio.
 
-# Features
+## 🚀 Tech Stack
 
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+I believe in using the latest and most efficient tools to build high-quality software. This portfolio is built with:
 
-# Getting Started Locally
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Library:** [React 19](https://react.dev/)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **ORM:** [Prisma](https://www.prisma.io/)
+- **Linting & Formatting:** [Biome](https://biomejs.dev/) via [Ultracite](https://github.com/ultracite/ultracite)
+- **Runtime:** [Bun](https://bun.sh/)
 
-1. Clone this repository to your local machine:
+## 🤖 AI Philosophy
 
+I am fortunate to have learned to code before the major AI breakthrough. This foundation allows me to understand the "why" and "how" behind the code, enabling me to immediately spot when AI produces incorrect or suboptimal results.
+
+I view AI as a powerful tool—much like the evolution from Assembly to high-level languages. It doesn't replace the need for engineering skills; rather, it allows us to express complex logic more naturally and build more sophisticated systems faster. I use AI efficiently to accelerate my workflow while maintaining strict human oversight and code quality.
+
+## 🎨 Coding Style & Standards
+
+Code quality is non-negotiable. This project follows strict standards enforced by **Ultracite** and **Biome**.
+- **Zero-config quality:** Automated linting and formatting.
+- **Modern Standards:** Prioritizing accessibility, type-safety, and performance.
+- **Clean Code:** Focused on clarity and explicit intent.
+
+You can find more details about the specific standards in [GEMINI.md](./GEMINI.md).
+
+## 🛠️ Getting Started
+
+To run this project locally, make sure you have [Bun](https://bun.sh/) installed.
+
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
-
-2. Move to the cloned directory
-
-   ```bash
+   git clone https://github.com/code-guerilla/portfolio.git
    cd portfolio
    ```
 
-3. Install dependencies:
-
+2. **Install dependencies:**
    ```bash
-   pnpm install
+   bun install
    ```
 
-4. Start the local Server:
-
+3. **Run the development server:**
    ```bash
-   pnpm dev
+   bun run dev
    ```
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+4. **Open the app:**
+   Navigate to `http://localhost:3000`.
 
-# License
+## ⚙️ How to Customize
 
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
+Want to use this for your own portfolio? Follow these steps:
+
+1. **Update Personal Data:**
+   Open `data/resume.tsx` and replace the information in the `DATA` object with your own details, work experience, and projects.
+
+2. **Localization & Translations:**
+   This portfolio supports multi-language (English and German). Update the text in:
+   - `messages/en.json`
+   - `messages/de.json`
+
+3. **Change the Profile Image:**
+   Replace the profile picture at `public/me.png` with your own (keeping the same filename or updating the `avatarUrl` in `data/resume.tsx`).
+
+4. **Deployment:**
+   This project is optimized for [Vercel](https://vercel.com/). Connect your GitHub repository to Vercel for automatic deployments.
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+*Built with ❤️ by Marcel Park*
