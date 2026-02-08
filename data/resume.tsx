@@ -1,0 +1,255 @@
+import {
+  ArrowRightLeft,
+  Award,
+  Gauge,
+  LayoutTemplate,
+  SearchCheck,
+  Server,
+  TestTube2,
+  Wrench,
+} from "lucide-react"
+import { Icons } from "@/components/icons"
+
+export const DATA = {
+  name: "Marcel Park",
+  initials: "MP",
+  url: "https://marcelpark.dev",
+  location: "Nürnberg, Deutschland",
+  locationLink: "https://www.google.com/maps/place/Nuremberg",
+  description:
+    "Software Engineer specializing in React, Next.js, and TypeScript.",
+  avatarUrl: "/me.png",
+  skills: [
+    { name: "React", icon: Icons.react },
+    { name: "Next.js", icon: Icons.nextjs },
+    { name: "Typescript", icon: Icons.typescript },
+    { name: "JavaScript", icon: Icons.javascript },
+    { name: "Tailwind CSS", icon: Icons.tailwindcss },
+    { name: "Node.js", icon: Icons.nodejs },
+    { name: "Python", icon: Icons.python },
+    { name: "C#", icon: Icons.csharp },
+    { name: "Blazor", icon: Icons.blazor },
+    { name: "SQL", icon: Icons.sql },
+    { name: "Prisma", icon: Icons.prisma },
+    { name: "Linux", icon: Icons.linux },
+    { name: "Redhat", icon: Icons.redhat },
+    { name: "NGINX", icon: Icons.nginx },
+    { name: "PM2", icon: Icons.pm2 },
+    { name: "GitHub Enterprise", icon: Icons.github },
+  ],
+  contact: {
+    email: process.env.NEXT_PUBLIC_EMAIL || "your_email@example.com",
+    tel: process.env.NEXT_PUBLIC_PHONE || "+49 123 4567890",
+    social: {
+      GitHub: {
+        name: "GitHub",
+        url: "https://github.com/code-guerilla",
+        icon: Icons.github,
+        navbar: true,
+      },
+      // email: {
+      //   name: "Send email",
+      //   url: "mailto:marcel_park@gmx.de",
+      //   icon: Send,
+      //   navbar: true,
+      // },
+    },
+  },
+  work: [
+    {
+      company: "Park Digital Solutions",
+      translationKey: "parkDigitalSolutions",
+      href: "https://park-digital-solutions.com",
+      location: "Nürnberg",
+      logoUrl: "/park-digital-solutions.png",
+      logoClassName:
+        " dark:bg-foreground w-full object-cover pt-1.5 h-10.5 rounded ",
+      start: "2026",
+      end: "heute",
+    },
+    {
+      company: "Robert Bosch GmbH",
+      translationKey: "bosch",
+      href: "https://www.bosch.de",
+      location: "Nürnberg",
+      logoUrl: "/bosch-invented-for-life.svg",
+      logoClassName: "dark:bg-foreground py-1.5 rounded",
+      start: "2021",
+      end: "heute",
+    },
+    {
+      company: "HMP Heidenhain Microprint",
+      translationKey: "hmp",
+      href: "https://www.hmp-heidenhain.de/",
+      location: "Berlin",
+      logoUrl: "/hmp heidenhain-microprint768x131.png",
+      start: "2018",
+      end: "2021",
+      logoClassName: "bg-[#706F6F] py-1.5 pl-1 rounded ",
+    },
+    {
+      company: "Stadtwerke Elmshorn",
+      translationKey: "stadtwerke",
+      href: "https://www.stadtwerke-elmshorn.de/",
+      location: "Elmshorn",
+      logoClassName: "dark:bg-foreground px-0 dark:py-0.5 rounded ",
+      logoUrl: "/stadtwerke-elmshorn.svg",
+      start: "2012",
+      end: "2016",
+    },
+  ],
+  education: [
+    {
+      school: "Robert Bosch GmbH",
+      translationKey: "bosch",
+      href: "https://www.bosch.de",
+      logoUrl: "/bosch-invented-for-life.svg",
+      logoClassName: "dark:bg-foreground px-3 py-1.5 rounded",
+      start: "2021",
+      end: "2023",
+    },
+    {
+      school: "Stadtwerke Elmshorn",
+      translationKey: "stadtwerke",
+      href: "https://www.stadtwerke-elmshorn.de",
+      logoUrl: "/stadtwerke-elmshorn.svg",
+      logoClassName: "dark:bg-foreground dark:py-0.5 rounded",
+      start: "2012",
+      end: "2015",
+    },
+  ],
+  projects: [
+    {
+      title: "drink2art",
+      translationKey: "drink2art",
+      dates: "2024 - heute",
+      active: true,
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Google Imagen",
+        "Vercel",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.drink2art.com/",
+          icon: <Icons.globe className='size-3' />,
+        },
+      ],
+      image: "/drink2art-landingPage.png",
+      video: "",
+    },
+  ],
+  boschProjects: [
+    {
+      title: "Manufacturing & Maintenance Suite (MMS)",
+      translationKey: "mms",
+    },
+    {
+      title: "Strategic Personnel Planning (SPP)",
+      translationKey: "spp",
+    },
+    {
+      title: "ITM-Location CMDB (Device Finder)",
+      translationKey: "deviceFinder",
+    },
+    {
+      title: "My Stuff – Interner Marktplatz",
+      translationKey: "myStuff",
+    },
+    {
+      title: "ASM-Hub (Application Lifecycle Management)",
+      translationKey: "asmHub",
+    },
+  ],
+  personalMilestones: [
+    {
+      translationKey: "keyboards",
+      dates: "2025 - 2026",
+      location: "Privat",
+      image: "/TOTEM_black_top.png",
+      links: [
+        {
+          title: "Anywhy Flake",
+          icon: <Icons.github className='h-4 w-4' />,
+          href: "https://github.com/anywhy-io/flake",
+        },
+        {
+          title: "TOTEM",
+          icon: <Icons.github className='h-4 w-4' />,
+          href: "https://github.com/GEIGEIGEIST/TOTEM",
+        },
+      ],
+    },
+    {
+      translationKey: "drink2artLaunch",
+      dates: "2025",
+      location: "Privat",
+      image: "/drink2art.png",
+      links: [
+        {
+          title: "Website",
+          icon: <Icons.globe className='h-4 w-4' />,
+          href: "https://www.drink2art.com/",
+        },
+      ],
+    },
+    {
+      translationKey: "fiAusbildung",
+      dates: "2023",
+      location: "Robert Bosch GmbH, Nürnberg",
+      icon: Award,
+      links: [],
+    },
+    {
+      translationKey: "homeServer",
+      dates: "2022 - heute",
+      location: "Privat",
+      icon: Server,
+      image: "/ha.svg",
+      links: [],
+    },
+    {
+      translationKey: "githubAdmin",
+      dates: "2022 - heute",
+      location: "Robert Bosch GmbH",
+      icon: Icons.github,
+      links: [],
+    },
+    {
+      translationKey: "webTemplate",
+      dates: "2022 - heute",
+      location: "Robert Bosch GmbH",
+      icon: LayoutTemplate,
+      links: [],
+    },
+    {
+      translationKey: "legacyMigration",
+      dates: "2021 - 2022",
+      location: "Robert Bosch GmbH",
+      icon: ArrowRightLeft,
+      links: [],
+    },
+  ],
+  parkServices: [
+    {
+      translationKey: "codeReviews",
+      icon: SearchCheck,
+    },
+    {
+      translationKey: "testing",
+      icon: TestTube2,
+    },
+    {
+      translationKey: "bugfixing",
+      icon: Wrench,
+    },
+    {
+      translationKey: "performance",
+      icon: Gauge,
+    },
+  ],
+} as const
