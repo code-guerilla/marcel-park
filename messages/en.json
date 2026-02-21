@@ -24,7 +24,7 @@
   },
   "about": {
     "title": "About me",
-    "summary": "From trades to full-stack development: I discovered my passion for coding through automation technology. After completing my apprenticeship at Bosch with distinction, I independently built up the web development department at the Nuremberg site. Today, I develop complex, globally used business applications there using Next.js, React, TypeScript, and Prisma."
+    "summary": "From trades to full-stack development: I discovered my passion for coding through automation technology. After completing my apprenticeship at Bosch, I independently built up the web development department at the Nuremberg site. Today, I develop complex, globally used business applications there using Next.js, React, TypeScript, and Prisma."
   },
   "work": {
     "title": "Work Experience",
@@ -52,7 +52,7 @@
   "education": {
     "title": "Education",
     "bosch": {
-      "degree": "IT Specialist for Application Development (shortened, with distinction)"
+      "degree": "IT Specialist for Application Development (shortened)"
     },
     "stadtwerke": {
       "degree": "Specialist for Water Supply Technology (with distinction)"

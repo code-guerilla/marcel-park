@@ -54,3 +54,7 @@ dist
 !.dev.vars.example
 !.env*example
 backups
+
+aboutMe.md
+cv.md
+AGENTS.md
