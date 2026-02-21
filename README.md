@@ -6,7 +6,7 @@
 
 # Marcel Park's Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcode-guerilla%2Fmarcel-park)
 
-Welcome to my personal portfolio! I am a **Full-Stack Solution Architect & Lead Developer** based in Nürnberg, Germany. This project showcases my professional work, personal milestones, and the cutting-edge technologies I love to work with.
+Welcome to my personal portfolio! I am a **Full-Stack Solution Architect & Lead Software Developer** based in Nürnberg, Germany. This project showcases my professional work, personal milestones, and the cutting-edge technologies I love to work with.
 
 This repository is **open source**—feel free to explore my code, learn from my style, or use it as a template for your own portfolio.
 

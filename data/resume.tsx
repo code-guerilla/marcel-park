@@ -105,8 +105,8 @@ export const DATA = {
       href: "https://www.bosch.de",
       logoUrl: "/bosch-invented-for-life.svg",
       logoClassName: "dark:bg-foreground px-3 py-1.5 rounded",
-      start: "2021",
-      end: "2023",
+      start: "09.2021",
+      end: "01.2024",
     },
     {
       school: "Stadtwerke Elmshorn",
