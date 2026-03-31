@@ -208,9 +208,9 @@
   }
 
   .prose :where(table):not(:where([class~="not-prose"]) *) {
-    @apply w-full min-w-full;
-    border-collapse: separate;
     border-spacing: 0;
+    border-collapse: separate;
+    @apply w-full min-w-full;
   }
 
   .prose :where(th):not(:where([class~="not-prose"] *)),
@@ -242,6 +242,6 @@
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation: none;
   mix-blend-mode: normal;
+  animation: none;
 }

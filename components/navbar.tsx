@@ -1,13 +1,6 @@
 "use client"
 
-import {
-  Award,
-  Briefcase,
-  Code,
-  HomeIcon,
-  type LucideIcon,
-  Mail,
-} from "lucide-react"
+import { Award, Code, HomeIcon, type LucideIcon, Mail } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import { Dock, DockIcon } from "@/components/magicui/dock"
@@ -31,11 +24,6 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { href: "/", icon: HomeIcon, labelKey: "home" },
-  {
-    href: "/park-digital-solutions",
-    icon: Briefcase,
-    labelKey: "parkDigitalSolutions",
-  },
   { href: "/#work", icon: Award, labelKey: "resume" },
   { href: "/#projects", icon: Code, labelKey: "projects" },
   { href: "/#contact", icon: Mail, labelKey: "contact" },

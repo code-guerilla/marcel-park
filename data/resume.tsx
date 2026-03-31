@@ -57,17 +57,6 @@ export const DATA = {
   },
   work: [
     {
-      company: "Park Digital Solutions",
-      translationKey: "parkDigitalSolutions",
-      href: "https://park-digital-solutions.com",
-      location: "Nürnberg",
-      logoUrl: "/park-digital-solutions.png",
-      logoClassName:
-        " dark:bg-foreground w-full object-cover pt-1.5 h-10.5 rounded ",
-      start: "2026",
-      end: "heute",
-    },
-    {
       company: "Robert Bosch GmbH",
       translationKey: "bosch",
       href: "https://www.bosch.de",
@@ -96,6 +85,17 @@ export const DATA = {
       logoUrl: "/stadtwerke-elmshorn.svg",
       start: "2012",
       end: "2016",
+    },
+    {
+      company: "Park Digital Solutions",
+      translationKey: "parkDigitalSolutions",
+      href: "https://park-digital-solutions.com",
+      location: "Nürnberg",
+      logoUrl: "/park-digital-solutions.png",
+      logoClassName:
+        " dark:bg-foreground w-full object-cover pt-1.5 h-10.5 rounded ",
+      start: "2026",
+      end: "heute",
     },
   ],
   education: [
