@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { useLocale } from "next-intl"
-import { type ComponentProps, forwardRef } from "react"
+import type { ComponentProps } from "react"
 import { usePathname, useRouter } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
 
@@ -15,10 +15,12 @@ type LanguageSwitcherProps = ComponentProps<"button"> & {
   className?: string
 }
 
-export const LanguageSwitcher = forwardRef<
-  HTMLButtonElement,
-  LanguageSwitcherProps
->(({ className, onClick, ...props }, ref) => {
+export const LanguageSwitcher = ({
+  className,
+  onClick,
+  ref,
+  ...props
+}: LanguageSwitcherProps & { ref?: RefObject<HTMLButtonElement | null> }) => {
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
@@ -55,5 +57,5 @@ export const LanguageSwitcher = forwardRef<
       </span>
     </button>
   )
-})
+}
 LanguageSwitcher.displayName = "LanguageSwitcher"
