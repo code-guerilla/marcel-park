@@ -26,6 +26,10 @@
     "title": "About me",
     "summary": "From trades to full-stack development: I discovered my passion for coding through automation technology. After completing my apprenticeship at Bosch, I independently built up the web development department at the Nuremberg site. Today, I develop complex, globally used business applications there using Next.js, React, TypeScript, and Prisma."
   },
+  "aiPosition": {
+    "title": "My position on AI",
+    "summary": "I am glad I learned programming in the classic way before AI became part of everyday development. Between 2019 and 2022 I had to understand fundamentals, documentation, source code, debugging, and clean architecture without shortcuts. That foundation is extremely valuable now, because AI only becomes useful when you can judge the result.\n\nToday I use AI as a serious development tool. I have built a fast, clean workflow around describing requirements precisely, choosing the right technical terms, iterating on solutions, and reviewing the output critically. My view is simple: AI will not remove the need for developers. Like earlier shifts from low-level languages to modern frameworks, it raises the level of what one capable developer can build. The value is no longer only in writing every line by hand, but in understanding the problem, shaping the architecture, recognizing weak code, and turning faster tooling into reliable software."
+  },
   "work": {
     "title": "Work Experience",
     "parkDigitalSolutions": {

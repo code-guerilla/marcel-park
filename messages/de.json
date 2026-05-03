@@ -26,6 +26,10 @@
     "title": "Über mich",
     "summary": "Vom Handwerk zur Full-Stack-Entwicklung: Über die Automatisierungstechnik entdeckte ich meine Leidenschaft für Code. Nach meiner mit Auszeichnung abgeschlossenen Ausbildung bei Bosch habe ich am Standort Nürnberg die Webentwicklung eigenständig aufgebaut. Heute entwickle ich dort komplexe, weltweit genutzte Business-Anwendungen mit Next.js, React, TypeScript und Prisma."
   },
+  "aiPosition": {
+    "title": "Meine Haltung zu KI",
+    "summary": "Ich bin froh, dass ich Programmierung noch auf dem klassischen Weg gelernt habe, bevor KI ein alltäglicher Teil der Entwicklung wurde. Zwischen 2019 und 2022 musste ich Grundlagen, Dokumentation, Source Code, Debugging und saubere Architektur ohne Abkürzungen verstehen. Genau dieses Fundament ist heute sehr wertvoll, weil KI erst dann wirklich nützlich wird, wenn man ihre Ergebnisse fachlich beurteilen kann.\n\nHeute nutze ich KI als ernsthaftes Entwicklungswerkzeug. Ich habe mir einen schnellen, sauberen Workflow aufgebaut: Anforderungen präzise beschreiben, die richtigen technischen Begriffe nutzen, Lösungen iterieren und den erzeugten Code kritisch prüfen. Meine Haltung ist klar: KI macht Entwickler nicht überflüssig. Wie frühere Entwicklungssprünge von hardwarenahen Sprachen zu modernen Frameworks hebt sie vor allem das Niveau dessen, was eine gute Entwicklerin oder ein guter Entwickler bauen kann. Der Wert liegt nicht mehr nur darin, jede Zeile selbst zu schreiben, sondern Probleme richtig zu verstehen, Architektur zu formen, schwachen Code zu erkennen und schnellere Werkzeuge in zuverlässige Software zu übersetzen."
+  },
   "work": {
     "title": "Berufserfahrung",
     "parkDigitalSolutions": {

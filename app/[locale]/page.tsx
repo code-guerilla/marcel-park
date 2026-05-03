@@ -1,4 +1,4 @@
-import { Briefcase, MapPin } from "lucide-react"
+import { Briefcase, MapPin, Sparkles } from "lucide-react"
 import Link from "next/link"
 import { getTranslations } from "next-intl/server"
 import Markdown from "react-markdown"
@@ -78,6 +78,19 @@ export default async function Page({
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <div className='prose dark:prose-invert max-w-full text-pretty font-sans text-muted-foreground text-sm'>
             <Markdown>{t("about.summary")}</Markdown>
+          </div>
+        </BlurFade>
+      </section>
+      <section id='ai-position'>
+        <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
+          <div className='flex items-center gap-2'>
+            <Sparkles className='size-4 text-foreground' />
+            <h2 className='font-bold text-xl'>{t("aiPosition.title")}</h2>
+          </div>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <div className='prose dark:prose-invert max-w-full text-pretty font-sans text-muted-foreground text-sm'>
+            <Markdown>{t("aiPosition.summary")}</Markdown>
           </div>
         </BlurFade>
       </section>
