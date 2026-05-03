@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { useLocale } from "next-intl"
-import type { ComponentProps } from "react"
+import type { ComponentProps, RefObject } from "react"
 import { usePathname, useRouter } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
 
