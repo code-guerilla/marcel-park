@@ -5,12 +5,14 @@ import {
   Linux,
   NextJs,
   NodeJs,
+  NuxtJs,
   Prisma,
   Python,
   React,
   RedHat,
   TailwindCSS,
   TypeScript,
+  VueJs,
   WhatsApp,
 } from "developer-icons"
 import { Database, GlobeIcon, MailIcon } from "lucide-react"
@@ -163,6 +165,8 @@ export const Icons = {
   ),
 
   nextjs: (props: IconProps) => <NextJs {...props} />,
+  nuxt: (props: IconProps) => <NuxtJs {...props} />,
+  vue: (props: IconProps) => <VueJs {...props} />,
   framermotion: (props: IconProps) => (
     <svg
       className='size-8'

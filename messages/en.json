@@ -19,16 +19,16 @@
   },
   "hero": {
     "greeting": "Hey, I'm {firstName} 👋",
-    "description": "Full-Stack Solution Architect & Lead Developer. I drive digitalization – from server to user interface.",
+    "description": "Full-Stack Developer & End-to-End Software Architect. I build internal tools from the first idea to production.",
     "openForWork": "Open to job opportunities"
   },
   "about": {
     "title": "About me",
-    "summary": "From trades to full-stack development: I discovered my passion for coding through automation technology. After completing my apprenticeship at Bosch, I independently built up the web development department at the Nuremberg site. Today, I develop complex, globally used business applications there using Next.js, React, TypeScript, and Prisma."
+    "summary": "I come from the trades, not from a classic computer science path. That shaped how I work: practical, direct, and focused on things that actually run in production. At Bosch I grew into a role where I talk to internal customers, understand their problems, make technical decisions, build the frontend and backend, and bring the tool online.\n\nMost of my professional work is Next.js, React, TypeScript and Prisma, but I also like leaving my comfort zone. Privately I went into Vue and Nuxt and really enjoyed it. I like trying new things, diving deep, and soaking up everything useful on the way."
   },
   "aiPosition": {
     "title": "My position on AI",
-    "summary": "I am glad I learned programming before AI became part of everyday development. From 2019 to 2022 I had to learn the fundamentals the normal way: reading documentation, understanding source code, debugging problems, and building projects step by step. That knowledge is very useful today, because AI can write code fast, but you still need a developer who can see whether the result is clean, secure, maintainable, and actually solves the problem.\n\nI use AI every day as a development tool. It helps me move faster when I build apps, refactor code, write scripts, compare solutions, or understand new packages. The important part is knowing how to explain the goal clearly, use the right technical words, guide the tool in the right direction, and review the output with real programming knowledge.\n\nI do not believe the idea that we will need no developers, or even simply fewer valuable developers, just because programming gets faster. I think that is wrong. When programming became easier in the past, for example from assembly to modern languages and frameworks, it did not stop software development. It created more software, bigger systems, and more complex products. I believe the same is happening now. Good developers become more valuable because one person can build things that previously needed a larger team. Companies will not just build the same small static websites faster. They will build tools with more automation, better interfaces, AI features, background processes, internal dashboards, and much more functionality."
+    "summary": "I am glad I learned programming before AI became normal in development. From 2019 to 2022 I had to learn the basics the hard way: documentation, source code, debugging, and building things step by step. That matters now, because AI can write code quickly, but somebody still has to know if the result is clean, secure, maintainable, and actually useful.\n\nI use AI every day. For building apps, refactoring code, writing scripts, comparing approaches, or understanding new packages, it is a serious speed boost. But the good results come from knowing how to explain the goal, how to guide the tool, and how to review what comes back.\n\nI think the idea that developers lose their value because of AI is bullshit. When programming became easier before, it did not kill software development. It created more software, bigger systems, and more functionality. I believe the same happens now. Good developers become more valuable, because one strong developer can build things today that used to need a much bigger team."
   },
   "work": {
     "title": "Work Experience",
@@ -38,8 +38,8 @@
       "badges": ["Part-time", "Sole Proprietorship"]
     },
     "bosch": {
-      "title": "Full-Stack Developer & Solution Architect",
-      "description": "Managing multiple Red Hat Linux terminal servers (NGINX, PM2) as well as MSSQL database servers. Administering a GitHub Enterprise Server with over 126 repositories and 30+ users. Developing complex web applications with Next.js, React, TypeScript and Prisma ORM – some used Bosch-wide or worldwide. Many smaller scripts and applications that save employees a lot of time. Migrated legacy C# Blazor projects to modern JavaScript frameworks and created a site-wide web template with Bosch corporate design.",
+      "title": "Full-Stack Developer & End-to-End Software Architect",
+      "description": "I build internal software products from the first customer conversation to production. That means understanding what the customer really needs, shaping the idea, making architecture decisions, estimating effort, keeping people informed, and building frontend and backend with Next.js, React, TypeScript and Prisma. I also decided and built much of the technical setup around it myself: GitHub Enterprise with over 126 repositories, CI/CD and deployment flows, RHEL bare-metal servers, NGINX, PM2, MSSQL operations, and the move toward OpenShift/Kubernetes. On the enterprise side I handle Entra ID applications, role-based access, logs, metrics, documentation, LeanIX, service-level agreements and lifecycle topics, with strict attention to European data protection and internal security requirements.",
       "badges": ["Full-time"]
     },
     "hmp": {
@@ -111,10 +111,10 @@
   "milestones": {
     "badge": "Achievements",
     "title": "I love learning and creating new things",
-    "description": "Throughout my career, I've reached various milestones and taken on responsibilities. From introducing new technologies to administering entire development platforms – here are some highlights.",
+    "description": "I learn best by building things. Some of these are work milestones, some are private projects, but all of them taught me something useful.",
     "keyboards": {
       "title": "Custom Mechanical Keyboards & Ergonomics",
-      "description": "Building custom keyboards with open source hardware from GitHub. Switched to ergonomic Colemak-DH layout. Manufacturing own PCBs (Totem 38 Keys, Anywhy) with soldering station, programmed in C with ZMK."
+      "description": "Building custom keyboards with open source hardware from GitHub. I switched to Colemak-DH, solder my own boards, and program firmware in C with ZMK. It is a good mix of hardware, software, and patience."
     },
     "drink2artLaunch": {
       "title": "drink2art.com Launch",
@@ -125,8 +125,8 @@
       "description": "Apprenticeship as IT specialist for application development shortened to 2.5 years and completed with distinction."
     },
     "homeServer": {
-      "title": "Home Server & Smart Home Automation",
-      "description": "Operating a home server with Proxmox: Pi-hole, NAS, and Home Assistant. Complete apartment automation via Zigbee devices."
+      "title": "Homelab & Self-Hosting",
+      "description": "Running a small homelab on three old enterprise thin clients (50 €). A Docker Swarm cluster for that is clearly overkill, but that is how I run it, and this website is currently hosted there too. I use containers for things that make my day easier, like Immich for private photos, Postgres, AdGuard Home, Dokploy for websites, Home Assistant, Smart TV apps, and Vaultwarden for password security. It is my private playground for testing infrastructure, networking, backups, and self-hosting."
     },
     "githubAdmin": {
       "title": "GitHub Enterprise Server Administrator",
@@ -134,7 +134,7 @@
     },
     "webTemplate": {
       "title": "Enterprise Web Template & Design System",
-      "description": "Development of a reusable web template with Entra ID authentication, security features, and complete Bosch corporate design. Continuously updated and adopted by teams."
+      "description": "Built a reusable web template with Entra ID authentication, security basics and Bosch corporate design. It made new internal apps faster to start and easier to keep consistent."
     },
     "legacyMigration": {
       "title": "Legacy C# → JavaScript Migration",
