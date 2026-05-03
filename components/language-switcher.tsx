@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { useLocale } from "next-intl"
-import type { ComponentProps, RefObject } from "react"
+import type { ComponentPropsWithoutRef, Ref } from "react"
 import { usePathname, useRouter } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
 
@@ -11,8 +11,8 @@ const locales = [
   { code: "en", label: "EN", flag: "/en.svg" },
 ] as const
 
-type LanguageSwitcherProps = ComponentProps<"button"> & {
-  className?: string
+type LanguageSwitcherProps = ComponentPropsWithoutRef<"button"> & {
+  ref?: Ref<HTMLButtonElement>
 }
 
 export const LanguageSwitcher = ({
@@ -20,7 +20,7 @@ export const LanguageSwitcher = ({
   onClick,
   ref,
   ...props
-}: LanguageSwitcherProps & { ref?: RefObject<HTMLButtonElement | null> }) => {
+}: LanguageSwitcherProps) => {
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
