@@ -28,7 +28,6 @@ AGENTS.md
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-bun.lock
 *.log
 
 # local env files
