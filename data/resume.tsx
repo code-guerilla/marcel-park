@@ -52,7 +52,6 @@ export const DATA = {
   ],
   contact: {
     email: process.env.NEXT_PUBLIC_EMAIL || "your_email@example.com",
-    tel: process.env.NEXT_PUBLIC_PHONE || "+49 123 4567890",
     social: {
       GitHub: {
         name: "GitHub",
@@ -60,12 +59,6 @@ export const DATA = {
         icon: Icons.github,
         navbar: true,
       },
-      // email: {
-      //   name: "Send email",
-      //   url: "mailto:marcel_park@gmx.de",
-      //   icon: Send,
-      //   navbar: true,
-      // },
     },
   },
   work: [
