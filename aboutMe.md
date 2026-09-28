@@ -68,7 +68,6 @@ A comprehensive live-monitoring and incident management ecosystem designed to st
 * **SAP Integration:** Custom interface allowing operators to open SAP issues directly from the floor, bypassing complex standard GUIs.
 * **Service Dashboard:** Priority-sorted dashboard for repair teams to monitor and react to incoming SAP issues.
 * **AI-Assisted Repair:** implemented an AI engine trained on 20 years of issue data to provide predictive advice and solution recommendations to repair technicians.
-* **Link:** `https://nup1-apps1.de.bosch.com/mms`
 
 ### 2. Strategic Personnel Planning (SPP)
 **Role:** Lead Developer
@@ -79,7 +78,6 @@ A strategic HR tool designed to replace manual spreadsheet planning with dynamic
 * **Workforce Mapping:** dynamic mapping of employees to job roles within specific departments per year.
 * **Predictive Analytics:** Forecasting future movements, including retirement schedules, fixed-term contract expirations, and trainee conversions.
 * **Gap Analysis:** Dashboard with extensive filtering to analyze current headcount vs. required roles to drive recruitment decisions.
-* **Link:** `https://nup1-apps1.de.bosch.com/spp`
 
 ### 3. ITM-Location CMDB (Device Finder)
 **Role:** Sole Developer
@@ -89,7 +87,6 @@ An interactive visualization tool solving the challenge of locating physical IT 
 
 * **Interactive Mapping:** 2D Room Map of Plant NuP1 featuring over 3,000 pinned devices.
 * **Precision Location:** Devices are pinned to real-world coordinates with metadata, including visual references (images) and descriptive location text.
-* **Link:** `https://nup1-apps1.de.bosch.com/itm-lageplan`
 
 ### 4. My Stuff – Internal Marketplace
 **Role:** Contributor / Lead Developer
@@ -99,7 +96,6 @@ A secure, internal exchange platform facilitating the circular economy within th
 
 * **Exchange Platform:** Marketplace for buying, selling, or exchanging used items (under €25,000 value).
 * **Adoption:** Successfully scaled for Bosch-wide usage.
-* **Link:** `https://nup1-apps1.de.bosch.com/my-stuff`
 
 ### 5. ASM-Hub (Application Lifecycle Management)
 **Role:** Developer / Contributor
@@ -110,7 +106,6 @@ A unified platform for managing the entire lifecycle of software projects. Initi
 * **Lifecycle Management:** Centralized tracking of project progress, measures, and access control.
 * **Document Standardization:** Central repository for document history, templates, and version control.
 * **Compliance & Automation:** Automated import of measures via operator self-checks and integration with **LeanIX** for enterprise architecture compliance.
-* **Link:** `https://rb-bbm-asm.app.bosch.com`
 
 
 
@@ -139,7 +134,6 @@ A comprehensive live-monitoring and incident management ecosystem designed to st
 * **SAP Integration:** Custom interface allowing operators to open SAP issues directly from the floor, bypassing complex standard GUIs.
 * **Service Dashboard:** Priority-sorted dashboard for repair teams to monitor and react to incoming SAP issues.
 * **AI-Assisted Repair:** implemented an AI engine trained on 20 years of issue data to provide predictive advice and solution recommendations to repair technicians.
-* **Link:** `https://nup1-apps1.de.bosch.com/mms`
 
 ### 2. Strategic Personnel Planning (SPP)
 **Role:** Lead Developer
@@ -150,7 +144,6 @@ A strategic HR tool designed to replace manual spreadsheet planning with dynamic
 * **Workforce Mapping:** dynamic mapping of employees to job roles within specific departments per year.
 * **Predictive Analytics:** Forecasting future movements, including retirement schedules, fixed-term contract expirations, and trainee conversions.
 * **Gap Analysis:** Dashboard with extensive filtering to analyze current headcount vs. required roles to drive recruitment decisions.
-* **Link:** `https://nup1-apps1.de.bosch.com/spp`
 
 ### 3. ITM-Location CMDB (Device Finder)
 **Role:** Sole Developer
@@ -160,7 +153,6 @@ An interactive visualization tool solving the challenge of locating physical IT 
 
 * **Interactive Mapping:** 2D Room Map of Plant NuP1 featuring over 3,000 pinned devices.
 * **Precision Location:** Devices are pinned to real-world coordinates with metadata, including visual references (images) and descriptive location text.
-* **Link:** `https://nup1-apps1.de.bosch.com/itm-lageplan`
 
 ### 4. My Stuff – Internal Marketplace
 **Role:** Contributor / Lead Developer
@@ -170,7 +162,6 @@ A secure, internal exchange platform facilitating the circular economy within th
 
 * **Exchange Platform:** Marketplace for buying, selling, or exchanging used items (under €25,000 value).
 * **Adoption:** Successfully scaled for Bosch-wide usage.
-* **Link:** `https://nup1-apps1.de.bosch.com/my-stuff`
 
 ### 5. ASM-Hub (Application Lifecycle Management)
 **Role:** Developer / Contributor
@@ -181,7 +172,6 @@ A unified platform for managing the entire lifecycle of software projects. Initi
 * **Lifecycle Management:** Centralized tracking of project progress, measures, and access control.
 * **Document Standardization:** Central repository for document history, templates, and version control.
 * **Compliance & Automation:** Automated import of measures via operator self-checks and integration with **LeanIX** for enterprise architecture compliance.
-* **Link:** `https://rb-bbm-asm.app.bosch.com`
 
 ---
 
